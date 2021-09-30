@@ -1,0 +1,19 @@
+{
+  "name": "timothegonin_6_30092021",
+  "version": "1.0.0",
+  "description": "TimotheGonin_6_30092021",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimotheGonin/TimotheGonin_6_30092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimotheGonin/TimotheGonin_6_30092021/issues"
+  },
+  "homepage": "https://github.com/TimotheGonin/TimotheGonin_6_30092021#readme"
+}
