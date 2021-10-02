@@ -1,9 +1,4 @@
 @import url(https://yarnpkg.com/en/package/normalize.css);
-.tag {
-  background-color: white;
-  color: #D3573C;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -19,7 +14,13 @@ html {
 }
 
 .tag {
+  color: #901C1C;
   display: inline-block;
+  border: 0.1rem solid #C4C4C4;
+  padding: 0.5rem;
+  font-size: 1.15rem;
+  border-radius: 1.1rem;
+  font-weight: bold;
 }
 
 .tags {

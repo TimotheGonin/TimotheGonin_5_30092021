@@ -1,4 +1,9 @@
 .tag{
-    @extend %secondary-colors;
+    color:$color-primary;
     display: inline-block;
+    border: 0.1rem solid #C4C4C4;
+    padding:0.5rem;
+    font-size:1.15rem;
+    border-radius: 1.1rem;
+    font-weight:bold;
 }
