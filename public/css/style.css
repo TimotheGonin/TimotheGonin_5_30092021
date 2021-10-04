@@ -76,6 +76,11 @@ a {
   align-items: center;
   margin-top: 0.5rem;
 }
+@media (max-width: 575.98px) {
+  .card {
+    width: 100%;
+  }
+}
 
 .logo {
   width: 25rem;
@@ -151,6 +156,13 @@ header nav {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 6rem;
+}
+@media (max-width: 575.98px) {
+  .cards-deck {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
 }
 
 .homepage-content {

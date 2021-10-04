@@ -56,4 +56,10 @@
         align-items: center;
         margin-top:0.5rem;
     }
+
+
+    //MEDIA QUERIES
+    @include mobile{
+        width: 100%;
+    }
 }
