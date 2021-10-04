@@ -1,6 +1,14 @@
-@import url(https://yarnpkg.com/en/package/normalize.css);
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 html {
   font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -14,6 +22,58 @@ a {
   background-color: #D3573C;
   border: none;
   border-radius: 0.35rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100%/3);
+  max-height: 34.2rem;
+  margin: 2rem 0;
+}
+.card .card__figure {
+  width: 20rem;
+  height: 20rem;
+}
+.card .card__figure img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.card .card__body .card__name {
+  font-size: 3.25rem;
+  font-weight: 400;
+  color: #D3573C;
+}
+.card .card__body .card__location {
+  margin-top: 0.5rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: #901C1C;
+}
+.card .card__body .card__slogan {
+  margin-top: 0.5rem;
+}
+.card .card__body .card__price {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #525252;
+}
+.card .card__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
 }
 
 .logo {
@@ -45,6 +105,7 @@ a {
 header {
   display: flex;
   flex-direction: column;
+  height: 10vh;
 }
 header aside {
   display: flex;
@@ -58,6 +119,19 @@ header nav {
 
 .tags {
   list-style: none;
+}
+
+.cards-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 6rem;
+}
+
+.homepage-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */

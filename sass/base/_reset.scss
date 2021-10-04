@@ -1,4 +1,18 @@
-@import url(https://yarnpkg.com/en/package/normalize.css);
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ MINIRESET IMPORT                                                             │
+// └──────────────────────────────────────────────────────────────────────────────┘
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ RESET ADJUST                                                                 │
+// └──────────────────────────────────────────────────────────────────────────────┘
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 a{
     text-decoration: none;

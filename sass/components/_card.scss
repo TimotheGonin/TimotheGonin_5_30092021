@@ -1,0 +1,59 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:calc(100%/3);
+    max-height:34.2rem;
+    margin: 2rem 0;
+
+
+    .card__figure{
+        width:20rem;
+        height:20rem;
+
+        img{
+            height: 100%;
+            width:100%;
+            border-radius:50%;
+            object-fit: cover;
+        }
+    }
+
+    .card__body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:1.5rem;
+
+        .card__name{
+            font-size:3.25rem;
+            font-weight: 400;
+            color: $color-secondary;
+        }
+    
+        .card__location{
+            margin-top:0.5rem;
+            font-size:1.45rem;
+            font-weight: 500;
+            color:$color-primary;
+        }
+        
+        .card__slogan{
+            margin-top:0.5rem;
+        }
+        .card__price{
+            margin-top:0.5rem;
+            font-size:1rem;
+            color:#525252;
+        }
+    }
+
+    .card__actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:0.5rem;
+    }
+}
