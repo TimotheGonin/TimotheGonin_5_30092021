@@ -26,6 +26,12 @@ a {
   height: 100%;
 }
 
+.page-title {
+  color: #901C1C;
+  font-size: 3.25rem;
+  font-weight: 400;
+}
+
 .tag {
   color: #901C1C;
   display: inline-block;
@@ -34,6 +40,20 @@ a {
   font-size: 1.15rem;
   border-radius: 1.1rem;
   font-weight: bold;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header aside {
+  display: flex;
+  justify-content: center;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .tags {

@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    flex-direction: column;
+
+    aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
