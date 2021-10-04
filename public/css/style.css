@@ -86,11 +86,27 @@ a {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 575.98px) {
+  .logo {
+    height: 3.7rem;
+    width: 50%;
+    order: 1;
+  }
+}
 
 .page-title {
   color: #901C1C;
   font-size: 3.25rem;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 575.98px) {
+  .page-title {
+    width: 50%;
+    order: 2;
+    font-size: 1.5rem;
+  }
 }
 
 .tag {
@@ -106,7 +122,6 @@ a {
 header {
   display: flex;
   flex-direction: column;
-  height: 10vh;
 }
 header aside {
   display: flex;
@@ -116,6 +131,15 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media (max-width: 575.98px) {
+  header nav {
+    flex-flow: wrap row;
+  }
+  header nav .tags {
+    order: 3;
+    margin: 3rem 0;
+  }
 }
 
 .tags {

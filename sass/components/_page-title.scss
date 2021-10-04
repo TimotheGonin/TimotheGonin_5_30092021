@@ -2,4 +2,13 @@
     color:$color-primary;
     font-size: 3.25rem;
     font-weight: 400;
+    display:flex;
+    justify-content:center;
+
+    // MEDIA QUERIES
+    @include mobile{
+        width: 50%;
+        order:2;
+        font-size:1.5rem;
+    }
 }

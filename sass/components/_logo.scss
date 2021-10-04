@@ -7,4 +7,11 @@
         width:100%;
         height:100%;
     }
+
+    // MEDIA QUERIES
+    @include mobile{
+        height:3.7rem;
+        width: 50%;
+        order:1;
+    }
 }
