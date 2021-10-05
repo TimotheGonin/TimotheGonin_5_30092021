@@ -1,0 +1,30 @@
+header {
+	display: flex;
+	flex-direction: column;
+
+	aside {
+		display: flex;
+		justify-content: center;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin-top: 2rem;
+        .tags{
+            flex-wrap: wrap;
+        }
+	}
+
+	@include tablets {
+		nav {
+			flex-flow: wrap row;
+			margin-top: 3.5rem;
+			.tags {
+				order: 3;
+				margin: 3rem 0;
+			}
+		}
+	}
+}

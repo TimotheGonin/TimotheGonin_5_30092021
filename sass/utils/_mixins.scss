@@ -1,0 +1,16 @@
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ MEDIA QUERIES                                                                │
+// └──────────────────────────────────────────────────────────────────────────────┘
+// X-Small devices (portrait phones, less than 576px)
+@mixin mobile {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin tablets {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
