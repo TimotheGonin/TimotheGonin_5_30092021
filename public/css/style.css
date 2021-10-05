@@ -146,8 +146,9 @@ header aside {
 header nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 2rem;
+  padding: 0 12rem;
 }
 header nav .tags {
   flex-wrap: wrap;
