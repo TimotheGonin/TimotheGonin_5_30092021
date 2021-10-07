@@ -18,11 +18,12 @@ a {
 
 .button {
   font-weight: bold;
+  font-size: 1.6rem;
   margin-top: 1rem;
   padding: 0.7rem;
   background-color: #D3573C;
   border: none;
-  border-radius: 0.35rem;
+  border-radius: 0.7rem;
 }
 
 .card {
@@ -174,7 +175,7 @@ header nav .tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 6rem;
+  margin: 6rem 0;
 }
 @media (max-width: 575.98px) {
   .cards-deck {
