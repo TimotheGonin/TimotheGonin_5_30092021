@@ -20,10 +20,20 @@ a {
   font-weight: bold;
   font-size: 1.6rem;
   margin-top: 1rem;
+  border-radius: 0.7rem;
   padding: 0.7rem;
   background-color: #D3573C;
   border: none;
-  border-radius: 0.7rem;
+}
+.button-contact {
+  font-weight: 600;
+  border-radius: 0.4rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.9rem;
+  color: #ffffff;
+  background-color: #901c1c;
+  padding: 2.2rem 1rem;
+  margin-top: 0;
 }
 
 .card {
@@ -165,12 +175,6 @@ header nav .tags {
   }
 }
 
-.tags {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
 .cards-deck {
   display: flex;
   flex-wrap: wrap;
@@ -183,6 +187,50 @@ header nav .tags {
     align-items: center;
     margin-top: 0;
   }
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.photographer-banner {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 14rem;
+  width: 100%;
+}
+.photographer-banner__name {
+  font-size: 6rem;
+  font-weight: 500;
+  color: #D3573C;
+  position: relative;
+}
+.photographer-banner__location {
+  margin: 0.5rem 0 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #901C1C;
+}
+.photographer-banner__slogan {
+  margin-top: 0.5rem;
+  font-size: 1.7rem;
+  color: #525252;
+}
+.photographer-banner .tags {
+  display: inline-flex;
+  margin-top: 1rem;
+}
+.photographer-banner .tags .tag {
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+}
+.photographer-banner__contact {
+  position: relative;
+  width: calc(100%/2);
 }
 
 .homepage-content {
