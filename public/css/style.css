@@ -146,6 +146,22 @@ a {
   font-weight: bold;
 }
 
+.order-by {
+  padding: 0 12rem;
+  margin: 3rem 2rem;
+}
+.order-by__label {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-right: 2rem;
+}
+.order-by__select {
+  background: #901C1C;
+  color: white;
+  padding: 2rem 3rem;
+  appearance: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
