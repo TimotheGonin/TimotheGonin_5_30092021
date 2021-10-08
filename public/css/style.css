@@ -175,6 +175,32 @@ a {
   font-weight: bold;
 }
 
+.picture-card {
+  width: calc(100%/3);
+}
+.picture-card__image {
+  width: 35rem;
+  height: 30rem;
+}
+.picture-card__image img {
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.picture-card__info {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  color: #901C1C;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.picture-card__counter-like {
+  display: flex;
+  justify-content: center;
+}
+
 header {
   display: flex;
   flex-direction: column;
