@@ -177,6 +177,10 @@ a {
 
 .picture-card {
   width: calc(100%/3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
 }
 .picture-card__image {
   width: 35rem;
@@ -195,6 +199,7 @@ a {
   color: #901C1C;
   font-weight: bold;
   font-size: 2rem;
+  width: 35rem;
 }
 .picture-card__counter-like {
   display: flex;
