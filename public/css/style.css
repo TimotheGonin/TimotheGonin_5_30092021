@@ -158,8 +158,21 @@ a {
 .order-by__select {
   background: #901C1C;
   color: white;
-  padding: 2rem 3rem;
+  padding: 1.5rem 2rem;
   appearance: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+.order-by__select option {
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+.order-by__option {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 header {
