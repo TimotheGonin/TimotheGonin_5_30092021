@@ -529,14 +529,15 @@ body {
 }
 
 .picture-card {
-  width: calc(100%/3);
+  width: 35rem;
+  height: 35.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
 }
 .picture-card__image {
-  width: 35rem;
+  width: 100%;
   height: 30rem;
 }
 .picture-card__image img {
