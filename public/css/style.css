@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap");
 *,
 ::before,
 ::after {
@@ -348,6 +349,10 @@ template {
    */
 [hidden] {
   display: none;
+}
+
+html {
+  font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 html {
