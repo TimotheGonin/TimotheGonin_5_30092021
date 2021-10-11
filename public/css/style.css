@@ -558,6 +558,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.picture-card__counter-like i {
+  margin-left: 0.5rem;
+}
 
 .photographer-counter {
   align-items: center;
