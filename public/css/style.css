@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap");
+.photographer-counter__price, .photographer-counter__likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 *,
 ::before,
 ::after {
@@ -554,6 +560,23 @@ body {
   justify-content: center;
 }
 
+.photographer-counter {
+  align-items: center;
+  background: #D3573C;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  bottom: 0;
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: space-around;
+  padding: 1.8rem;
+  position: fixed;
+  right: 3.8rem;
+  width: 37.6rem;
+}
+.photographer-counter__likes i {
+  margin-left: 0.5rem;
+}
 header {
   display: flex;
   flex-direction: column;
