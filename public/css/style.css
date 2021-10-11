@@ -660,8 +660,12 @@ header nav .tags {
   border-radius: 1.5rem;
 }
 .photographer-banner__contact {
-  position: relative;
   width: calc(100%/2);
+  position: relative;
+}
+.photographer-banner__contact .button-contact {
+  position: absolute;
+  top: 4rem;
 }
 
 .homepage-content {

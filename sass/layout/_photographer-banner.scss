@@ -36,7 +36,11 @@
 	}
 
 	&__contact {
-		position: relative;
         width:calc(100%/2);
+		position: relative;
+		.button-contact{
+			position:absolute;
+			top:4rem;
+		}
 	}
 }
