@@ -10,8 +10,10 @@
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ BASE                                                                         │
 // └──────────────────────────────────────────────────────────────────────────────┘
-@import "./base/typography";
 @import "./base/reset";
+@import "./base/normalize";
+@import "./base/typography";
+
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ COMPONENTS                                                                   │
@@ -21,6 +23,9 @@
 @import "./components/logo";
 @import "./components/page-title";
 @import "./components/tag";
+@import "./components/order-by";
+@import "./components/picture-card";
+@import "./components/photographer-counter";
 
 
 
@@ -28,8 +33,9 @@
 // │ LAYOUT                                                                       │
 // └──────────────────────────────────────────────────────────────────────────────┘
 @import "./layout/header";
-@import "./layout/tags";
 @import "./layout/cards-deck";
+@import "./layout/tags";
+@import "./layout/photographer-banner";
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ PAGES                                                                        │
