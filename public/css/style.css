@@ -501,7 +501,6 @@ body {
 }
 
 .order-by {
-  padding: 0 12rem;
   margin: 3rem 2rem;
 }
 .order-by__label {
@@ -590,7 +589,6 @@ header nav {
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
-  padding: 0 12rem;
 }
 header nav .tags {
   flex-wrap: wrap;
@@ -631,7 +629,6 @@ header nav .tags {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 0 14rem;
   width: 100%;
 }
 .photographer-banner__name {
