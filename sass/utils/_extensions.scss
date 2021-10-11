@@ -1,0 +1,15 @@
+%primray-colors {
+    background-color: $color-primary;
+    color:white;
+}
+
+%secondary-colors {
+    background-color: white;
+    color: $color-secondary;
+}
+
+%center-x-y{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

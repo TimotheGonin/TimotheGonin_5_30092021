@@ -1,0 +1,14 @@
+.cards-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin:6rem 0;
+
+
+    // MEDAI QUERIES
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+}
