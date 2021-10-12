@@ -590,6 +590,7 @@ header nav .tags {
 @media (max-width: 767.98px) {
   header nav {
     flex-flow: wrap row;
+    justify-content: center;
     margin-top: 3.5rem;
   }
   header nav .tags {
