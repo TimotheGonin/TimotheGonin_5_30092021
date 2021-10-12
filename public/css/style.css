@@ -517,6 +517,11 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
 }
+@media (max-width: 575.98px) {
+  .order-by {
+    display: none;
+  }
+}
 
 .picture-card {
   width: 35rem;
@@ -570,6 +575,12 @@ body {
 .photographer-counter__likes i {
   margin-left: 0.5rem;
 }
+@media (max-width: 575.98px) {
+  .photographer-counter {
+    display: none;
+  }
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -658,6 +669,11 @@ header nav .tags {
 .photographer-banner__contact .button-contact {
   position: absolute;
   top: 4rem;
+}
+@media (max-width: 575.98px) {
+  .photographer-banner__contact {
+    display: none;
+  }
 }
 
 .homepage-content {

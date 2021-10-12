@@ -42,5 +42,10 @@
 			position:absolute;
 			top:4rem;
 		}
+
+		// MEDIA QUERIES
+		@include mobile{
+			display: none;
+		}
 	}
 }

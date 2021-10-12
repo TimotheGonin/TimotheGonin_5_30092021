@@ -21,4 +21,9 @@
     &__price{
         @extend %center-x-y;
     }
+
+    // MEDIA QUERIES
+    @include mobile{
+        display: none;
+    }
 }

@@ -1,5 +1,4 @@
 .order-by{
-    // padding:0 12rem;
     margin: 3rem 2rem;
 
     &__label{
@@ -28,5 +27,10 @@
     &__option{
         font-size:1.5rem;
         font-weight:bold;
+    }
+
+    // MEDIA QUERIES
+    @include mobile{
+        display: none;
     }
 }
