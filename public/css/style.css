@@ -380,7 +380,7 @@ body {
   border: none;
 }
 .button-contact {
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 0.4rem;
   letter-spacing: 0.1rem;
   font-size: 1.9rem;
@@ -466,7 +466,7 @@ body {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 864.98px) {
   .page-title {
     width: 50%;
     order: 2;
@@ -598,7 +598,7 @@ header nav {
 header nav .tags {
   flex-wrap: wrap;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 864.98px) {
   header nav {
     flex-flow: wrap row;
     justify-content: center;
@@ -632,16 +632,21 @@ header nav .tags {
 
 .photographer-banner {
   margin-top: 7rem;
+  margin-bottom: 7rem;
+  padding: 0 7rem;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
+}
+.photographer-banner__body {
+  display: flex;
+  align-items: center;
 }
 .photographer-banner__name {
   font-size: 6rem;
   font-weight: 500;
   color: #D3573C;
-  position: relative;
 }
 .photographer-banner__location {
   margin: 0.5rem 0 2rem;
@@ -654,6 +659,11 @@ header nav .tags {
   font-size: 1.7rem;
   color: #525252;
 }
+.photographer-banner__contact {
+  align-self: flex-start;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
 .photographer-banner .tags {
   display: inline-flex;
   margin-top: 1rem;
@@ -662,18 +672,15 @@ header nav .tags {
   font-size: 1.5rem;
   border-radius: 1.5rem;
 }
-.photographer-banner__contact {
-  width: calc(100%/2);
-  position: relative;
+.photographer-banner .card__figure {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
-.photographer-banner__contact .button-contact {
-  position: absolute;
-  top: 4rem;
-}
-@media (max-width: 575.98px) {
-  .photographer-banner__contact {
-    display: none;
-  }
+.photographer-banner .card__figure img {
+  align-self: flex-end;
+  height: 20rem;
+  width: 20rem;
 }
 
 .homepage-content {
