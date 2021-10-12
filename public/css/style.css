@@ -575,6 +575,12 @@ body {
 .photographer-counter__likes i {
   margin-left: 0.5rem;
 }
+@media (max-width: 864.98px) {
+  .photographer-counter {
+    font-size: calc(2.5rem / 1.3);
+    width: calc(37.6rem / 1.3);
+  }
+}
 @media (max-width: 575.98px) {
   .photographer-counter {
     display: none;
