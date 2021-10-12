@@ -3,10 +3,9 @@
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    width:calc(100%/3);
-    max-height:34.2rem;
+    width:33.5rem;
+    height:34.2rem;
     margin: 2rem 0;
-
 
     &__figure{
         width:20rem;
@@ -55,15 +54,5 @@
         justify-content: center;
         align-items: center;
         margin-top:0.5rem;
-    }
-
-
-    //MEDIA QUERIES
-    @include mobile{
-        width: 100%;
-    }
-
-    @include tablets{
-        width:calc(100%/2);
     }
 }
