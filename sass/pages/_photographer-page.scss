@@ -12,3 +12,10 @@
         width:100%;
 	}
 }
+
+main{
+        @include mobile{
+                padding: 0 2rem;
+        }
+        
+}

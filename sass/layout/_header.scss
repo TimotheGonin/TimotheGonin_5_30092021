@@ -22,7 +22,7 @@ header {
 	@include tablets {
 		nav {
 			flex-flow: wrap row;
-			justify-content: center;
+			// justify-content: center;
 			margin-top: 3.5rem;
 			.tags {
 				order: 3;

@@ -563,7 +563,7 @@ body {
 }
 @media (max-width: 575.98px) {
   .picture-card {
-    width: 35rem;
+    width: 33.5rem;
     height: 21.8rem;
     margin: 0 0 1.5rem;
   }
@@ -577,6 +577,7 @@ body {
   .picture-card__info {
     font-size: 1.4rem;
     font-weight: 500;
+    width: 100%;
   }
   .picture-card__title {
     font-weight: 500;
@@ -626,7 +627,6 @@ header nav .tags {
 @media (max-width: 864.98px) {
   header nav {
     flex-flow: wrap row;
-    justify-content: center;
     margin-top: 3.5rem;
   }
   header nav .tags {
@@ -667,6 +667,8 @@ header nav .tags {
 @media (max-width: 575.98px) {
   .photographer-banner {
     padding: 0;
+    margin-top: 3.5rem;
+    margin-bottom: 4rem;
   }
 }
 .photographer-banner__body {
@@ -778,6 +780,12 @@ header nav .tags {
     justify-content: space-around;
     position: fixed;
     width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  main {
+    padding: 0 2rem;
   }
 }
 

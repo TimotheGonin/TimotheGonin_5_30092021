@@ -38,7 +38,7 @@
 
     //MEDIA QUERIES
     @include mobile{
-        width:35rem;
+        width:33.5rem;
         height:21.8rem;
         margin: 0 0 1.5rem;
         &__image{
@@ -53,6 +53,7 @@
         &__info{
             font-size:1.4rem;
             font-weight:500;
+            width:100%;
         }
 
         &__title{
