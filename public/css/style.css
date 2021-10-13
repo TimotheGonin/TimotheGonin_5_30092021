@@ -391,7 +391,7 @@ body {
 }
 .button-contact--small {
   padding: 0.8rem 1.8rem;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 
 .card {
@@ -672,9 +672,6 @@ header nav .tags {
   .photographer-banner__contact .button-contact {
     display: none;
   }
-  .photographer-banner__contact .button-contact--small {
-    display: block;
-  }
 }
 .photographer-banner .tags {
   display: inline-flex;
@@ -699,6 +696,21 @@ header nav .tags {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.photographer-contact {
+  display: none;
+}
+@media (max-width: 864.98px) {
+  .photographer-contact {
+    align-items: center;
+    bottom: 3rem;
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

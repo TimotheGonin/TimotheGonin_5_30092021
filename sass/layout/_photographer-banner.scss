@@ -40,10 +40,6 @@
 		@include tablets{
 			.button-contact{
 				display:none;
-
-				&--small{
-					display:block;
-				}
 			}
 		}
 	}
