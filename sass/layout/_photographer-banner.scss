@@ -35,7 +35,19 @@
 		align-self: flex-start;
 		margin-top: 4rem;
 		margin-left: 4rem;
+
+		//MEDIA QUERIES
+		@include tablets{
+			.button-contact{
+				display:none;
+
+				&--small{
+					display:block;
+				}
+			}
+		}
 	}
+
 	.tags {
 		display: inline-flex;
 		margin-top: 1rem;

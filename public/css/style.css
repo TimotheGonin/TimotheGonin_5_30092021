@@ -389,6 +389,10 @@ body {
   padding: 2.2rem 1rem;
   margin-top: 0;
 }
+.button-contact--small {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.6rem;
+}
 
 .card {
   display: flex;
@@ -577,12 +581,6 @@ body {
 }
 @media (max-width: 864.98px) {
   .photographer-counter {
-    font-size: calc(2.5rem / 1.3);
-    width: calc(37.6rem / 1.3);
-  }
-}
-@media (max-width: 575.98px) {
-  .photographer-counter {
     display: none;
   }
 }
@@ -669,6 +667,14 @@ header nav .tags {
   align-self: flex-start;
   margin-top: 4rem;
   margin-left: 4rem;
+}
+@media (max-width: 864.98px) {
+  .photographer-banner__contact .button-contact {
+    display: none;
+  }
+  .photographer-banner__contact .button-contact--small {
+    display: block;
+  }
 }
 .photographer-banner .tags {
   display: inline-flex;

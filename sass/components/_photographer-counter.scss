@@ -24,12 +24,6 @@
 
 	// MEDIA QUERIES
 	@include tablets {
-        font-size: calc(2.5rem / 1.3);
-        width: calc(37.6rem / 1.3);
-	}
-
-	// MEDIA QUERIES
-	@include mobile {
-		display: none;
+        display:none;
 	}
 }
