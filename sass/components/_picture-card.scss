@@ -35,4 +35,28 @@
         margin-left:0.5rem;
         }
     }
+
+    //MEDIA QUERIES
+    @include mobile{
+        width:35rem;
+        height:21.8rem;
+        margin: 0 0 1.5rem;
+        &__image{
+            height: 19rem;
+            object-fit:contain;
+
+            img{
+                object-position: 0 20%;
+            }
+        }
+
+        &__info{
+            font-size:1.4rem;
+            font-weight:500;
+        }
+
+        &__title{
+            font-weight:500;
+        }
+    }
 }

@@ -561,6 +561,27 @@ body {
 .picture-card__counter-like i {
   margin-left: 0.5rem;
 }
+@media (max-width: 575.98px) {
+  .picture-card {
+    width: 35rem;
+    height: 21.8rem;
+    margin: 0 0 1.5rem;
+  }
+  .picture-card__image {
+    height: 19rem;
+    object-fit: contain;
+  }
+  .picture-card__image img {
+    object-position: 0 20%;
+  }
+  .picture-card__info {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .picture-card__title {
+    font-weight: 500;
+  }
+}
 
 .photographer-counter {
   align-items: center;
