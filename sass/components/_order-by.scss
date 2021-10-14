@@ -30,6 +30,8 @@
     }
 
     // MEDIA QUERIES
+
+    //--mobile
     @include mobile{
         display: none;
     }

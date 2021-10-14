@@ -15,6 +15,10 @@ display:none;
 }
 
 main{
+
+	//MEDIA QUERIES
+
+	//--mobile
 	@include mobile{
 		padding: 0 2rem;
 	}

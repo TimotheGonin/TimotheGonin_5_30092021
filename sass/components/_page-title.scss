@@ -6,14 +6,16 @@
     justify-content:center;
 
     // MEDIA QUERIES
+
+    //--tablets
     @include tablets{
         width: 50%;
         order:2;
         font-size:2.5rem;
     }
+
+    //--mobile
     @include mobile{
-        // width: 50%;
-        // order:2;
         font-size:1.5rem;
     }
 }

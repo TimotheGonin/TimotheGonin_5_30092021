@@ -20,6 +20,8 @@ header {
 	}
 
 	//MEDIA QUERIES
+
+	//--tablets
 	@include tablets {
 		nav {
 			flex-flow: wrap row;
@@ -32,6 +34,7 @@ header {
 		}
 	}
 
+	//--mobile
 	@include mobile{
 		padding: 0 2rem;
 		margin:0;
