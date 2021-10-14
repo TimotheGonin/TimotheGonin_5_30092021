@@ -7,13 +7,6 @@
 	flex-direction: column;
 	width: 100%;
 
-	//MEDIA QUERIES
-	@include mobile{
-		padding: 0;
-		margin-top: 3.5rem;
-		margin-bottom: 4rem;
-	}
-
 	&__body {
 		display: flex;
 		align-items: center;
@@ -24,12 +17,6 @@
 		font-size: 6rem;
 		font-weight: 500;
 		color: $color-secondary;
-		//MEDIA QUERIES
-		@include mobile{
-			font-size:3.6rem;
-			margin:0;
-			font-weight: 400;
-		}
 	}
 
 	&__location {
@@ -37,23 +24,12 @@
 		font-size: 2.5rem;
 		font-weight: 500;
 		color: $color-primary;
-
-		//MEDIA QUERIES
-		@include mobile{
-			font-size:1.3rem;
-			margin:0.5rem 0 1rem;
-		}
 	}
 
 	&__slogan {
 		margin-top: 0.5rem;
 		font-size: 1.7rem;
 		color: #525252;
-
-		//MEDIA QUERIES
-		@include mobile{
-			font-size:1.3rem;
-		}
 	}
 
 	&__contact{
@@ -77,9 +53,44 @@
 			font-size: 1.5rem;
 			border-radius: 1.5rem;
 		}
+	}
 
-		//MEDIA QUERIES
-		@include mobile{
+	.card__figure{
+		display: flex;
+		justify-content: flex-end;
+		flex-grow: 1;
+
+		img{
+			align-self: flex-end;
+			height:20rem;
+			width:20rem;
+		}
+	}
+
+	//MEDIA QUERIES
+
+	//--mobile
+	@include mobile{
+		padding: 0;
+		margin-top: 3.5rem;
+		margin-bottom: 4rem;
+
+		&__name{
+			font-size:3.6rem;
+			margin:0;
+			font-weight: 400;
+		}
+
+		&__location{
+			font-size:1.3rem;
+			margin:0.5rem 0 1rem;
+		}
+
+		&__slogan{
+			font-size:1.3rem;
+		}
+
+		.tags{
 			margin:0;
 
 			.tag{
@@ -87,26 +98,13 @@
 				padding:0.3rem 0.5rem;
 			}
 		}
-	}
-	.card__figure{
-		display: flex;
-		justify-content: flex-end;
-		flex-grow: 1;
 
-		// MEDIA QUERIES
-		@include mobile{
+		.card__figure{
 			flex-grow: 0;
 			height:inherit;
 			width:inherit;
-		}
 
-		img{
-			align-self: flex-end;
-			height:20rem;
-			width:20rem;
-
-			//MEDIA QUERIES
-			@include mobile{
+			img{
 				align-self: center;
 				height:10rem;
 				width:10rem;
