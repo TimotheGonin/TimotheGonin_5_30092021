@@ -1,6 +1,7 @@
 header {
 	display: flex;
 	flex-direction: column;
+	margin:0 2rem;
 
 	aside {
 		display: flex;
@@ -29,5 +30,10 @@ header {
 				margin: 3rem 0;
 			}
 		}
+	}
+
+	@include mobile{
+		padding: 0 2rem;
+		margin:0;
 	}
 }

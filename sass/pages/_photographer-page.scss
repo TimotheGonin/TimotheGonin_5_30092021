@@ -1,22 +1,22 @@
 .photographer-contact {
-	display:none;
+display:none;
 
-	// MEDIA QUERIES
-	@include tablets {
-        align-items: center;
-        bottom: 3rem;
-        display: flex;
-        font-size: 2.5rem;
-        justify-content: center;
-        position: fixed;
-        width: 100%;
-        margin-left: -2rem;
-	}
+// MEDIA QUERIES
+@include tablets {
+	align-items: center;
+	bottom: 3rem;
+	display: flex;
+	font-size: 2.5rem;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	margin-left: -2rem;
+}
 }
 
 main{
-        @include mobile{
-                padding: 0 2rem;
-        }
-        
+	@include mobile{
+		padding: 0 2rem;
+	}
+	
 }

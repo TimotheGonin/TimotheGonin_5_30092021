@@ -447,7 +447,7 @@ body {
 }
 
 .logo {
-  width: 25rem;
+  width: 20rem;
   height: 5rem;
 }
 .logo img {
@@ -460,6 +460,9 @@ body {
     height: 3.7rem;
     width: 50%;
     order: 1;
+  }
+  .logo img {
+    width: 15rem;
   }
 }
 
@@ -610,6 +613,7 @@ body {
 header {
   display: flex;
   flex-direction: column;
+  margin: 0 2rem;
 }
 header aside {
   display: flex;
@@ -632,6 +636,12 @@ header nav .tags {
   header nav .tags {
     order: 3;
     margin: 3rem 0;
+  }
+}
+@media (max-width: 575.98px) {
+  header {
+    padding: 0 2rem;
+    margin: 0;
   }
 }
 
