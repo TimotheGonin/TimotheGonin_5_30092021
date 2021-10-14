@@ -25,10 +25,10 @@ header {
 	@include tablets {
 		nav {
 			flex-flow: wrap row;
-			// justify-content: center;
 			margin-top: 3.5rem;
 			.tags {
 				order: 3;
+				width: 100%;
 				margin: 3rem 0;
 			}
 		}

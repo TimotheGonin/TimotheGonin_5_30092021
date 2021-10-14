@@ -645,6 +645,7 @@ header nav .tags {
   }
   header nav .tags {
     order: 3;
+    width: 100%;
     margin: 3rem 0;
   }
 }
