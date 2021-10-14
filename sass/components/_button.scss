@@ -8,7 +8,7 @@
 	border: none;
 
     &-contact{
-        font-weight:600;
+        font-weight:500;
         border-radius: 0.4rem;
         letter-spacing:0.1rem;
         font-size: 1.9rem;
@@ -16,5 +16,11 @@
         background-color: #901c1c;
         padding: 2.2rem 1rem;
         margin-top: 0;
+
+        &--small{
+            padding: 0.8rem 1.8rem;
+            font-size:1.7rem;
+        }
     }
+    
 }
