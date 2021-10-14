@@ -700,11 +700,6 @@ header nav .tags {
   margin-top: 4rem;
   margin-left: 4rem;
 }
-@media (max-width: 991.98px) {
-  .photographer-banner__contact .button-contact {
-    display: none;
-  }
-}
 .photographer-banner .tags {
   display: inline-flex;
   margin-top: 1rem;
@@ -722,6 +717,11 @@ header nav .tags {
   align-self: flex-end;
   height: 20rem;
   width: 20rem;
+}
+@media (max-width: 991.98px) {
+  .photographer-banner__contact .button-contact {
+    display: none;
+  }
 }
 @media (max-width: 575.98px) {
   .photographer-banner {

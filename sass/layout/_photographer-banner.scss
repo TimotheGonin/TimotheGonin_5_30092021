@@ -36,13 +36,6 @@
 		align-self: flex-start;
 		margin-top: 4rem;
 		margin-left: 4rem;
-
-		//MEDIA QUERIES
-		@include tablets{
-			.button-contact{
-				display:none;
-			}
-		}
 	}
 
 	.tags {
@@ -68,6 +61,15 @@
 	}
 
 	//MEDIA QUERIES
+
+	//--tablets
+	@include tablets{
+		&__contact{
+			.button-contact{
+				display:none;
+			}
+		}
+	}
 
 	//--mobile
 	@include mobile{
