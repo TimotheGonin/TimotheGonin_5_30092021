@@ -739,6 +739,10 @@ header nav .tags {
   .photographer-banner__slogan {
     font-size: 1.5rem;
   }
+  .photographer-banner .card__figure img {
+    height: 15rem;
+    width: 15rem;
+  }
 }
 @media (max-width: 575.98px) {
   .photographer-banner {

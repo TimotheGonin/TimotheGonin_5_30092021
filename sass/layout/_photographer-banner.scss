@@ -84,8 +84,16 @@
 		&__location{
 			font-size:2rem;
 		}
+
 		&__slogan{
 			font-size:1.5rem;
+		}
+
+		.card__figure{
+			img{
+				height:15rem;
+				width:15rem;
+			}
 		}
 	}
 
