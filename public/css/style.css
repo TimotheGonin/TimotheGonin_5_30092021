@@ -534,6 +534,7 @@ body {
   width: 35rem;
   height: 35.1rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
@@ -564,6 +565,21 @@ body {
 .picture-card__counter-like i {
   margin-left: 0.5rem;
 }
+@media (max-width: 991.98px) {
+  .picture-card {
+    width: 55%;
+  }
+  .picture-card__image img {
+    object-position: 0 20%;
+  }
+  .picture-card__info {
+    font-weight: 500;
+    width: 100%;
+  }
+  .picture-card__title {
+    font-weight: 500;
+  }
+}
 @media (max-width: 575.98px) {
   .picture-card {
     width: 33.5rem;
@@ -574,16 +590,10 @@ body {
     height: 19rem;
     object-fit: contain;
   }
-  .picture-card__image img {
-    object-position: 0 20%;
-  }
   .picture-card__info {
     font-size: 1.4rem;
     font-weight: 500;
     width: 100%;
-  }
-  .picture-card__title {
-    font-weight: 500;
   }
 }
 
