@@ -723,15 +723,30 @@ header nav .tags {
     display: none;
   }
 }
+@media (max-width: 767.98px) {
+  .photographer-banner {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    padding: 0 2rem;
+  }
+  .photographer-banner__name {
+    font-size: 4.5rem;
+    margin: 0;
+  }
+  .photographer-banner__location {
+    font-size: 2rem;
+  }
+  .photographer-banner__slogan {
+    font-size: 1.5rem;
+  }
+}
 @media (max-width: 575.98px) {
   .photographer-banner {
     padding: 0;
-    margin-top: 3.5rem;
     margin-bottom: 4rem;
   }
   .photographer-banner__name {
     font-size: 3.6rem;
-    margin: 0;
     font-weight: 400;
   }
   .photographer-banner__location {
