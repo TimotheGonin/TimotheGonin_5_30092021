@@ -30,13 +30,17 @@ cardLink.setAttribute('href','photographer.html');
 cardHeader.classList.add('card__header');
 cardFigure.classList.add('card__figure');
 cardPicture.setAttribute('src', '../public/img/Photographers_ID_Photos/EllieRoseWilkens.jpg');
-//BODY--CLASS/ATTRIBUTES
+//BODY--CLASS
 cardBody.classList.add('card__body');
 cardName.classList.add('card__name');
 cardLocation.classList.add('card__location');
 cardSlogan.classList.add('card__slogan');
 cardPrice.classList.add('card__price');
-
+//BODY--TEXTCONTENT
+cardName.textContent = "Ellie-Rose Wilkens";
+cardLocation.textContent = "Paris, France";
+cardSlogan.textContent = "Travaille sur des compositions complexes";
+cardPrice.textContent = "250€/jour";
 
 //give child to elements
 mainContent.appendChild(card);
