@@ -20,6 +20,11 @@ let cardName = document.createElement('h2');
 let cardLocation = document.createElement('p');
 let cardSlogan = document.createElement('p');
 let cardPrice = document.createElement('p');
+//FOOTER--ELEMENTS
+let cardFooter = document.createElement('footer');
+let cardActions = document.createElement('div');
+let tags = document.createElement('ul');
+let tag = document.createElement('li');
 
 
 //give class name and attribute
