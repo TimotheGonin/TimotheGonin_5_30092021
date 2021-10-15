@@ -403,6 +403,10 @@ body {
   height: 34.2rem;
   margin: 2rem 0;
 }
+.card__header {
+  display: flex;
+  justify-content: center;
+}
 .card__figure {
   width: 20rem;
   height: 20rem;
