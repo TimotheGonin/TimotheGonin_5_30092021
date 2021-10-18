@@ -24,12 +24,14 @@ let cardPrice = document.createElement('p');
 let cardFooter = document.createElement('footer');
 let cardActions = document.createElement('div');
 let tags = document.createElement('ul');
-let tag = document.createElement('li');
+//FOOTER--DATA
+let tagList = ['#sport', '#architecture'];
 
 
 //give class name and attribute
 card.classList.add('card');
 cardLink.setAttribute('href','photographer.html');
+
 
 //HEADER--CLASS/ATTRIBUTES
 cardHeader.classList.add('card__header');
@@ -46,19 +48,33 @@ cardName.textContent = "Ellie-Rose Wilkens";
 cardLocation.textContent = "Paris, France";
 cardSlogan.textContent = "Travaille sur des compositions complexes";
 cardPrice.textContent = "250€/jour";
+//FOOTER--CLASS
+cardFooter.classList.add('card__footer');
+cardActions.classList.add('card__actions');
+tags.classList.add('card__tags');
 
 //give child to elements
 mainContent.appendChild(card);
 card.appendChild(cardLink);
+card.appendChild(cardFooter);
 
 //HEADER--CHILD
 cardLink.appendChild(cardHeader);
 cardHeader.appendChild(cardFigure);
 cardFigure.appendChild(cardPicture);
-
 //BODY--CHILD
 cardLink.appendChild(cardBody);
 cardBody.appendChild(cardName);
 cardBody.appendChild(cardLocation);
 cardBody.appendChild(cardSlogan);
 cardBody.appendChild(cardPrice);
+//FOOTER--CHILD
+cardFooter.appendChild(cardActions);
+cardActions.appendChild(tags);
+
+for (tagValue of tagList){
+    let tag = document.createElement('li');
+    tag.textContent += tagValue;
+    tag.classList.add('tag');
+    tags.appendChild(tag);
+}
