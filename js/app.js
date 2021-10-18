@@ -36,7 +36,7 @@ cardLink.setAttribute('href','photographer.html');
 //HEADER--CLASS/ATTRIBUTES
 cardHeader.classList.add('card__header');
 cardFigure.classList.add('card__figure');
-cardPicture.setAttribute('src', '../public/img/Photographers_ID_Photos/EllieRoseWilkens.jpg');
+cardPicture.setAttribute('src', 'public/img/Photographers_ID_Photos/EllieRoseWilkens.jpg');
 //BODY--CLASS
 cardBody.classList.add('card__body');
 cardName.classList.add('card__name');
