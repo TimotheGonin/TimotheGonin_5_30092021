@@ -78,3 +78,26 @@ for (tagValue of tagList){
     tag.classList.add('tag');
     tags.appendChild(tag);
 }
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ TEST FETCH                                                                   │
+// └──────────────────────────────────────────────────────────────────────────────┘
+const url = '/data/fisheye_data.json';
+
+async function getData(){
+
+    //req settings
+    const request = await fetch(url,{
+        method: 'GET'
+    });
+
+    //verification - display
+    if(!request.ok){
+        alert('Un problème est survenu.');
+    } else {
+        let data = await request.json();
+        console.log(data);
+    }
+}
+
+getData();
