@@ -96,8 +96,25 @@ async function getData(){
         alert('Un problème est survenu.');
     } else {
         let data = await request.json();
-        console.log(data);
+        console.log(data.media);
+        await getPhotographers(data);
+        await getMedia(data);
     }
 }
 
 getData();
+
+//GET PHOTOGRAPHERS
+async function getPhotographers(data){
+    let photographersData = data.photographers;
+    return () => {
+        return photographersData;
+    }
+}
+
+//GET MEDIA
+async function getMedia(data){
+    const mediaData = data.media;
+    return media;
+}
+
