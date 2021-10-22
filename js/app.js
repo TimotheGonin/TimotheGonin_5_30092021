@@ -187,4 +187,13 @@ async function createCard(data){
     //FOOTER--CHILD
     cardFooter.appendChild(cardActions);
     cardActions.appendChild(tags);
+
+
+    //LOOP TAG LIST
+    for (tagValue of data.photographers[1].tags){
+        let tag = document.createElement('li');
+        tag.textContent += `#${tagValue}`;
+        tag.classList.add('tag');
+        tags.appendChild(tag);
+    }
 }
