@@ -9,7 +9,7 @@ const mainContent = document.getElementById('main-content');
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ FETCH                                                                        │
 // └──────────────────────────────────────────────────────────────────────────────┘
-const url = '/data/fisheye_data.json';
+const url = 'data/fisheye_data.json';
 
 async function getData(){
 
