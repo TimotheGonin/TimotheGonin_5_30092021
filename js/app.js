@@ -73,7 +73,7 @@ async function createCard(data){
 
     //give class name and attribute
     card.classList.add('card');
-    cardLink.setAttribute('href','photographer.html');
+    cardLink.setAttribute('href',`photographer.html?id=${data.photographers[1].id}`);
 
 
     //HEADER--CLASS/ATTRIBUTES
