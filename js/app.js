@@ -23,31 +23,15 @@ async function getData(){
         alert('Un problème est survenu.');
     } else {
         let data = await request.json();
-        // console.log(data.media);
-        // await getPhotographers(data);
-        // await getMedia(data);
-        await createCard(data);
+        
+        createCard(data);
     }
 }
 
 getData();
 
-// //GET PHOTOGRAPHERS
-// async function getPhotographers(data){
-//     let photographersData = data.photographers;
-//     return () => {
-//         return photographersData;
-//     }
-// }
-
-// //GET MEDIA
-// async function getMedia(data){
-//     const mediaData = data.media;
-//     return media;
-// }
-
 // CREATE PHTOGRAPHER CARD
-async function createCard(data){
+function createCard(data){
 
     //create elements
     let card = document.createElement('article');
