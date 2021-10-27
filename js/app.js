@@ -108,3 +108,33 @@ function createCard(data){
         tags.appendChild(tag);
     }
 }
+
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ FACTORY METHOD                                                               │
+// └──────────────────────────────────────────────────────────────────────────────┘
+
+//Create card 
+function card(tag, className){
+    return {
+        //settings
+        tag,
+        className,
+
+        //method
+        create(){
+            this.element = document.createElement(tag);
+        },
+        setClassName(){
+            this.element.classList.add(className);
+        },
+        launch(parent){
+            parent.append(this.element);
+        }
+    }
+}
+
+const newCard = card('arcticle', 'cardtest');
+newCard.create();
+newCard.setClassName();
+newCard.launch(mainContent);
