@@ -7,6 +7,11 @@
     height:34.2rem;
     margin: 2rem 0;
 
+    &__header{
+        display: flex;
+        justify-content: center;
+    }
+    
     &__figure{
         width:20rem;
         height:20rem;
