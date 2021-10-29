@@ -23,15 +23,17 @@ async function getData(){
         alert('Un problème est survenu.');
     } else {
         let data = await request.json();
-        
-        createCard(data);
+
+        for (let index = 0; index < data.photographers.length; index++) {
+            createCard(data, index);
+        }
     }
 }
 
 getData();
 
 // CREATE PHTOGRAPHER CARD
-function createCard(data){
+function createCard(data, index){
 
     //create elements
     let card = document.createElement('article');
@@ -57,13 +59,13 @@ function createCard(data){
 
     //give class name and attribute
     card.classList.add('card');
-    cardLink.setAttribute('href',`photographer.html?id=${data.photographers[1].id}`);
+    cardLink.setAttribute('href',`photographer.html?id=${data.photographers[index].id}`);
 
 
     //HEADER--CLASS/ATTRIBUTES
     cardHeader.classList.add('card__header');
     cardFigure.classList.add('card__figure');
-    cardPicture.setAttribute('src', `public/img/Photographers_ID_Photos/${data.photographers[1].portrait}`);
+    cardPicture.setAttribute('src', `public/img/Photographers_ID_Photos/${data.photographers[index].portrait}`);
     //BODY--CLASS
     cardBody.classList.add('card__body');
     cardName.classList.add('card__name');
@@ -71,10 +73,10 @@ function createCard(data){
     cardSlogan.classList.add('card__slogan');
     cardPrice.classList.add('card__price');
     //BODY--TEXTCONTENT
-    cardName.textContent = data.photographers[1].name;
-    cardLocation.textContent = `${data.photographers[1].city}, ${data.photographers[1].country}`;
-    cardSlogan.textContent = `${data.photographers[1].tagline}`;
-    cardPrice.textContent = `${data.photographers[1].price}/jours`;
+    cardName.textContent = data.photographers[index].name;
+    cardLocation.textContent = `${data.photographers[index].city}, ${data.photographers[index].country}`;
+    cardSlogan.textContent = `${data.photographers[index].tagline}`;
+    cardPrice.textContent = `${data.photographers[index].price}/jours`;
     //FOOTER--CLASS
     cardFooter.classList.add('card__footer');
     cardActions.classList.add('card__actions');
@@ -101,10 +103,40 @@ function createCard(data){
 
 
     //LOOP TAG LIST
-    for (tagValue of data.photographers[1].tags){
+    for (tagValue of data.photographers[index].tags){
         let tag = document.createElement('li');
         tag.textContent += `#${tagValue}`;
         tag.classList.add('tag');
         tags.appendChild(tag);
     }
 }
+
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ FACTORY METHOD                                                               │
+// └──────────────────────────────────────────────────────────────────────────────┘
+
+// //Create card 
+// function card(tag, className){
+//     return {
+//         //settings
+//         tag,
+//         className,
+
+//         //method
+//         create(){
+//             this.element = document.createElement(tag);
+//         },
+//         setClassName(){
+//             this.element.classList.add(className);
+//         },
+//         launch(parent){
+//             parent.append(this.element);
+//         }
+//     }
+// }
+
+// const newCard = card('arcticle', 'cardtest');
+// newCard.create();
+// newCard.setClassName();
+// newCard.launch(mainContent);
