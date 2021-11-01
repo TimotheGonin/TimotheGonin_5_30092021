@@ -6,6 +6,9 @@ console.log(pageUrl);
 const id = pageUrl.searchParams.get("id");
 console.log(id);
 
+//KEEP INFO CORRESPONDING ID
+let photographerInfo = [];
+
 
 //FETCH FROM JSON
 fetch("data/fisheye_data.json")
@@ -15,11 +18,21 @@ fetch("data/fisheye_data.json")
 
         //LOOP ID
         for ( kind of data.photographers){
-            console.log(kind.id);
+            photographerInfo.push(kind.name);
+            photographerInfo.push(kind.city);
+            photographerInfo.push(kind.country);
+            photographerInfo.push(kind.tags);
+            photographerInfo.push(kind.tagline);
+            photographerInfo.push(kind.price);
+            photographerInfo.push(kind.portrait);
+            console.log(photographerInfo);
 
             if(kind.id == id){
                 console.log(`${kind.id} : ID from .JSON == ${id} Id in URL`);
                 return;
+            } else {
+                //remove array
+                photographerInfo = [];
             }
         }
     })
