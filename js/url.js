@@ -16,19 +16,19 @@ fetch("data/fisheye_data.json")
     .then(data => {
         console.log(data.photographers);
 
-        //LOOP ID
-        for ( kind of data.photographers){
-            photographerInfo.push(kind.name);
-            photographerInfo.push(kind.city);
-            photographerInfo.push(kind.country);
-            photographerInfo.push(kind.tags);
-            photographerInfo.push(kind.tagline);
-            photographerInfo.push(kind.price);
-            photographerInfo.push(kind.portrait);
+        //LOOP ID + STOCK DATA(photographer corresponding to ID in URL)
+        for ( photographer of data.photographers){
+            photographerInfo.push(photographer.name);
+            photographerInfo.push(photographer.city);
+            photographerInfo.push(photographer.country);
+            photographerInfo.push(photographer.tags);
+            photographerInfo.push(photographer.tagline);
+            photographerInfo.push(photographer.price);
+            photographerInfo.push(photographer.portrait);
             console.log(photographerInfo);
 
-            if(kind.id == id){
-                console.log(`${kind.id} : ID from .JSON == ${id} Id in URL`);
+            if(photographer.id == id){
+                console.log(`${photographer.id} : ID from .JSON == ${id} Id in URL`);
                 return;
             } else {
                 //remove array
