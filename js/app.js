@@ -24,6 +24,7 @@ async function getData(){
     } else {
         let data = await request.json();
 
+        //LOOP TO DISPLAY THE DATA
         for (let index = 0; index < data.photographers.length; index++) {
             createCard(data, index);
         }
@@ -53,9 +54,6 @@ function createCard(data, index){
     let cardFooter = document.createElement('footer');
     let cardActions = document.createElement('div');
     let tags = document.createElement('ul');
-    //FOOTER--DATA
-    let tagList = ['#sport', '#architecture'];
-
 
     //give class name and attribute
     card.classList.add('card');
@@ -76,7 +74,7 @@ function createCard(data, index){
     cardName.textContent = data.photographers[index].name;
     cardLocation.textContent = `${data.photographers[index].city}, ${data.photographers[index].country}`;
     cardSlogan.textContent = `${data.photographers[index].tagline}`;
-    cardPrice.textContent = `${data.photographers[index].price}/jours`;
+    cardPrice.textContent = `${data.photographers[index].price}€/jours`;
     //FOOTER--CLASS
     cardFooter.classList.add('card__footer');
     cardActions.classList.add('card__actions');
