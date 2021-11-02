@@ -51,11 +51,15 @@ function createBanner() {
     let bannerFigure = document.createElement('figure');
     let bannerPicture = document.createElement('img');
 
+    let bannerFooter = document.createElement('div');
+    let tags = document.createElement('ul');
+    let tagList = ['#art', '#fashion', '#events'];
+
     //ADD CLASS - ATTRIBUTE
     banner.classList.add('photographer-banner');
     bannerBody.classList.add('photographer-banner__body');
     bannerInfo.classList.add('photographer-banner__info');
-    bannerContact.classList.add('photographer-banner__contat');
+    bannerContact.classList.add('photographer-banner__contact');
 
     bannerName.classList.add('photographer-banner__name');
     bannerLocation.classList.add('photographer-banner__location');
@@ -64,6 +68,8 @@ function createBanner() {
     contactButton.classList.add('button-contact');
     bannerFigure.classList.add('card__figure');
     bannerPicture.setAttribute('src','public/img/Photographers_ID_Photos/TracyGalindo.jpg');
+    bannerFooter.classList.add('photographer-banner__footer');
+    tags.classList.add('tags');
 
     //CONTENT
     bannerName.textContent = 'Tracy Galindo';
@@ -82,6 +88,16 @@ function createBanner() {
     bannerContact.append(contactButton);
     bannerBody.append(bannerFigure);
     bannerFigure.append(bannerPicture);
+    banner.append(bannerFooter);
+    bannerFooter.append(tags);
+
+    //LOOP TAG LIST
+    for (tagValue of tagList){
+        let tag = document.createElement('li');
+        tag.textContent += tagValue ;
+        tag.classList.add('tag');
+        tags.appendChild(tag);
+    }
 }
 
 createBanner();
