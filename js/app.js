@@ -74,7 +74,7 @@ function createCard(data, index){
     cardName.textContent = data.photographers[index].name;
     cardLocation.textContent = `${data.photographers[index].city}, ${data.photographers[index].country}`;
     cardSlogan.textContent = `${data.photographers[index].tagline}`;
-    cardPrice.textContent = `${data.photographers[index].price}/jours`;
+    cardPrice.textContent = `${data.photographers[index].price}€/jours`;
     //FOOTER--CLASS
     cardFooter.classList.add('card__footer');
     cardActions.classList.add('card__actions');
