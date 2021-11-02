@@ -13,29 +13,23 @@ const main = document.querySelector('main');
 fetch("data/fisheye_data.json")
     .then(response => response.json())
     .then(data => {
-        console.table(data.photographers);
+        // console.table(data.photographers);
 
         //LOOP ID + STOCK DATA(photographer corresponding to ID in URL)
         for ( photographer of data.photographers){
-            // photographerInfo.push(photographer.name);
-            // photographerInfo.push(photographer.city);
-            // photographerInfo.push(photographer.country);
-            // photographerInfo.push(photographer.tags);
-            // photographerInfo.push(photographer.tagline);
-            // photographerInfo.push(photographer.price);
-            // photographerInfo.push(photographer.portrait);
-            // console.log(photographerInfo);
 
             if(photographer.id == id){
-                // console.log(`${photographer.id} : ID from .JSON == ${id} Id in URL`);
-                // return;
-                //fonction => create banner photographe (àfaire);
-                // 
+                // console.log(photographer.name);
+                // console.log(photographer.city);
+                // console.log(photographer.country);
+                // console.log(photographer.tagline);
+                // console.log(typeOf(photographer.id));
+                createBanner(photographer);
             }
         }
     });
 
-function createBanner() {
+function createBanner(data) {
 
     //BLOCKS
     let banner = document.createElement('section');
@@ -67,14 +61,14 @@ function createBanner() {
     contactButton.classList.add('button');
     contactButton.classList.add('button-contact');
     bannerFigure.classList.add('card__figure');
-    bannerPicture.setAttribute('src','public/img/Photographers_ID_Photos/TracyGalindo.jpg');
+    bannerPicture.setAttribute('src',`public/img/Photographers_ID_Photos/${photographer.portrait}`);
     bannerFooter.classList.add('photographer-banner__footer');
     tags.classList.add('tags');
 
     //CONTENT
-    bannerName.textContent = 'Tracy Galindo';
-    bannerLocation.textContent = 'Montreal, Canada';
-    bannerSlogan.textContent = 'Photographe freelance';
+    bannerName.textContent = `${photographer.name}`;
+    bannerLocation.textContent = `${photographer.city}, ${photographer.country}`;
+    bannerSlogan.textContent = `${photographer.tagline}`;
     contactButton.textContent = 'Contactez-moi';
 
     //CHILD
@@ -92,12 +86,17 @@ function createBanner() {
     bannerFooter.append(tags);
 
     //LOOP TAG LIST
-    for (tagValue of tagList){
+    // for (tagValue of tagList){
+    //     let tag = document.createElement('li');
+    //     tag.textContent += tagValue ;
+    //     tag.classList.add('tag');
+    //     tags.appendChild(tag);
+    // }
+
+    for (tagValue of photographer.tags){
         let tag = document.createElement('li');
-        tag.textContent += tagValue ;
+        tag.textContent += `#${tagValue}`;
         tag.classList.add('tag');
         tags.appendChild(tag);
     }
 }
-
-createBanner();

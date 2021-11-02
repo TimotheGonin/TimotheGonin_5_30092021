@@ -53,9 +53,6 @@ function createCard(data, index){
     let cardFooter = document.createElement('footer');
     let cardActions = document.createElement('div');
     let tags = document.createElement('ul');
-    //FOOTER--DATA
-    let tagList = ['#sport', '#architecture'];
-
 
     //give class name and attribute
     card.classList.add('card');
