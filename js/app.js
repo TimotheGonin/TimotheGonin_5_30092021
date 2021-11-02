@@ -24,6 +24,7 @@ async function getData(){
     } else {
         let data = await request.json();
 
+        //LOOP TO DISPLAY THE DATA
         for (let index = 0; index < data.photographers.length; index++) {
             createCard(data, index);
         }
