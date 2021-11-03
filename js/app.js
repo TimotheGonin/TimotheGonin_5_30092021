@@ -36,77 +36,32 @@ getData();
 // CREATE PHTOGRAPHER CARD
 function createCard(data, index){
 
-    //create elements
-    let card = document.createElement('article');
-    let cardLink = document.createElement('a');
+    let card = `
+        <article class="card">
+            <a href="photographer.html">
+                <div class="card__header">
+                    <figure class="card__figure">
+                        <img src="public/img/Photographers_ID_Photos/${data.photographers[index].portrait}" alt="" class="card__image">
+                    </figure>
+                </div>
+                <div class="card__body">
+                    <h2 class="card__name">${data.photographers[index].name}</h2>
+                    <p class="card__location">${data.photographers[index].city}, ${data.photographers[index].country}</p>
+                    <p class="card__slogan">${data.photographers[index].tagline}</p>
+                    <p class="card__price">${data.photographers[index].price}€/jour</p>
+                </div>
+            </a>
+        </article>
+    `;
+    mainContent.innerHTML += card;
 
-    //HEADER--ELEMENTS
-    let cardHeader = document.createElement('div');
-    let cardFigure = document.createElement('figure');
-    let cardPicture = document.createElement('img');
-    //BODY--ELEMENTS
-    let cardBody = document.createElement('div');
-    let cardName = document.createElement('h2');
-    let cardLocation = document.createElement('p');
-    let cardSlogan = document.createElement('p');
-    let cardPrice = document.createElement('p');
-    //FOOTER--ELEMENTS
-    let cardFooter = document.createElement('footer');
-    let cardActions = document.createElement('div');
-    let tags = document.createElement('ul');
-
-    //give class name and attribute
-    card.classList.add('card');
-    cardLink.setAttribute('href',`photographer.html?id=${data.photographers[index].id}`);
-
-
-    //HEADER--CLASS/ATTRIBUTES
-    cardHeader.classList.add('card__header');
-    cardFigure.classList.add('card__figure');
-    cardPicture.setAttribute('src', `public/img/Photographers_ID_Photos/${data.photographers[index].portrait}`);
-    //BODY--CLASS
-    cardBody.classList.add('card__body');
-    cardName.classList.add('card__name');
-    cardLocation.classList.add('card__location');
-    cardSlogan.classList.add('card__slogan');
-    cardPrice.classList.add('card__price');
-    //BODY--TEXTCONTENT
-    cardName.textContent = data.photographers[index].name;
-    cardLocation.textContent = `${data.photographers[index].city}, ${data.photographers[index].country}`;
-    cardSlogan.textContent = `${data.photographers[index].tagline}`;
-    cardPrice.textContent = `${data.photographers[index].price}€/jours`;
-    //FOOTER--CLASS
-    cardFooter.classList.add('card__footer');
-    cardActions.classList.add('card__actions');
-    tags.classList.add('card__tags');
-
-    //give child to elements
-    mainContent.appendChild(card);
-    card.appendChild(cardLink);
-    card.appendChild(cardFooter);
-
-    //HEADER--CHILD
-    cardLink.appendChild(cardHeader);
-    cardHeader.appendChild(cardFigure);
-    cardFigure.appendChild(cardPicture);
-    //BODY--CHILD
-    cardLink.appendChild(cardBody);
-    cardBody.appendChild(cardName);
-    cardBody.appendChild(cardLocation);
-    cardBody.appendChild(cardSlogan);
-    cardBody.appendChild(cardPrice);
-    //FOOTER--CHILD
-    cardFooter.appendChild(cardActions);
-    cardActions.appendChild(tags);
-
-
-    //LOOP TAG LIST
-    for (tagValue of data.photographers[index].tags){
-        let tag = document.createElement('li');
-        tag.textContent += `#${tagValue}`;
-        tag.classList.add('tag');
-        tags.appendChild(tag);
-    }
+    // //LOOP TAG LIST
+    // for (tagValue of data.photographers[index].tags){
+    //     let tag = document.createElement('li');
+    //     tag.textContent += `#${tagValue}`;
+    //     tag.classList.add('tag');
+    //     tags.appendChild(tag);
+    // }
 }
 
 
