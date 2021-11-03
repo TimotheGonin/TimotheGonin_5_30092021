@@ -36,60 +36,58 @@ getData();
 // CREATE PHTOGRAPHER CARD
 function createCard(data, index){
 
-    let card = `
-        <article class="card">
-            <a href="photographer.html">
-                <div class="card__header">
-                    <figure class="card__figure">
-                        <img src="public/img/Photographers_ID_Photos/${data.photographers[index].portrait}" alt="" class="card__image">
-                    </figure>
-                </div>
-                <div class="card__body">
-                    <h2 class="card__name">${data.photographers[index].name}</h2>
-                    <p class="card__location">${data.photographers[index].city}, ${data.photographers[index].country}</p>
-                    <p class="card__slogan">${data.photographers[index].tagline}</p>
-                    <p class="card__price">${data.photographers[index].price}€/jour</p>
-                </div>
-            </a>
-        </article>
+    //CARD
+    let card = document.createElement('article');
+    card.classList.add('card');
+
+    // HEADER CONTENT
+    let cardHeader = `
+        <a href="photographer.html?id=${data.photographers[index].id}">
+            <div class="card__header">
+                <figure class="card__figure">
+                    <img src="public/img/Photographers_ID_Photos/${data.photographers[index].portrait}" alt="" class="card__image">
+                </figure>
+            </div>
+            <div class="card__body">
+                <h2 class="card__name">${data.photographers[index].name}</h2>
+                <p class="card__location">${data.photographers[index].city}, ${data.photographers[index].country}</p>
+                <p class="card__slogan">${data.photographers[index].tagline}</p>
+                <p class="card__price">${data.photographers[index].price}€/jour</p>
+            </div>
+        </a>
     `;
-    mainContent.innerHTML += card;
+    //GET HEADER CONTENT
+    card.innerHTML += cardHeader;
 
-    // //LOOP TAG LIST
-    // for (tagValue of data.photographers[index].tags){
-    //     let tag = document.createElement('li');
-    //     tag.textContent += `#${tagValue}`;
-    //     tag.classList.add('tag');
-    //     tags.appendChild(tag);
-    // }
+
+    //FOOTER--ELEMENTS
+    let cardFooter = document.createElement('footer');
+    cardFooter.classList.add('card__footer');
+
+    let cardActions = document.createElement('div');
+    cardActions.classList.add('card__actions');
+
+    let tags = document.createElement('ul');
+    tags.classList.add('tags');
+
+
+    //FOOTER CONTENT
+    //--loop to get tags
+    for (tagValue of data.photographers[index].tags){
+        let content = `
+        <li class="tag"><a href="#">#${tagValue}</a></li>
+        `;
+        tags.innerHTML += content;
+    }
+
+
+
+
+    //FOOTER--CHILD
+    cardFooter.appendChild(cardActions); 
+    card.appendChild(cardFooter);
+    cardActions.appendChild(tags);
+
+    //LAUNCH
+    mainContent.append(card);
 }
-
-
-// ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ FACTORY METHOD                                                               │
-// └──────────────────────────────────────────────────────────────────────────────┘
-
-// //Create card 
-// function card(tag, className){
-//     return {
-//         //settings
-//         tag,
-//         className,
-
-//         //method
-//         create(){
-//             this.element = document.createElement(tag);
-//         },
-//         setClassName(){
-//             this.element.classList.add(className);
-//         },
-//         launch(parent){
-//             parent.append(this.element);
-//         }
-//     }
-// }
-
-// const newCard = card('arcticle', 'cardtest');
-// newCard.create();
-// newCard.setClassName();
-// newCard.launch(mainContent);
