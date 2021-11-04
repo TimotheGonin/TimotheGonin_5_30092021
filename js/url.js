@@ -98,33 +98,20 @@ function createBanner(data) {
 // │ COUNTER                                                                      │
 // └──────────────────────────────────────────────────────────────────────────────┘
 function createCounter(data){
-    //BLOCKS
-    let counter = document.createElement('aside');
-    let counterLikes = document.createElement('div');
-    let counterPrice = document.createElement('div');
 
-    //CONTENT
-    let numberLikes = document.createElement('p');
-    let likesIcon = document.createElement('i');
-    let price = document.createElement('p');
+    //CREATE ELEMENT
+    let counter = `
+        <aside class="photographer-counter">
+            <div class="photographer-counter__likes">
+                <p>297 081</p>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="photographer-counter__price">
+                <p>${photographer.price}€ / jour</p>
+            </div>
+        </aside>
+    `;
 
-    //ADD CLASS
-    counter.classList.add('photographer-counter');
-    counterLikes.classList.add('photographer-counter__likes');
-    counterPrice.classList.add('photographer-counter__price');
-    likesIcon.classList.add('fas');
-    likesIcon.classList.add('fa-heart');
-
-    //CONTENT
-    numberLikes.textContent = "123 456";
-    price.textContent = `${photographer.price}€ / jour`;
-
-    //CHILD
-    main.append(counter);
-    counter.append(counterLikes);
-    counter.append(counterPrice);
-    counterLikes.append(numberLikes);
-    counterLikes.append(likesIcon);
-    counterPrice.append(price);
-
+    //INSERT TO  MAIN
+    main.innerHTML += counter;
 }
