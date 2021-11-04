@@ -89,14 +89,16 @@ function createMedia(data){
                 <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
             </figure>
             <footer class="picture-card__info">
-                <h3 class="picture-card__title"></h3>
+                <h3 class="picture-card__title">${data.title}</h3>
                 <aside class="picture-card__counter-like">
-                    <p>12</p>
+                    <p>${data.likes}</p>
                     <i class="fas fa-heart"></i>
                 </aside>
             </footer>
         </article>
     `;
+
+    mediaCardsDeck.innerHTML += mediaCard;
 }
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ ELEMENTS / INSTRUCTIONS                                                      │
@@ -110,6 +112,9 @@ const id = pageUrl.searchParams.get("id");
 
 //CIBLING MAIN BLOCK
 const main = document.querySelector('main');
+
+//CIBLING MEDIA CARDS DECK
+const mediaCardsDeck = document.querySelector('.cards-deck');
 
 //INIT COUNTER
 let counter = 0;
