@@ -1,39 +1,8 @@
 // ┌──────────────────────────────────────────────────────────────────────────────┐
-// │NEW PHOTOGRAPHER                                                              │
+// │ FUNCTIONS                                                                    │
 // └──────────────────────────────────────────────────────────────────────────────┘
 
-//scope main content box
-const mainContent = document.getElementById('main-content');
-
-
-// ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ FETCH                                                                        │
-// └──────────────────────────────────────────────────────────────────────────────┘
-const url = 'data/fisheye_data.json';
-
-async function getData(){
-
-    //req settings
-    const request = await fetch(url,{
-        method: 'GET'
-    });
-
-    //verification - display
-    if(!request.ok){
-        alert('Un problème est survenu.');
-    } else {
-        let data = await request.json();
-
-        //LOOP TO DISPLAY THE DATA
-        for (let index = 0; index < data.photographers.length; index++) {
-            createCard(data, index);
-        }
-    }
-}
-
-getData();
-
-// CREATE PHTOGRAPHER CARD
+//--CREATE PHTOGRAPHER CARD
 function createCard(data, index){
 
     //CARD
@@ -59,17 +28,13 @@ function createCard(data, index){
     //GET HEADER CONTENT
     card.innerHTML += cardHeader;
 
-
     //FOOTER--ELEMENTS
     let cardFooter = document.createElement('footer');
     cardFooter.classList.add('card__footer');
-
     let cardActions = document.createElement('div');
     cardActions.classList.add('card__actions');
-
     let tags = document.createElement('ul');
     tags.classList.add('tags');
-
 
     //FOOTER CONTENT
     //--loop to get tags
@@ -80,9 +45,6 @@ function createCard(data, index){
         tags.innerHTML += content;
     }
 
-
-
-
     //FOOTER--CHILD
     cardFooter.appendChild(cardActions); 
     card.appendChild(cardFooter);
@@ -91,3 +53,37 @@ function createCard(data, index){
     //LAUNCH
     mainContent.append(card);
 }
+
+//--FETCH / GET DATA
+
+async function getData(){
+
+    //req settings
+    const request = await fetch(url,{
+        method: 'GET'
+    });
+
+    //verification - display
+    if(!request.ok){
+        alert('Un problème est survenu.');
+    } else {
+        let data = await request.json();
+
+        //LOOP TO DISPLAY THE DATA
+        for (let index = 0; index < data.photographers.length; index++) {
+            createCard(data, index);
+        }
+    }
+}
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ ELEMENTS / INSTRUCTIONS                                                      │
+// └──────────────────────────────────────────────────────────────────────────────┘
+//scope main content box
+const mainContent = document.getElementById('main-content');
+
+//get url cont
+const url = 'data/fisheye_data.json';
+
+
+getData();
