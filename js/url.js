@@ -73,9 +73,30 @@ function createCounter(photographer, numberOflikes){
     main.innerHTML += counter;
 }
 
-// function likesCounter(data){
-    
-// }
+function createMedia(data){
+
+    //data needed
+    console.log(data);
+    console.log(data.title);
+    console.log(data.likes);
+    console.log(data.image);
+    console.log(data.video);
+
+    let mediaCard = `
+        <article class="picture-card">
+            <figure class="picture-card__image">
+                <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
+            </figure>
+            <footer class="picture-card__info">
+                <h3 class="picture-card__title"></h3>
+                <aside class="picture-card__counter-like">
+                    <p>12</p>
+                    <i class="fas fa-heart"></i>
+                </aside>
+            </footer>
+        </article>
+    `;
+}
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ ELEMENTS / INSTRUCTIONS                                                      │
 // └──────────────────────────────────────────────────────────────────────────────┘
@@ -102,6 +123,7 @@ fetch("data/fisheye_data.json")
 
             if(media.photographerId == id){
                 counter += media.likes;
+                createMedia(media);
             }
         }
 
