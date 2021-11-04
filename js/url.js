@@ -1,33 +1,8 @@
-//CREATE URL OBJECT
-let pageUrl = new URL(window.location.href);
-console.log(pageUrl);
-
-//GET URL PARAMETERS
-const id = pageUrl.searchParams.get("id");
-console.log(id);
-
-//CIBLING MAIN BLOCK
-const main = document.querySelector('main');
-
-//FETCH FROM JSON
-fetch("data/fisheye_data.json")
-    .then(response => response.json())
-    .then(data => {
-
-        //LOOP TO DISPLAY THE DATA referring to ID in URL
-        for ( photographer of data.photographers){
-
-            if(photographer.id == id){
-                createBanner(photographer);
-                createCounter(photographer);
-            }
-        }
-    });
-
-
 // ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ CREATE BANNER                                                                │
+// │ FUNCTIONS                                                                    │
 // └──────────────────────────────────────────────────────────────────────────────┘
+
+//--CREATE BANNER
 function createBanner(data) {
 
     //BANNER
@@ -78,10 +53,7 @@ function createBanner(data) {
 
 }
 
-
-// ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ CREATE COUNTER                                                               │
-// └──────────────────────────────────────────────────────────────────────────────┘
+//--CREATE COUNTER
 function createCounter(data){
 
     //CREATE ELEMENT
@@ -100,3 +72,32 @@ function createCounter(data){
     //INSERT TO  MAIN
     main.innerHTML += counter;
 }
+
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ ELEMENTS / INSTRUCTIONS                                                      │
+// └──────────────────────────────────────────────────────────────────────────────┘
+
+//CREATE URL OBJECT
+let pageUrl = new URL(window.location.href);
+
+//GET URL PARAMETERS
+const id = pageUrl.searchParams.get("id");
+
+//CIBLING MAIN BLOCK
+const main = document.querySelector('main');
+
+//FETCH FROM JSON
+fetch("data/fisheye_data.json")
+    .then(response => response.json())
+    .then(data => {
+
+        //LOOP TO DISPLAY THE DATA referring to ID in URL
+        for ( photographer of data.photographers){
+
+            if(photographer.id == id){
+                createBanner(photographer);
+                createCounter(photographer);
+            }
+        }
+    });
