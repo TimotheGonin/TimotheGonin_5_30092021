@@ -73,32 +73,54 @@ function createCounter(photographer, numberOflikes){
     main.innerHTML += counter;
 }
 
-function createMedia(data){
-
+function createMedia(data, photographer){
+    
     //data needed
-    console.log(data);
-    console.log(data.title);
-    console.log(data.likes);
-    console.log(data.image);
-    console.log(data.video);
+    // console.log(data);
+    // console.log(data.title);
+    // console.log(data.likes);
+    // console.log(data.image);
+    // console.log(data.video);
 
+    if(data.video){
+        //create mediacard type VIDEO
+        let videoCard = `
+            <article class="picture-card">
+                <video class="picture-card__image" controls>
+                    <source src="public/img/${photographer}/${data.video}" type="video/mp4">
+                </video>
+                <footer class="picture-card__info">
+                    <h3 class="picture-card__title">${data.title}</h3>
+                    <aside class="picture-card__counter-like">
+                        <p>${data.likes}</p>
+                        <i class="fas fa-heart"></i>
+                    </aside>
+                </footer>
+            </article>
+        `;
 
-    let mediaCard = `
-        <article class="picture-card">
-            <figure class="picture-card__image">
-                <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
-            </figure>
-            <footer class="picture-card__info">
-                <h3 class="picture-card__title">${data.title}</h3>
-                <aside class="picture-card__counter-like">
-                    <p>${data.likes}</p>
-                    <i class="fas fa-heart"></i>
-                </aside>
-            </footer>
-        </article>
-    `;
+        mediaCardsDeck.innerHTML += videoCard;
 
-    mediaCardsDeck.innerHTML += mediaCard;
+    } else {
+        //create mediacard type PICTURE
+        let pictureCard = `
+            <article class="picture-card">
+                <figure class="picture-card__image">
+                    <img src="public/img/${photographer}/${data.image}" alt="">
+                </figure>
+                <footer class="picture-card__info">
+                    <h3 class="picture-card__title">${data.title}</h3>
+                    <aside class="picture-card__counter-like">
+                        <p>${data.likes}</p>
+                        <i class="fas fa-heart"></i>
+                    </aside>
+                </footer>
+            </article>
+        `;
+
+        mediaCardsDeck.innerHTML += pictureCard;
+    }
+
 }
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ ELEMENTS / INSTRUCTIONS                                                      │
@@ -118,6 +140,7 @@ const mediaCardsDeck = document.querySelector('.cards-deck');
 
 //INIT COUNTER
 let counter = 0;
+let photographerName ='';
 
 //FETCH FROM JSON
 fetch("data/fisheye_data.json")
@@ -129,7 +152,16 @@ fetch("data/fisheye_data.json")
 
             if(media.photographerId == id){
                 counter += media.likes;
-                createMedia(media);
+                
+                for ( photographer of data.photographers){
+
+                    if(photographer.id == id){
+                        photographerName = photographer.name;
+                        console.log(photographerName);
+                    }
+                }
+
+                createMedia(media,photographerName);
             }
         }
 
