@@ -26,76 +26,61 @@ fetch("data/fisheye_data.json")
 
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ BANNER                                                                       │
+// │ CREATE BANNER                                                                │
 // └──────────────────────────────────────────────────────────────────────────────┘
 function createBanner(data) {
 
-    //BLOCKS
+    //BANNER
     let banner = document.createElement('section');
-    let bannerBody = document.createElement('div');
-    let bannerInfo = document.createElement('div');
-    let bannerContact = document.createElement('div');
-
-    //ELEMENTS
-    let bannerName = document.createElement('h1');
-    let bannerLocation = document.createElement('p');
-    let bannerSlogan = document.createElement('p');
-    let contactButton = document.createElement('button');
-    let bannerFigure = document.createElement('figure');
-    let bannerPicture = document.createElement('img');
-
-    let bannerFooter = document.createElement('div');
-    let tags = document.createElement('ul');
-    let tagList = ['#art', '#fashion', '#events'];
-
-    //ADD CLASS - ATTRIBUTE
     banner.classList.add('photographer-banner');
-    bannerBody.classList.add('photographer-banner__body');
-    bannerInfo.classList.add('photographer-banner__info');
-    bannerContact.classList.add('photographer-banner__contact');
 
-    bannerName.classList.add('photographer-banner__name');
-    bannerLocation.classList.add('photographer-banner__location');
-    bannerSlogan.classList.add('photographer-banner__slogan');
-    contactButton.classList.add('button');
-    contactButton.classList.add('button-contact');
-    bannerFigure.classList.add('card__figure');
-    bannerPicture.setAttribute('src',`public/img/Photographers_ID_Photos/${photographer.portrait}`);
+    //BANNER BODY CONTENT
+    let bannerBody =`
+        <div class="photographer-banner__body">
+            <div class="photographer-banner__info">
+                <h1 class="photographer-banner__name">${photographer.name}</h1>
+                <p class="photographer-banner__location">${photographer.city}, ${photographer.country}</p>
+                <p class="photographer-banner__slogan">${photographer.tagline}</p>
+            </div>
+            <div class="photographer-banner__contact">
+                <button type="button" class="button button-contact">Contactez-moi</button>
+            </div>
+            <figure class="card__figure">
+                <img src="public/img/Photographers_ID_Photos/${photographer.portrait}" alt="">
+            </figure>
+        </div>
+    `;
+
+    //GET BANNER BODY CONTENT
+    banner.innerHTML += bannerBody;
+
+    //FOOTER ELEMENTS
+    let bannerFooter = document.createElement('div');
     bannerFooter.classList.add('photographer-banner__footer');
+    let tags = document.createElement('ul');
     tags.classList.add('tags');
 
-    //CONTENT
-    bannerName.textContent = `${photographer.name}`;
-    bannerLocation.textContent = `${photographer.city}, ${photographer.country}`;
-    bannerSlogan.textContent = `${photographer.tagline}`;
-    contactButton.textContent = 'Contactez-moi';
+    //FOOTER CONTENT
+    //--loop to get tags
+    for (tagValue of photographer.tags){
+        let content = `
+        <li class="tag"><a href="#">#${tagValue}</a></li>
+        `;
+        tags.innerHTML += content;
+    }
 
-    //CHILD
-    main.prepend(banner);
-    banner.append(bannerBody);
-    bannerBody.append(bannerInfo);
-    bannerInfo.append(bannerName);
-    bannerInfo.append(bannerLocation);
-    bannerInfo.append(bannerSlogan);
-    bannerBody.append(bannerContact);
-    bannerContact.append(contactButton);
-    bannerBody.append(bannerFigure);
-    bannerFigure.append(bannerPicture);
+    //BANNER FOOTER CHILD
     banner.append(bannerFooter);
     bannerFooter.append(tags);
 
-    //LOOP TAG LIST
-    for (tagValue of photographer.tags){
-        let tag = document.createElement('li');
-        tag.textContent += `#${tagValue}`;
-        tag.classList.add('tag');
-        tags.appendChild(tag);
-    }
+    //LAUNCH
+    main.prepend(banner);
+
 }
 
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ COUNTER                                                                      │
+// │ CREATE COUNTER                                                               │
 // └──────────────────────────────────────────────────────────────────────────────┘
 function createCounter(data){
 
