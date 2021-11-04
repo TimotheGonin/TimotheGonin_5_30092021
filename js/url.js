@@ -73,7 +73,9 @@ function createCounter(data){
     main.innerHTML += counter;
 }
 
-
+function likesCounter(data){
+    
+}
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ ELEMENTS / INSTRUCTIONS                                                      │
 // └──────────────────────────────────────────────────────────────────────────────┘
@@ -98,6 +100,15 @@ fetch("data/fisheye_data.json")
             if(photographer.id == id){
                 createBanner(photographer);
                 createCounter(photographer);
+            }
+        }
+
+        //TEST COUNTERLIKES
+        for ( media of data.media){
+
+            if(media.photographerId == id){
+                console.log(media);
+                console.log(media.likes);
             }
         }
     });
