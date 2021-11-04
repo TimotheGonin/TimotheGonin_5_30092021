@@ -82,6 +82,7 @@ function createMedia(data){
     console.log(data.image);
     console.log(data.video);
 
+
     let mediaCard = `
         <article class="picture-card">
             <figure class="picture-card__image">
