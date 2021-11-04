@@ -54,13 +54,13 @@ function createBanner(data) {
 }
 
 //--CREATE COUNTER
-function createCounter(data){
+function createCounter(photographer, numberOflikes){
 
     //CREATE ELEMENT
     let counter = `
         <aside class="photographer-counter">
             <div class="photographer-counter__likes">
-                <p>297 081</p>
+                <p>${numberOflikes}</p>
                 <i class="fas fa-heart"></i>
             </div>
             <div class="photographer-counter__price">
@@ -73,9 +73,9 @@ function createCounter(data){
     main.innerHTML += counter;
 }
 
-function likesCounter(data){
+// function likesCounter(data){
     
-}
+// }
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ ELEMENTS / INSTRUCTIONS                                                      │
 // └──────────────────────────────────────────────────────────────────────────────┘
@@ -89,26 +89,28 @@ const id = pageUrl.searchParams.get("id");
 //CIBLING MAIN BLOCK
 const main = document.querySelector('main');
 
+//INIT COUNTER
+let counter = 0;
+
 //FETCH FROM JSON
 fetch("data/fisheye_data.json")
     .then(response => response.json())
     .then(data => {
+
+        //CONUTER OF LIKES
+        for ( media of data.media){
+
+            if(media.photographerId == id){
+                counter += media.likes;
+            }
+        }
 
         //LOOP TO DISPLAY THE DATA referring to ID in URL
         for ( photographer of data.photographers){
 
             if(photographer.id == id){
                 createBanner(photographer);
-                createCounter(photographer);
-            }
-        }
-
-        //TEST COUNTERLIKES
-        for ( media of data.media){
-
-            if(media.photographerId == id){
-                console.log(media);
-                console.log(media.likes);
+                createCounter(photographer, counter);
             }
         }
     });
