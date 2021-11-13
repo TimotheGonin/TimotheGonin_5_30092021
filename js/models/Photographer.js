@@ -24,4 +24,7 @@ class Photographer{
     get price(){
         return this._price
     }
+    get portrait(){
+        return this._portrait
+    }
 }
