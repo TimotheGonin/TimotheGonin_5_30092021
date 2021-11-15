@@ -4,7 +4,6 @@ class PhotographerCard {
     }
 
     createCard(){
-
         //CARD
         const card = document.createElement('article');
         card.classList.add('card');
@@ -25,33 +24,34 @@ class PhotographerCard {
                 </div>
             </a>
         `;
+        
+    
+        // FOOTER--ELEMENTS
+        let cardFooter = document.createElement('footer');
+        cardFooter.classList.add('card__footer');
+        let cardActions = document.createElement('div');
+        cardActions.classList.add('card__actions');
+        let tags = document.createElement('ul');
+        tags.classList.add('tags');
+    
+        //FOOTER CONTENT
+        this._photographer.tags.forEach(tag => {
+            let content = `
+                <li class="tag"><a href="#">#${tag}</a></li>
+            `;
+            tags.innerHTML += content;
+        });
+
+        
         //GET HEADER CONTENT
         card.innerHTML += cardHeader;
+
+        // GET FOOTER CONTENT
+        cardFooter.appendChild(cardActions); 
+        card.appendChild(cardFooter);
+        cardActions.appendChild(tags);
+        
+        //LAUNCH
         return card
-    
-        //FOOTER--ELEMENTS
-        // let cardFooter = document.createElement('footer');
-        // cardFooter.classList.add('card__footer');
-        // let cardActions = document.createElement('div');
-        // cardActions.classList.add('card__actions');
-        // let tags = document.createElement('ul');
-        // tags.classList.add('tags');
-    
-        // //FOOTER CONTENT
-        // //--loop to get tags
-        // for (tagValue of data.photographers[index].tags){
-        //     let content = `
-        //     <li class="tag"><a href="#">#${tagValue}</a></li>
-        //     `;
-        //     tags.innerHTML += content;
-        // }
-    
-        // //FOOTER--CHILD
-        // cardFooter.appendChild(cardActions); 
-        // card.appendChild(cardFooter);
-        // cardActions.appendChild(tags);
-    
-        // //LAUNCH
-        // mainContent.append(card);
     }
 }
