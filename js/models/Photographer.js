@@ -22,7 +22,6 @@ class Photographer{
     get tags(){
         return this._tags
     }
-
     get tagline(){
         return this._tagline
     }
