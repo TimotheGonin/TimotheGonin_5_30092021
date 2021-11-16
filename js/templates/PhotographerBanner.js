@@ -12,15 +12,15 @@ class PhotographerBanner {
         let bannerBody =`
             <div class="photographer-banner__body">
                 <div class="photographer-banner__info">
-                    <h1 class="photographer-banner__name">${photographer.name}</h1>
-                    <p class="photographer-banner__location">${photographer.city}, ${photographer.country}</p>
-                    <p class="photographer-banner__slogan">${photographer.tagline}</p>
+                    <h1 class="photographer-banner__name">${this._photographer.name}</h1>
+                    <p class="photographer-banner__location">${this._photographer.location}</p>
+                    <p class="photographer-banner__slogan">${this._photographer.tagline}</p>
                 </div>
                 <div class="photographer-banner__contact">
                     <button type="button" class="button button-contact">Contactez-moi</button>
                 </div>
                 <figure class="card__figure">
-                    <img src="public/img/Photographers_ID_Photos/${photographer.portrait}" alt="">
+                    <img src="public/img/Photographers_ID_Photos/${this._photographer.portrait}" alt="">
                 </figure>
             </div>
         `;
