@@ -1,4 +1,4 @@
-class MediaVideo{
+class Video{
     constructor(data){
         this._id = data.id
         this._photographerId = data.photographerId
@@ -19,8 +19,10 @@ class MediaVideo{
     get title(){
         return  this._title
     }
-    get video(){
-        return this._video
+    get source(){
+        return `<video class="picture-card__image" controls>
+                    <source src="public/img/${this._photographerId}/${this._video}" type="video/mp4">
+                </video>`
     }
     get tags(){
         return this._tags

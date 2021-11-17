@@ -1,9 +1,9 @@
 class MediaFactory{
-    constructor(data, type) {
-        if (type === 'video'){
-            return new MediaVideo(data)
-        } else if (type === 'image'){
-            return new MediaPicture(data)
+    constructor(data) {
+        if (data.video){
+            return new Video(data)
+        } else if (data.image){
+            return new Picture(data)
         } else {
             throw 'Une erreur est survenue'
         }

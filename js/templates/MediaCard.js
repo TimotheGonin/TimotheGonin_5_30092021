@@ -1,13 +1,11 @@
-class PictureCard {
+class MediaCard {
     constructor(media){
         this._media = media
     }
-    createPictureCard(){
-        const pictureCard = `
+    createMediaCard(){
+        const mediaCard = `
             <article class="picture-card">
-                <figure class="picture-card__image">
-                    <img src="public/img/${photographer}/${this._media.image}" alt="">
-                </figure>
+                ${this._media.source}
                 <footer class="picture-card__info">
                     <h3 class="picture-card__title">${this._media.title}</h3>
                     <aside class="picture-card__counter-like">
@@ -18,6 +16,6 @@ class PictureCard {
             </article>
         `;
 
-        return pictureCard
+        return mediaCard
     }
 }

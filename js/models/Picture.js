@@ -1,4 +1,4 @@
-class MediaPicture{
+class Picture{
     constructor(data){
         this._id = data.id
         this._photographerId = data.photographerId
@@ -19,8 +19,10 @@ class MediaPicture{
     get title(){
         return  this._title
     }
-    get image(){
-        return this._image
+    get source(){
+        return `<figure class="picture-card__image">
+                    <img src="public/img/${this._photographerId}/${this._image}" alt="">
+                </figure>`
     }
     get tags(){
         return this._tags
