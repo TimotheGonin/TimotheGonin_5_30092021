@@ -1,6 +1,6 @@
 class Medias {
     constructor(){
-        this.mainContent = document.getElementById('cards-deck');
+        this.mainContent = document.getElementById('media-cards-deck');
         this.url = 'data/fisheye_data.json'
     }
 
@@ -27,10 +27,6 @@ class Medias {
                     Template.createMediaCard()
                 )
             });
-            // const Template = new MediaCard(Medias[0])
-            //     this.mainContent.append(
-            //         Template.createMediaCard()
-            //     )
         }
     }
 }
