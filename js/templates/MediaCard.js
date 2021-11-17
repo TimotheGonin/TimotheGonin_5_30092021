@@ -3,8 +3,9 @@ class MediaCard {
         this._media = media
     }
     createMediaCard(){
-        const mediaCard = `
-            <article class="picture-card">
+        let mediaCard = document.createElement('article')
+        mediaCard.classList.add('picture-card')
+        let content = `
                 ${this._media.source}
                 <footer class="picture-card__info">
                     <h3 class="picture-card__title">${this._media.title}</h3>
@@ -13,9 +14,8 @@ class MediaCard {
                         <i class="fas fa-heart"></i>
                     </aside>
                 </footer>
-            </article>
         `;
-
+        mediaCard.innerHTML += content
         return mediaCard
     }
 }
