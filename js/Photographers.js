@@ -6,27 +6,8 @@ class Photographers {
 
     async launchPhotographers(){
 
-        // //req settings
-        // const request = await fetch(this.url,{
-        //     method: 'GET'
-        // });
-    
-        // //verification - display
-        // if(!request.ok){
-        //     alert('Un problème est survenu.');
-        // } else {
-        //     const data = await request.json();
-    
-        //     data.photographers
-        //         .map(photographer => new Photographer(photographer))
-        //         .forEach(photographer => {
-        //             const Template = new PhotographerCard(photographer)
-        //             this.mainContent.appendChild(
-        //                 Template.createCard()
-        //             )
-        //         });
-        // }
         const photographersData = await this.photographersApi.getPhotographers()
+        
         photographersData
             .map(photographer => new Photographer(photographer))
             .forEach(photographer => {
