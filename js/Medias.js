@@ -16,21 +16,21 @@ class Medias {
             alert('Un problème est survenu.');
         } else {
             const data = await request.json();
-            const media = data.media;
-
-            const Medias = media
+            
+            //ID url = ID photographer ?
+            data.media
                 .map(media => new MediaFactory(media))
-
-            Medias.forEach(element => {
-                const Template = new MediaCard(element)
-                this.mainContent.append(
-                    Template.createMediaCard()
-                )
-            });
+                .forEach(element => {
+                    if(id === element.photographerId){
+                        const Template = new MediaCard(element)
+                        this.mainContent.append(
+                        Template.createMediaCard()
+                        )
+                    }
+                });
         }
     }
 }
 
 const mediaCardDeck = new Medias()
 mediaCardDeck.getData()
-
