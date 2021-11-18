@@ -27,7 +27,14 @@ class Photographers {
         //         });
         // }
         const photographersData = await this.photographersApi.getPhotographers()
-        console.log(photographersData)
+        photographersData
+            .map(photographer => new Photographer(photographer))
+            .forEach(photographer => {
+                const Template = new PhotographerCard(photographer)
+                this.mainContent.appendChild(
+                    Template.createCard()
+                )
+            });
     }
 }
 
