@@ -50,4 +50,5 @@ class PhotographerBanner {
         //LAUNCH
         return banner
     }
+    
 }
