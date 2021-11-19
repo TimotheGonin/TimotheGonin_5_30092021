@@ -51,3 +51,17 @@ let pageUrl = new URL(window.location.href);
 
 //GET URL PARAMETERS
 const id = Number(pageUrl.searchParams.get("id"));
+
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ TEST MOMDAL                                                                  │
+// └──────────────────────────────────────────────────────────────────────────────┘
+function displayModal() {
+    const modal = document.getElementById("contact-modal");
+	modal.style.display = "block";
+}
+
+function closeModal() {
+    const modal = document.getElementById("contact-modal");
+    modal.style.display = "none";
+}
