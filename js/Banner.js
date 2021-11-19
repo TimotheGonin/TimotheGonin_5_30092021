@@ -15,13 +15,13 @@ class Banner {
             .map(photographer => new Photographer(photographer))
             .forEach(photographer => {
                 if(id === photographer.id){
+                    //CREATE COUNTER   
                     const Template = new PhotographerBanner(photographer)
                     this.mainContent.prepend(
                     Template.createBanner()
                     )
 
-                    // CREATE BANNER
-                    console.log(photographer.price)
+                    // INCREMENT COUNTER--LOOP
                     mediasData.forEach(media => {
                         
                         if(id === media.photographerId){
@@ -29,19 +29,17 @@ class Banner {
                         }
                         
                     })
+
+                    //CREATE COUNTER--LOOP
                     mediasData.forEach(media => {
-                        
                         const Template = new PhotographerCounter(photographer,counter)
                             this.mainContent.prepend(
                                 Template.createCounter()
                             )
-                        
                     })
-
                     
                 }
             });
-            console.log(counter)
     }
 }
 
