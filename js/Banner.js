@@ -40,6 +40,13 @@ class Banner {
                     
                 }
             });
+        
+
+            // MODAL LAUCHER
+            const contactButton = document.getElementById('contact-btn')
+            contactButton.addEventListener('click', () => {
+                console.log('event ok');
+            })
     }
 }
 
