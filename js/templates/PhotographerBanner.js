@@ -43,10 +43,17 @@ class PhotographerBanner {
         });
 
         
+
+
         //BANNER FOOTER CHILD
         banner.append(bannerFooter);
         bannerFooter.append(tags);
         
+        //TEST MODAL
+        const Template = new ContactModal(this._photographer)
+            banner.append(
+                Template.createContactModal()
+            )
         //LAUNCH
         return banner
     }
