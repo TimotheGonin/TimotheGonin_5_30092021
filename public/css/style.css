@@ -673,9 +673,36 @@ header nav .tags {
 }
 .modal--contact {
   align-self: center;
-  background: red;
+  background: #DB8876;
   max-height: 900px;
   width: 669px;
+}
+.modal--contact__header {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+.modal--contact__info {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.modal--contact__title {
+  display: inline;
+}
+.modal--contact__recipient {
+  display: inline;
+}
+.modal--contact__close {
+  width: 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.modal--contact__close i {
+  color: white;
+  font-size: 6rem;
 }
 
 .cards-deck {

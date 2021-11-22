@@ -9,11 +9,13 @@ class ContactModal {
         contactModal.setAttribute('class', 'modal')
         let contentModal = `
             <div class="modal--contact">
-                <header>
-                    <h2>Contactez-moi</h2>
-                    <p>${this._photographer.name}<p>
-                    <span>
-                        <i class="fas fa-times"></i>
+                <header class="modal--contact__header">
+                    <div class="modal--contact__info">
+                        <h2 class="modal--contact__title">Contactez-moi</h2>
+                        <p class="modal--contact__recipient">${this._photographer.name}<p>
+                    </div>
+                    <span class="modal--contact__close">
+                        <i class="fas fa-times "></i>
                     </span>
                 </header>
                 <form>
