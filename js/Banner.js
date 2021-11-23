@@ -48,6 +48,20 @@ class Banner {
 
             const closeContactModal = document.getElementById('close-contact-momdal-button');
             closeContactModal.addEventListener('click', closeModal);
+
+            // SUBMIT BUTTON--modal
+            const submitButtonModal = document.getElementById('contact-submit-button');
+            submitButtonModal.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                let origin = pageUrl.origin;
+                let pathName = pageUrl.pathname;
+                let search = pageUrl.search;
+
+                let urlRedirect = `${origin}${pathName}${search}`;
+
+                document.location.href=`${urlRedirect}`;
+            });
     }
 }
 
