@@ -704,6 +704,21 @@ header nav .tags {
   color: white;
   font-size: 6rem;
 }
+.modal--contact__body {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.modal--contact__input-group label {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.modal--contact__input-group input {
+  width: 100%;
+}
+.modal--contact__input-group textarea {
+  width: 100%;
+}
 
 .cards-deck {
   display: flex;

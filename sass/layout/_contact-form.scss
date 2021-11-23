@@ -16,6 +16,7 @@
         max-height:900px;
         width: 669px;
 
+        //MODAL--header
         &__header{
             font-size:3rem;
             display: flex;
@@ -41,6 +42,26 @@
             i{
                 color:white;
                 font-size: 6rem;
+            }
+        }
+
+        //MODAL--body
+        &__body{
+    
+            display: flex;
+            flex-direction: column;
+            margin:2rem;
+        }
+        &__input-group{
+            label{
+                font-size:2.5rem;
+                font-weight:400;
+            }
+            input{
+                width:100%;
+            }
+            textarea{
+                width: 100%;
             }
         }
     }
