@@ -6,7 +6,7 @@
     top:0;
     left: 0;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -15,7 +15,6 @@
         background:$color-tertiary;
         max-height:900px;
         width: 669px;
-
         //MODAL--header
         &__header{
             font-size:3rem;

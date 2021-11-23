@@ -687,7 +687,7 @@ header nav .tags {
   width: 100%;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }

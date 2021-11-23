@@ -44,9 +44,7 @@ class Banner {
 
             // MODAL LAUCHER
             const contactButton = document.getElementById('contact-btn')
-            contactButton.addEventListener('click', () => {
-                console.log('event ok');
-            })
+            contactButton.addEventListener('click', displayModal)
     }
 }
 
@@ -65,7 +63,7 @@ const id = Number(pageUrl.searchParams.get("id"));
 // └──────────────────────────────────────────────────────────────────────────────┘
 function displayModal() {
     const modal = document.getElementById("contact-modal");
-	modal.style.display = "block";
+	modal.style.display = "flex";
 }
 
 function closeModal() {
