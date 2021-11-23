@@ -21,6 +21,7 @@
 @import "./components/button";
 @import "./components/card";
 @import "./components/logo";
+@import "./components/input-group";
 @import "./components/page-title";
 @import "./components/tag";
 @import "./components/order-by";
@@ -33,6 +34,7 @@
 // │ LAYOUT                                                                       │
 // └──────────────────────────────────────────────────────────────────────────────┘
 @import "./layout/header";
+@import "./layout/contact-form";
 @import "./layout/cards-deck";
 @import "./layout/tags";
 @import "./layout/photographer-banner";

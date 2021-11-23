@@ -17,7 +17,7 @@ class PhotographerBanner {
                     <p class="photographer-banner__slogan">${this._photographer.tagline}</p>
                 </div>
                 <div class="photographer-banner__contact">
-                    <button type="button" class="button button-contact">Contactez-moi</button>
+                    <button type="button" class="button button-contact" id="contact-btn">Contactez-moi</button>
                 </div>
                 <figure class="card__figure">
                     <img src="public/img/Photographers_ID_Photos/${this._photographer.portrait}" alt="">
@@ -43,10 +43,17 @@ class PhotographerBanner {
         });
 
         
+
+
         //BANNER FOOTER CHILD
         banner.append(bannerFooter);
         bannerFooter.append(tags);
         
+        //TEST MODAL
+        const Template = new ContactModal(this._photographer)
+            banner.append(
+                Template.createContactModal()
+            )
         //LAUNCH
         return banner
     }

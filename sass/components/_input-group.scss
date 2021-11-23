@@ -1,0 +1,21 @@
+.input-group{
+    &__label{
+        font-size:2.5rem;
+        font-weight:400;
+        color:#312E2E;
+    }
+    &__input{
+        font-size:2rem;
+        padding:0 2rem;
+        height:6.8rem;
+        outline:none;
+        border:none;
+        border-radius: 0.4rem;
+    }
+    &__input--textarea{
+        outline:none;
+        border:none;
+        height:17rem;
+        border-radius: 0.4rem;
+    }
+}

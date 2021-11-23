@@ -40,6 +40,14 @@ class Banner {
                     
                 }
             });
+        
+
+            // MODAL LAUCHER EVENTS
+            const contactButton = document.getElementById('contact-btn');
+            contactButton.addEventListener('click', displayModal);
+
+            const closeContactModal = document.getElementById('close-contact-momdal-button');
+            closeContactModal.addEventListener('click', closeModal);
     }
 }
 
@@ -51,3 +59,17 @@ let pageUrl = new URL(window.location.href);
 
 //GET URL PARAMETERS
 const id = Number(pageUrl.searchParams.get("id"));
+
+
+// ┌──────────────────────────────────────────────────────────────────────────────┐
+// │ MODAL LAUNCHER FUNCTION                                                      │
+// └──────────────────────────────────────────────────────────────────────────────┘
+function displayModal() {
+    const modal = document.getElementById("contact-modal");
+	modal.style.display = "flex";
+}
+
+function closeModal() {
+    const modal = document.getElementById("contact-modal");
+    modal.style.display = "none";
+}

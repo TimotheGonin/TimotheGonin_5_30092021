@@ -470,6 +470,26 @@ body {
   }
 }
 
+.input-group__label {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #312E2E;
+}
+.input-group__input {
+  font-size: 2rem;
+  padding: 0 2rem;
+  height: 6.8rem;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+}
+.input-group__input--textarea {
+  outline: none;
+  border: none;
+  height: 17rem;
+  border-radius: 0.4rem;
+}
+
 .page-title {
   color: #901C1C;
   font-size: 3.25rem;
@@ -658,6 +678,69 @@ header nav .tags {
     padding: 0 2rem;
     margin: 0;
   }
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal--contact {
+  align-self: center;
+  background: #DB8876;
+  max-height: 900px;
+  width: 669px;
+}
+.modal--contact__header {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+.modal--contact__info {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.modal--contact__title {
+  display: inline;
+}
+.modal--contact__recipient {
+  display: inline;
+}
+.modal--contact__close {
+  width: 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.modal--contact__close i {
+  color: white;
+  font-size: 6rem;
+}
+.modal--contact__body {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.modal--contact__body .input-group {
+  margin-top: 1rem;
+}
+.modal--contact__body .input-group__input {
+  width: 100%;
+}
+.modal--contact__body .input-group__input--textarea {
+  width: 100%;
+}
+.modal--contact__body button {
+  align-self: flex-start;
+  margin: 2rem 0;
 }
 
 .cards-deck {
