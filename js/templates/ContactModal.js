@@ -35,7 +35,7 @@ class ContactModal {
                         <label class="input-group__label">Votre Message</label>
                         <textarea class="input-group__input--textarea"></textarea>
                     </div>
-                    <button class="button button-contact button-contact--small">Envoyer</button>
+                    <button class="button button-contact button-contact--small" id="contact-submit-button">Envoyer</button>
                 </form>
             </div>
         `;
