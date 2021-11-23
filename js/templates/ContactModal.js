@@ -19,21 +19,21 @@ class ContactModal {
                     </span>
                 </header>
                 <form class="modal--contact__body">
-                    <div class="modal--contact__input-group">
-                        <label>Prénom</label>
-                        <input type="text"/>
+                    <div class="input-group">
+                        <label class="input-group__label">Prénom</label>
+                        <input type="text" class="input-group__input"/>
                     </div>
-                    <div class="modal--contact__input-group">
-                        <label>Nom</label>
-                        <input type="text"/>
+                    <div class="input-group">
+                        <label class="input-group__label">Nom</label>
+                        <input type="text" class="input-group__input"/>
                     </div>
-                    <div class="modal--contact__input-group">
-                        <label>Email</label>
-                        <input typ="email"/>
+                    <div class="input-group">
+                        <label class="input-group__label">Email</label>
+                        <input type="email" class="input-group__input"/>
                     </div>
-                    <div class="modal--contact__input-group">
-                        <label>Votre Message</label>
-                        <textarea></textarea>
+                    <div class="input-group">
+                        <label class="input-group__label">Votre Message</label>
+                        <textarea class="input-group__input--textarea"></textarea>
                     </div>
                     <button class="button button-contact button-contact--small">Envoyer</button>
                 </form>
