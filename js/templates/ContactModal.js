@@ -14,7 +14,7 @@ class ContactModal {
                         <h2 class="modal--contact__title">Contactez-moi</h2>
                         <p class="modal--contact__recipient">${this._photographer.name}<p>
                     </div>
-                    <span class="modal--contact__close">
+                    <span class="modal--contact__close" id="close-contact-momdal-button">
                         <i class="fas fa-times "></i>
                     </span>
                 </header>
