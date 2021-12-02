@@ -20,9 +20,13 @@ class Video{
         return  this._title
     }
     get source(){
-        return `<video class="picture-card__image" controls>
-                    <source src="public/img/${this._photographerId}/${this._video}" type="video/mp4">
-                </video>`
+        return `<figure class="picture-card__image">
+                    <a href="public/img/${this._photographerId}/${this._video}">
+                        <video>
+                            <source src="public/img/${this._photographerId}/${this._video}" type="video/mp4">
+                        </video>
+                    </a>
+                </figure>`
     }
     get tags(){
         return this._tags

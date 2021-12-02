@@ -567,7 +567,7 @@ body {
   width: 100%;
   height: 30rem;
 }
-.picture-card__image img {
+.picture-card__image img, .picture-card__image video {
   border-radius: 0.5rem;
   height: 100%;
   width: 100%;
