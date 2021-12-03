@@ -1,19 +1,22 @@
 class Ligthbox {
 
     static init (){
-        const links = document.querySelectorAll('a[href$=".mp4"], a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"]')
-            .forEach(link => link.addEventListener('click', e => {
+        const links = Array.from(document.querySelectorAll('a[href$=".mp4"], a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"]'));
+        const gallery = links.map(link => link.getAttribute('href'))
+        links.forEach(link => link.addEventListener('click', e => {
                 e.preventDefault();
-                new Ligthbox(e.currentTarget.getAttribute('href'));
+                new Ligthbox(e.currentTarget.getAttribute('href'), gallery);
             }))
     }
 
     /**
      * 
      * @param{string} url URL de l'image
+     * @param{string[]} images Chemin des images de la lightbox
      */
-    constructor(url){
+    constructor(url, images){
         this.element = this.buildDOM(url);
+        this.images = images;
         this.loadImage(url);
         this.onKeyUp = this.onKeyUp.bind(this);
         document.body.appendChild(this.element);
@@ -25,10 +28,15 @@ class Ligthbox {
      * @param{string} url URL de l'image
      */
     loadImage(url){
+        this.url = null;
         const image = new Image();
         const container = this.element.querySelector('.lightbox__container');
+        container.innerHTML = '';
+        image.onload = () => {
+            container.appendChild(image);
+            this.url = url;
+        };
         image.src = url;
-        container.appendChild(image);
     }
 
     // KEYBORD EVENT
@@ -55,12 +63,36 @@ class Ligthbox {
         document.removeEventListener('keyup', this.onKeyUp);
     }
 
+    /**Previous Image
+     * @param {MouseEvent/KeybordEvent} e 
+     */
+    prev(e){
+        e.preventDefault();
+        let i = this.images.findIndex(image => image === this.url);
+        if(i === 0){
+            i = this.images.length;
+        }
+        this.loadImage(this.images[i - 1]);
+    }
+
+    /**Next Image
+     * @param {MouseEvent/KeybordEvent} e 
+     */
+    next(e){
+        e.preventDefault();
+        let i = this.images.findIndex(image => image === this.url);
+        if(i === this.images.length - 1){
+            i = -1;
+        }
+        this.loadImage(this.images[i + 1]);
+    }
+
     /**
      * 
      * @param{string} url URL de l'image
      * @return{HTMLElement}
      */
-    buildDOM(url){
+    buildDOM(){
         const dom = document.createElement('div');
         dom.classList.add('lightbox');
         dom.innerHTML = `<button class="lightbox__close">Fermer</button>
@@ -71,6 +103,8 @@ class Ligthbox {
 
         //  EVENT
         dom.querySelector('.lightbox__close').addEventListener('click', this.close.bind(this))
+        dom.querySelector('.lightbox__prev').addEventListener('click', this.prev.bind(this));
+        dom.querySelector('.lightbox__next').addEventListener('click', this.next.bind(this));
         return dom;
     }
 }
