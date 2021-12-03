@@ -47,6 +47,10 @@ class Ligthbox {
     onKeyUp(e){
         if(e.key === 'Escape'){
             this.close(e);
+        } else if (e.key === 'ArrowLeft') {
+            this.prev(e);
+        } else if (e.key === 'ArrowRight') {
+            this.next(e);
         }
     }
 
