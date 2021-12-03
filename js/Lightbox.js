@@ -1,3 +1,8 @@
+/**
+ * @property {HTMLElement} element
+ * @property {string[]} images Lightbox's image links
+ * @property {string} url Active Image
+ */
 class Ligthbox {
 
     static init (){
@@ -11,8 +16,8 @@ class Ligthbox {
 
     /**
      * 
-     * @param{string} url URL de l'image
-     * @param{string[]} images Chemin des images de la lightbox
+     * @param{string} image's url
+     * @param{string[]} Lightbox's image links
      */
     constructor(url, images){
         this.element = this.buildDOM(url);
@@ -25,7 +30,7 @@ class Ligthbox {
 
     /**
      * 
-     * @param{string} url URL de l'image
+     * @param{string} image's url
      */
     loadImage(url){
         this.url = null;
@@ -92,8 +97,6 @@ class Ligthbox {
     }
 
     /**
-     * 
-     * @param{string} url URL de l'image
      * @return{HTMLElement}
      */
     buildDOM(){
