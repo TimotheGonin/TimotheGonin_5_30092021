@@ -15,7 +15,9 @@ class Ligthbox {
     constructor(url){
         this.element = this.buildDOM(url);
         this.loadImage(url);
+        this.onKeyUp = this.onKeyUp.bind(this);
         document.body.appendChild(this.element);
+        document.addEventListener('keyup', this.onKeyUp);
     }
 
     /**
@@ -29,6 +31,17 @@ class Ligthbox {
         container.appendChild(image);
     }
 
+    // KEYBORD EVENT
+    /**
+     * 
+     * @param {KeyboardEvent} e 
+     */
+    onKeyUp(e){
+        if(e.key === 'Escape'){
+            this.close(e);
+        }
+    }
+
     /**
      * Close lightbox
      * @param {MouseEvent} e 
@@ -39,6 +52,7 @@ class Ligthbox {
         window.setTimeout(()=> {
             this.element.parentElement.removeChild(this.element);
         }, 500);
+        document.removeEventListener('keyup', this.onKeyUp);
     }
 
     /**
