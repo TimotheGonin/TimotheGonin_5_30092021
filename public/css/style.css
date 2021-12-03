@@ -767,6 +767,10 @@ header nav .tags {
   z-index: 10;
   overflow: auto;
   animation: lightboxIn 0.5s;
+  transition: opacity 0.5s;
+}
+.lightbox.fadeOut {
+  opacity: 0;
 }
 .lightbox__next, .lightbox__prev {
   border: none;

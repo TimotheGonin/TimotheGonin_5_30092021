@@ -8,6 +8,11 @@
     z-index:10;
     overflow:auto;
     animation: lightboxIn .5s;
+    transition: opacity .5s;
+
+    &.fadeOut{
+        opacity:0;
+    }
 
     //ICONS
     &__next, &__prev{
