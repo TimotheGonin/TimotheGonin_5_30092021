@@ -815,7 +815,7 @@ header nav .tags {
   margin-right: 50px;
   min-height: 100vh;
 }
-.lightbox__container img {
+.lightbox__container img, .lightbox__container video {
   max-width: 100%;
   height: 90vh;
   animation: lightboxIn 0.5s;

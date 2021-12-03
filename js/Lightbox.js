@@ -34,14 +34,22 @@ class Ligthbox {
      */
     loadImage(url){
         this.url = null;
-        const image = new Image();
+
         const container = this.element.querySelector('.lightbox__container');
         container.innerHTML = '';
-        image.onload = () => {
+        this.url = url;
+        
+        if (url.includes('jpg')) {
+            const image = new Image();
+			image.src = url;
             container.appendChild(image);
-            this.url = url;
-        };
-        image.src = url;
+
+		} else if (url.includes('mp4')) {
+            const video = document.createElement('video');
+			video.src = url;
+            video.controls = true;
+            container.appendChild(video);
+		}
     }
 
     // KEYBORD EVENT
