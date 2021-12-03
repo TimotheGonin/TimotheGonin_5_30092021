@@ -768,9 +768,7 @@ header nav .tags {
   overflow: auto;
   animation: lightboxIn 0.5s;
 }
-
-.lightbox__next,
-.lightbox__prev {
+.lightbox__next, .lightbox__prev {
   border: none;
   background: url("/public/icon/arrow.svg") center center/16px 28px no-repeat;
   width: 50px;
@@ -781,13 +779,11 @@ header nav .tags {
   margin-top: -14px;
   z-index: 11;
 }
-
 .lightbox__prev {
   right: auto;
   left: 0;
   transform: rotate(180deg);
 }
-
 .lightbox__close {
   width: 30px;
   height: 30px;
@@ -798,24 +794,15 @@ header nav .tags {
   right: 10px;
   z-index: 12;
 }
-
 .lightbox button {
   opacity: 1;
   cursor: pointer;
   transition: opacity 0.3s;
   text-indent: -3000px;
 }
-
 .lightbox button:hover {
   opacity: 0.5;
 }
-
-.lightbox__container img {
-  max-width: 100%;
-  height: 90vh;
-  animation: lightboxIn 0.5s;
-}
-
 .lightbox__container {
   display: flex;
   align-items: center;
@@ -823,6 +810,11 @@ header nav .tags {
   margin-left: 50px;
   margin-right: 50px;
   min-height: 100vh;
+}
+.lightbox__container img {
+  max-width: 100%;
+  height: 90vh;
+  animation: lightboxIn 0.5s;
 }
 
 /* ANIMATION */
