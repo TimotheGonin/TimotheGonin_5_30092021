@@ -21,7 +21,9 @@ class Picture{
     }
     get source(){
         return `<figure class="picture-card__image">
-                    <img src="public/img/${this._photographerId}/${this._image}" alt="">
+                    <a href="public/img/${this._photographerId}/${this._image}">
+                        <img src="public/img/${this._photographerId}/${this._image}" alt="">
+                    </a>
                 </figure>`
     }
     get tags(){

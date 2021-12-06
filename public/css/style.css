@@ -567,7 +567,7 @@ body {
   width: 100%;
   height: 30rem;
 }
-.picture-card__image img {
+.picture-card__image img, .picture-card__image video {
   border-radius: 0.5rem;
   height: 100%;
   width: 100%;
@@ -757,6 +757,88 @@ header nav .tags {
   }
 }
 
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  overflow: auto;
+  animation: lightboxIn 0.5s;
+  transition: opacity 0.5s;
+}
+.lightbox.fadeOut {
+  opacity: 0;
+}
+.lightbox__next, .lightbox__prev {
+  border: none;
+  background: url("/public/icon/arrow.svg") center center/16px 28px no-repeat;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: -14px;
+  z-index: 11;
+}
+.lightbox__prev {
+  right: auto;
+  left: 0;
+  transform: rotate(180deg);
+}
+.lightbox__close {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: url("/public/icon/cross.svg") center center/100% 100% no-repeat transparent;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  z-index: 12;
+}
+.lightbox button {
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  text-indent: -3000px;
+}
+.lightbox button:hover {
+  opacity: 0.5;
+}
+.lightbox__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: 100vh;
+}
+.lightbox__container img, .lightbox__container video {
+  max-width: 100%;
+  height: 90vh;
+  animation: lightboxIn 0.5s;
+}
+.lightbox__footer {
+  margin: 2vh 0;
+}
+.lightbox__title {
+  color: #901C1C;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+/* ANIMATION */
+@keyframes lightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .tags {
   list-style: none;
   display: flex;

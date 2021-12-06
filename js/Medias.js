@@ -18,6 +18,7 @@ class Medias {
                     )
                 }
             });
+            Ligthbox.init();
     }
 }
 
