@@ -7,10 +7,16 @@ class Ligthbox {
 
     static init (){
         const links = Array.from(document.querySelectorAll('a[href$=".mp4"], a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"]'));
-        const gallery = links.map(link => link.getAttribute('href'))
+        const gallery = links.map(link => link.getAttribute('href'));
+
+        //TEST
+        const infos = Array.from(document.querySelectorAll('.picture-card__title'));
+        const titles = infos.map(title => title.textContent);
+
+
         links.forEach(link => link.addEventListener('click', e => {
                 e.preventDefault();
-                new Ligthbox(e.currentTarget.getAttribute('href'), gallery);
+                new Ligthbox(e.currentTarget.getAttribute('href'), gallery, titles);
             }))
     }
 
@@ -19,10 +25,13 @@ class Ligthbox {
      * @param{string} image's url
      * @param{string[]} Lightbox's image links
      */
-    constructor(url, medias){
+    constructor(url, medias, titles){
         this.element = this.buildDOM(url);
         this.medias = medias;
+        this.index = medias.indexOf(url)
+        this.titles = titles;
         this.loadMedia(url);
+        this.loadMediaInfo(titles);
         this.onKeyUp = this.onKeyUp.bind(this);
         document.body.appendChild(this.element);
         document.addEventListener('keyup', this.onKeyUp);
@@ -34,22 +43,31 @@ class Ligthbox {
      */
     loadMedia(url){
         this.url = null;
-
-        const container = this.element.querySelector('.lightbox__body');
-        container.innerHTML = '';
+        const mediaContainer = this.element.querySelector('.lightbox__body');
+        mediaContainer.innerHTML = '';
         this.url = url;
-        
+        console.log(this.index);
         if (url.includes('jpg')) {
             const image = new Image();
 			image.src = url;
-            container.appendChild(image);
+            mediaContainer.appendChild(image);
 
 		} else if (url.includes('mp4')) {
             const video = document.createElement('video');
 			video.src = url;
             video.controls = true;
-            container.appendChild(video);
+            mediaContainer.appendChild(video);
 		}
+    }
+
+    loadMediaInfo(title){
+        this.title = null;
+        this.title = title;
+        const infoContainer = this.element.querySelector('.lightbox__footer');
+        const mediaInfo = document.createElement('h3');
+        mediaInfo.classList.add('lightbox__title');
+        mediaInfo.innerHTML = this.titles[this.index];
+        infoContainer.appendChild(mediaInfo);
     }
 
     // KEYBORD EVENT
@@ -115,9 +133,7 @@ class Ligthbox {
         <button class="lightbox__prev">Précédent</button>
         <div class="lightbox__container">
             <div class="lightbox__body"></div>
-            <div class="lightbox__footer">
-                <h3 class="lightbox__title">Titre<h3>
-            </div>
+            <div class="lightbox__footer"></div>
         </div>`;
 
         //  EVENT
