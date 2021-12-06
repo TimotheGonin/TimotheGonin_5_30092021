@@ -821,6 +821,14 @@ header nav .tags {
   height: 90vh;
   animation: lightboxIn 0.5s;
 }
+.lightbox__footer {
+  margin: 2vh 0;
+}
+.lightbox__title {
+  color: #901C1C;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
 
 /* ANIMATION */
 @keyframes lightboxIn {
