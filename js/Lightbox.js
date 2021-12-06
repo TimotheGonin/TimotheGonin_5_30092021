@@ -28,10 +28,10 @@ class Ligthbox {
     constructor(url, medias, titles){
         this.element = this.buildDOM(url);
         this.medias = medias;
-        this.index = medias.indexOf(url)
         this.titles = titles;
         this.loadMedia(url);
-        this.loadMediaInfo(titles);
+        this.index = medias.indexOf(url);
+        this.loadMediaInfo(titles[this.index]);
         this.onKeyUp = this.onKeyUp.bind(this);
         document.body.appendChild(this.element);
         document.addEventListener('keyup', this.onKeyUp);
@@ -46,7 +46,6 @@ class Ligthbox {
         const mediaContainer = this.element.querySelector('.lightbox__body');
         mediaContainer.innerHTML = '';
         this.url = url;
-        console.log(this.index);
         if (url.includes('jpg')) {
             const image = new Image();
 			image.src = url;
@@ -61,12 +60,11 @@ class Ligthbox {
     }
 
     loadMediaInfo(title){
-        this.title = null;
-        this.title = title;
         const infoContainer = this.element.querySelector('.lightbox__footer');
+        infoContainer.innerHTML = '';
         const mediaInfo = document.createElement('h3');
         mediaInfo.classList.add('lightbox__title');
-        mediaInfo.innerHTML = this.titles[this.index];
+        mediaInfo.innerHTML = title;
         infoContainer.appendChild(mediaInfo);
     }
 
@@ -108,6 +106,7 @@ class Ligthbox {
             i = this.medias.length;
         }
         this.loadMedia(this.medias[i - 1]);
+        this.loadMediaInfo(this.titles[i - 1]);
     }
 
     /**Next Media
@@ -120,6 +119,7 @@ class Ligthbox {
             i = -1;
         }
         this.loadMedia(this.medias[i + 1]);
+        this.loadMediaInfo(this.titles[i + 1]);
     }
 
     /**
