@@ -19,10 +19,10 @@ class Ligthbox {
      * @param{string} image's url
      * @param{string[]} Lightbox's image links
      */
-    constructor(url, images){
+    constructor(url, medias){
         this.element = this.buildDOM(url);
-        this.images = images;
-        this.loadImage(url);
+        this.medias = medias;
+        this.loadMedia(url);
         this.onKeyUp = this.onKeyUp.bind(this);
         document.body.appendChild(this.element);
         document.addEventListener('keyup', this.onKeyUp);
@@ -30,9 +30,9 @@ class Ligthbox {
 
     /**
      * 
-     * @param{string} image's url
+     * @param{string} media's url
      */
-    loadImage(url){
+    loadMedia(url){
         this.url = null;
 
         const container = this.element.querySelector('.lightbox__container');
@@ -80,28 +80,28 @@ class Ligthbox {
         document.removeEventListener('keyup', this.onKeyUp);
     }
 
-    /**Previous Image
+    /**Previous Media
      * @param {MouseEvent/KeybordEvent} e 
      */
     prev(e){
         e.preventDefault();
-        let i = this.images.findIndex(image => image === this.url);
+        let i = this.medias.findIndex(media => media === this.url);
         if(i === 0){
-            i = this.images.length;
+            i = this.medias.length;
         }
-        this.loadImage(this.images[i - 1]);
+        this.loadMedia(this.medias[i - 1]);
     }
 
-    /**Next Image
+    /**Next Media
      * @param {MouseEvent/KeybordEvent} e 
      */
     next(e){
         e.preventDefault();
-        let i = this.images.findIndex(image => image === this.url);
-        if(i === this.images.length - 1){
+        let i = this.medias.findIndex(media => media === this.url);
+        if(i === this.medias.length - 1){
             i = -1;
         }
-        this.loadImage(this.images[i + 1]);
+        this.loadMedia(this.medias[i + 1]);
     }
 
     /**
