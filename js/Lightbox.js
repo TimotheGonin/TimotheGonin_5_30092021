@@ -35,7 +35,7 @@ class Ligthbox {
     loadMedia(url){
         this.url = null;
 
-        const container = this.element.querySelector('.lightbox__container');
+        const container = this.element.querySelector('.lightbox__body');
         container.innerHTML = '';
         this.url = url;
         
@@ -114,6 +114,10 @@ class Ligthbox {
         <button class="lightbox__next">Suivant</button>
         <button class="lightbox__prev">Précédent</button>
         <div class="lightbox__container">
+            <div class="lightbox__body"></div>
+            <div class="lightbox__footer">
+                <h3 class="lightbox__title">Titre<h3>
+            </div>
         </div>`;
 
         //  EVENT
