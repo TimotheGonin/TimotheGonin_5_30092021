@@ -10,12 +10,12 @@ class Banner {
         const photographersData = await this.photographersApi.getPhotographers()
         const mediasData = await this.mediasApi.getMedias()
 
-        let counter = 0;
+        let numberOfLikes = 0;
         photographersData
             .map(photographer => new Photographer(photographer))
             .forEach(photographer => {
                 if(id === photographer.id){
-                    //CREATE COUNTER   
+                    //CREATE BANNER
                     const Template = new PhotographerBanner(photographer)
                     this.mainContent.prepend(
                     Template.createBanner()
@@ -25,18 +25,16 @@ class Banner {
                     mediasData.forEach(media => {
                         
                         if(id === media.photographerId){
-                            counter += media.likes
+                            numberOfLikes += media.likes
                         }
                         
                     })
 
-                    //CREATE COUNTER--LOOP
-                    mediasData.forEach(media => {
-                        const Template = new PhotographerCounter(photographer,counter)
-                            this.mainContent.prepend(
-                                Template.createCounter()
-                            )
-                    })
+                    //CREATE COUNTER
+                    const counter = new PhotographerCounter(photographer,numberOfLikes)
+                        this.mainContent.prepend(
+                            counter.createCounter()
+                        )
                     
                 }
             });
