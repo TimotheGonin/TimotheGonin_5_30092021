@@ -585,9 +585,15 @@ body {
 .picture-card__counter-like {
   display: flex;
   justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 .picture-card__counter-like i {
   margin-left: 0.5rem;
+}
+.picture-card__counter-like:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 @media (max-width: 991.98px) {
   .picture-card {

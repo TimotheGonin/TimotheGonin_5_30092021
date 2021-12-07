@@ -2,10 +2,18 @@ class MediaCard {
     constructor(media){
         this._media = media
     }
+
+    liking(){
+        console.log(this._media.likes);
+    }
+    /**
+     * 
+     * @returns{HTMLElement}
+     */
     createMediaCard(){
         let mediaCard = document.createElement('article')
         mediaCard.classList.add('picture-card')
-        let content = `
+        mediaCard.innerHTML = `
                 ${this._media.source}
                 <footer class="picture-card__info">
                     <h3 class="picture-card__title">${this._media.title}</h3>
@@ -15,7 +23,7 @@ class MediaCard {
                     </aside>
                 </footer>
         `;
-        mediaCard.innerHTML += content
+        mediaCard.querySelector('.picture-card__counter-like').addEventListener('click' , this.liking.bind(this));
         return mediaCard
     }
 }

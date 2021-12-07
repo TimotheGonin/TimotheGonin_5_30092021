@@ -32,9 +32,16 @@
     &__counter-like{
         display: flex;
         justify-content: center;
+        opacity: 1;
+        transition: opacity 0.3s;
         
         i{
         margin-left:0.5rem;
+        }
+
+        &:hover{
+            opacity: 0.5;
+            cursor:pointer;
         }
     }
 
