@@ -8,6 +8,8 @@ function liking(){
     //Increment
     let newCounter = document.createElement('p');
     newCounter.textContent = `${counter + 1}`;
+
+    counterBox.removeChild(counter);
     
     // const counter = document.querySelector('.picture-card__counter-like p');
     // const newCounter = document.createElement('p');
