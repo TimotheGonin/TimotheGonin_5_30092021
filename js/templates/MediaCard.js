@@ -1,20 +1,7 @@
 class MediaCard {
     constructor(media){
         this._media = media;
-        this._element = this.createMediaCard();
-    }
-
-    liking(){
-        // const mediaCounter = this._element.querySelector('.picture-card__counter-like p').textContent;
-        // const mediaCounterValue = Number(mediaCounter);
-        // console.log(mediaCounterValue);
-        const counterBox = this._element.querySelector('.picture-card__counter-like');
-        const counter = this._element.querySelector('.picture-card__counter-like p');
-        const newCounter = document.createElement('p');
-        newCounter.innerText = `New Value Lauched`;
-        counterBox.removeChild(counter);
-        counterBox.appendChild(newCounter);
-        console.log(counterBox);
+        // this._element = this.createMediaCard();
     }
 
     /**
@@ -34,7 +21,6 @@ class MediaCard {
                     </aside>
                 </footer>
         `;
-        mediaCard.querySelector('.picture-card__counter-like').addEventListener('click' , this.liking.bind(this));
         return mediaCard
     }
 }
