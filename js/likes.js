@@ -6,7 +6,16 @@ function liking(){
 
     //Increment
     counterElement.textContent = `${counterValue + 1}`;
+    
+    counterUpdate();
+}
 
+function counterUpdate(){
+    const totalLikesElement = document.querySelector('.photographer-counter__likes p');
+    const totalLikesValue = Number(document.querySelector('.photographer-counter__likes p').textContent);
+
+    //Increment
+    totalLikesElement.textContent = `${totalLikesValue + 1}`;
 }
 
 
