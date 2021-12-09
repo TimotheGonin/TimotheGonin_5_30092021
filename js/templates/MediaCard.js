@@ -1,11 +1,17 @@
 class MediaCard {
     constructor(media){
-        this._media = media
+        this._media = media;
+        // this._element = this.createMediaCard();
     }
+
+    /**
+     * 
+     * @returns{HTMLElement}
+     */
     createMediaCard(){
         let mediaCard = document.createElement('article')
         mediaCard.classList.add('picture-card')
-        let content = `
+        mediaCard.innerHTML = `
                 ${this._media.source}
                 <footer class="picture-card__info">
                     <h3 class="picture-card__title">${this._media.title}</h3>
@@ -15,7 +21,6 @@ class MediaCard {
                     </aside>
                 </footer>
         `;
-        mediaCard.innerHTML += content
         return mediaCard
     }
 }
