@@ -1,21 +1,21 @@
 function liking(){
 
-    //Show me the DOM
+    //PICTURE-CARD'S LIKES
     const counterElement = this.querySelector('.picture-card__counter-like p');
-    const counterValue = Number(this.querySelector('.picture-card__counter-like p').textContent);
+    const counterValue = Number(counterElement.textContent);
 
-    //Increment
-    counterElement.textContent = `${counterValue + 1}`;
+    // PHOTOGRAPHER'S-COUNTER LIKES
+    const totalLikesElement = document.querySelector('.photographer-counter__likes p');
+    const totalLikesValue = Number(totalLikesElement.textContent);
+
     
-    counterUpdate();
+    increment(counterElement, counterValue);
+    increment(totalLikesElement, totalLikesValue);
 }
 
-function counterUpdate(){
-    const totalLikesElement = document.querySelector('.photographer-counter__likes p');
-    const totalLikesValue = Number(document.querySelector('.photographer-counter__likes p').textContent);
-
+function increment(element, value){
     //Increment
-    totalLikesElement.textContent = `${totalLikesValue + 1}`;
+    element.textContent = `${++value}`;
 }
 
 
