@@ -16,6 +16,8 @@ orderByButton.addEventListener('change',  (e) => {
     if(e.target.value === 'Popularité'){
         galleryContent.forEach(elt => {
             elt.style.background='red';
+            //CATCH LIKES
+            console.log(Number(elt.childNodes[3].lastElementChild.textContent));
             gallery.appendChild(elt);
         });
     } else if(e.target.value === 'Date'){
