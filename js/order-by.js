@@ -26,6 +26,8 @@ orderByButton.addEventListener('change',  (e) => {
     } else if(e.target.value === 'Titre'){
         galleryContent.forEach(elt => {
             elt.style.background='green';
+            //CATCH TITLE
+            console.log(elt.childNodes[3].firstChild.nextSibling.textContent);
             gallery.appendChild(elt);
         });
     }
