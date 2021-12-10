@@ -17,7 +17,9 @@ orderByButton.addEventListener('change',  (e) => {
         galleryContent.forEach(elt => {
             elt.style.background='red';
             //CATCH LIKES
-            console.log(Number(elt.childNodes[3].lastElementChild.textContent));
+            const like = Number(elt.childNodes[3].lastElementChild.textContent)
+            console.log(like);
+
             gallery.appendChild(elt);
         });
     } else if(e.target.value === 'Date'){
@@ -29,7 +31,8 @@ orderByButton.addEventListener('change',  (e) => {
         galleryContent.forEach(elt => {
             elt.style.background='green';
             //CATCH TITLE
-            console.log(elt.childNodes[3].firstChild.nextSibling.textContent);
+            const title = elt.childNodes[3].firstChild.nextSibling.textContent
+            console.log(title);
             gallery.appendChild(elt);
         });
     }
