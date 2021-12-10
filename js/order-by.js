@@ -8,7 +8,7 @@ const gallery = document.querySelector('#media-cards-deck'); //media-cards colle
 const galleryContent = document.querySelectorAll('.picture-card'); //media-cards collection
 console.log(galleryContent);
 
-orderByButton.addEventListener('change',  (e) => {
+orderByButton.addEventListener('change', (e) => {
     console.log(e.target.value);
     gallery.innerHTML ='';
     
@@ -37,3 +37,7 @@ orderByButton.addEventListener('change',  (e) => {
         });
     }
 });
+
+
+//IF POSSIBLE 
+// orderByButton.addEventListener('click', (e) => console.log(e.target.value));
