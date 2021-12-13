@@ -41,3 +41,7 @@ orderByButton.addEventListener('change', (e) => {
 
 //IF POSSIBLE 
 // orderByButton.addEventListener('click', (e) => console.log(e.target.value));
+
+function order(array, arrayProperty){
+    array.sort((a,b) => a.arrayProperty - b.arrayProperty)
+}
