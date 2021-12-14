@@ -6,6 +6,7 @@
 const orderByButton = document.querySelector('#orderBy'); 
 const gallery = document.querySelector('#media-cards-deck'); //media-cards collection container
 const galleryContent = Array.from(document.querySelectorAll('.picture-card')); //media-cards collection
+console.log(galleryContent);
 
 orderByButton.addEventListener('change', (e) => {
     //REMOVING gallery content
