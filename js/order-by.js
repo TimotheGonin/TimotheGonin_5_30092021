@@ -14,6 +14,11 @@ orderByButton.addEventListener('change', (e) => {
     
     console.log(galleryContent);
     if(e.target.value === 'Popularité'){
+
+        //SORT METHOD--number of likes
+        galleryContent.sort((a,b) => a.childNodes[3].lastElementChild.textContent - b.childNodes[3].lastElementChild.textContent);
+
+        //SORTED ARRAY TO THE DOM
         galleryContent.forEach(elt => {
             elt.style.background='red';
             //CATCH LIKES
