@@ -5,7 +5,7 @@
 // ORDERBY BOX/BUTTON
 const orderByButton = document.querySelector('#orderBy'); 
 const gallery = document.querySelector('#media-cards-deck'); //media-cards collection container
-const galleryContent = document.querySelectorAll('.picture-card'); //media-cards collection
+const galleryContent = Array.from(document.querySelectorAll('.picture-card')); //media-cards collection
 console.log(galleryContent);
 
 orderByButton.addEventListener('change', (e) => {
@@ -28,6 +28,11 @@ orderByButton.addEventListener('change', (e) => {
             gallery.appendChild(elt);
         });
     } else if(e.target.value === 'Titre'){
+
+        //SORT METHOD--titles
+        galleryContent.sort((a,b) => a.childNodes[3].firstChild.nextSibling.textContent.localeCompare(b.childNodes[3].firstChild.nextSibling.textContent));
+
+        //SORTED ARRAY TO THE DOM
         galleryContent.forEach(elt => {
             elt.style.background='green';
             //CATCH TITLE
