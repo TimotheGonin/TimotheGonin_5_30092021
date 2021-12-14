@@ -22,9 +22,13 @@ orderByButton.addEventListener('change', (e) => {
         });
 
     } else if(e.target.value === 'Date'){
+        //SORT METHOD--number of likes
+        galleryContent.sort((a,b) => a.childNodes[5].dateTime.localeCompare(b.childNodes[5].dateTime));
 
+        //SORTED ARRAY TO THE DOM
         galleryContent.forEach(elt => {
             elt.style.background='orange';
+            console.log(elt.childNodes[5].dateTime);
             gallery.appendChild(elt);
         });
 
