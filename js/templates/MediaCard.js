@@ -20,6 +20,7 @@ class MediaCard {
                         <i class="fas fa-heart"></i>
                     </aside>
                 </footer>
+                <time datetime="${this._media.date}"></time>
         `;
         return mediaCard
     }

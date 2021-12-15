@@ -18,8 +18,10 @@ class Medias {
                     )
                 }
             });
-            Ligthbox.init();
+            
+            Ligthbox.init(); 
             Likes.init();
+            OrderBy.init();
     }
 }
 
