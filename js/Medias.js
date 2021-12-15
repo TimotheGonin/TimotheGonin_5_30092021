@@ -19,13 +19,11 @@ class Medias {
                 }
             });
             Ligthbox.init();
+            OrderBy.init();
 
             const likes = document.createElement('script');
-            const orderBy = document.createElement('script');
             likes.src = "js/likes.js";
-            orderBy.src = "js/order-by.js";
             document.body.appendChild(likes);
-            document.body.appendChild(orderBy);
     }
 }
 

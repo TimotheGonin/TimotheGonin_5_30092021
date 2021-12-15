@@ -1,49 +1,47 @@
-// ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ ELEMENTS                                                                     │
-// └──────────────────────────────────────────────────────────────────────────────┘
+class OrderBy{
+    static init(){
 
-// ORDERBY BOX/BUTTON
-const orderByButton = document.querySelector('#orderBy'); 
-const gallery = document.querySelector('#media-cards-deck'); //media-cards collection container
-const galleryContent = Array.from(document.querySelectorAll('.picture-card')); //media-cards collection
+        /**
+        * @param {ARRAY of HTMLElements} array 
+        * @param {DOM Container} destination 
+        */ 
+        function sortedToDOM(array, destination){
+            array.forEach(arrayElement => {
+                destination.appendChild(arrayElement);
+            });
+        }
 
-orderByButton.addEventListener('change', (e) => {
-    //REMOVING gallery content
-    gallery.innerHTML ='';
 
-    if(e.target.value === 'Popularité'){
+        // ORDERBY BOX/BUTTON
+        const orderByButton = document.querySelector('#orderBy'); 
+        const gallery = document.querySelector('#media-cards-deck'); //media-cards collection container
+        const galleryContent = Array.from(document.querySelectorAll('.picture-card')); //media-cards collection
 
-        //SORT METHOD--number of likes
-        galleryContent.sort((a,b) => a.childNodes[3].lastElementChild.textContent - b.childNodes[3].lastElementChild.textContent);
+        orderByButton.addEventListener('change', (e) => {
+            //REMOVING gallery content
+            gallery.innerHTML ='';
 
-        //SORTED ARRAY TO THE DOM
-        sortedToDOM(galleryContent, gallery);
+            if(e.target.value === 'Popularité'){
 
-    } else if(e.target.value === 'Date'){
+                //SORT METHOD--number of likes
+                galleryContent.sort((a,b) => a.childNodes[3].lastElementChild.textContent - b.childNodes[3].lastElementChild.textContent);
+                //SORTED ARRAY TO THE DOM
+                sortedToDOM(galleryContent, gallery);
 
-        //SORT METHOD--number of likes
-        galleryContent.sort((a,b) => a.childNodes[5].dateTime.localeCompare(b.childNodes[5].dateTime));
+            } else if(e.target.value === 'Date'){
 
-        //SORTED ARRAY TO THE DOM
-        sortedToDOM(galleryContent, gallery);
+                //SORT METHOD--number of likes
+                galleryContent.sort((a,b) => a.childNodes[5].dateTime.localeCompare(b.childNodes[5].dateTime));
+                //SORTED ARRAY TO THE DOM
+                sortedToDOM(galleryContent, gallery);
 
-    } else if(e.target.value === 'Titre'){
+            } else if(e.target.value === 'Titre'){
 
-        //SORT METHOD--titles
-        galleryContent.sort((a,b) => a.childNodes[3].firstChild.nextSibling.textContent.localeCompare(b.childNodes[3].firstChild.nextSibling.textContent));
-
-        //SORTED ARRAY TO THE DOM
-        sortedToDOM(galleryContent, gallery);
+                //SORT METHOD--titles
+                galleryContent.sort((a,b) => a.childNodes[3].firstChild.nextSibling.textContent.localeCompare(b.childNodes[3].firstChild.nextSibling.textContent));
+                //SORTED ARRAY TO THE DOM
+                sortedToDOM(galleryContent, gallery);
+            }
+        });
     }
-});
-
-
-// function order(array, arrayProperty){
-//     array.sort((a,b) => a.arrayProperty - b.arrayProperty)
-// }
-
-function sortedToDOM(array, destination){
-    array.forEach(arrayElement => {
-        destination.appendChild(arrayElement);
-    });
 }
