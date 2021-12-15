@@ -20,27 +20,31 @@ class OrderBy{
         orderByButton.addEventListener('change', (e) => {
             //REMOVING gallery content
             gallery.innerHTML ='';
-
-            if(e.target.value === 'Popularité'){
-
-                //SORT METHOD--number of likes
-                galleryContent.sort((a,b) => a.childNodes[3].lastElementChild.textContent - b.childNodes[3].lastElementChild.textContent);
-                //SORTED ARRAY TO THE DOM
-                sortedToDOM(galleryContent, gallery);
-
-            } else if(e.target.value === 'Date'){
-
-                //SORT METHOD--number of likes
-                galleryContent.sort((a,b) => a.childNodes[5].dateTime.localeCompare(b.childNodes[5].dateTime));
-                //SORTED ARRAY TO THE DOM
-                sortedToDOM(galleryContent, gallery);
-
-            } else if(e.target.value === 'Titre'){
-
-                //SORT METHOD--titles
-                galleryContent.sort((a,b) => a.childNodes[3].firstChild.nextSibling.textContent.localeCompare(b.childNodes[3].firstChild.nextSibling.textContent));
-                //SORTED ARRAY TO THE DOM
-                sortedToDOM(galleryContent, gallery);
+            
+            switch (e.target.value) {
+                case 'Popularité':
+                    //SORT METHOD--number of likes
+                    galleryContent.sort((a,b) => a.childNodes[3].lastElementChild.textContent - b.childNodes[3].lastElementChild.textContent);
+                    //SORTED ARRAY TO THE DOM
+                    sortedToDOM(galleryContent, gallery);
+                    break;
+            
+                case 'Date':
+                    //SORT METHOD--number of likes
+                    galleryContent.sort((a,b) => b.childNodes[5].dateTime.localeCompare(a.childNodes[5].dateTime));
+                    //SORTED ARRAY TO THE DOM
+                    sortedToDOM(galleryContent, gallery);
+                    break;
+            
+                case 'Titre':
+                    //SORT METHOD--titles
+                    galleryContent.sort((a,b) => a.childNodes[3].firstChild.nextSibling.textContent.localeCompare(b.childNodes[3].firstChild.nextSibling.textContent));
+                    //SORTED ARRAY TO THE DOM
+                    sortedToDOM(galleryContent, gallery);
+                    break;
+            
+                default:
+                    break;
             }
         });
     }
