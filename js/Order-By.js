@@ -24,7 +24,7 @@ class OrderBy{
             switch (e.target.value) {
                 case 'Popularité':
                     //SORT METHOD--number of likes
-                    galleryContent.sort((a,b) => a.childNodes[3].lastElementChild.textContent - b.childNodes[3].lastElementChild.textContent);
+                    galleryContent.sort((a,b) => b.childNodes[3].lastElementChild.textContent - a.childNodes[3].lastElementChild.textContent);
                     //SORTED ARRAY TO THE DOM
                     sortedToDOM(galleryContent, gallery);
                     break;
