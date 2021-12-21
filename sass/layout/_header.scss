@@ -13,10 +13,6 @@ header {
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 2rem;
-		// padding: 0 12rem;
-        .tags{
-            flex-wrap: wrap;
-        }
 	}
 
 	//MEDIA QUERIES
@@ -26,11 +22,6 @@ header {
 		nav {
 			flex-flow: wrap row;
 			margin-top: 3.5rem;
-			.tags {
-				order: 3;
-				width: 100%;
-				margin: 3rem 0;
-			}
 		}
 	}
 
