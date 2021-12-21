@@ -31,23 +31,9 @@ class PhotographerBanner {
         //FOOTER ELEMENTS
         let bannerFooter = document.createElement('div');
         bannerFooter.classList.add('photographer-banner__footer');
-        let tags = document.createElement('ul');
-        tags.classList.add('tags');
     
-        //FOOTER CONTENT
-        this._photographer.tags.forEach(tag => {
-            let content = `
-                <li class="tag"><a href="#">#${tag}</a></li>
-            `;
-            tags.innerHTML += content;
-        });
-
-        
-
-
         //BANNER FOOTER CHILD
         banner.append(bannerFooter);
-        bannerFooter.append(tags);
         
         //TEST MODAL
         const Template = new ContactModal(this._photographer)

@@ -31,17 +31,6 @@ class PhotographerCard {
         cardFooter.classList.add('card__footer');
         let cardActions = document.createElement('div');
         cardActions.classList.add('card__actions');
-        let tags = document.createElement('ul');
-        tags.classList.add('tags');
-    
-        //FOOTER CONTENT
-        this._photographer.tags.forEach(tag => {
-            let content = `
-                <li class="tag"><a href="#">#${tag}</a></li>
-            `;
-            tags.innerHTML += content;
-        });
-
         
         //GET HEADER CONTENT
         card.innerHTML += cardHeader;
@@ -49,7 +38,6 @@ class PhotographerCard {
         // GET FOOTER CONTENT
         cardFooter.appendChild(cardActions); 
         card.appendChild(cardFooter);
-        cardActions.appendChild(tags);
         
         //LAUNCH
         return card

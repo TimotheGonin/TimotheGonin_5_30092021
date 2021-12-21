@@ -4,7 +4,6 @@ class Photographer{
         this._id = data.id
         this._city = data.city
         this._country = data.country
-        this._tags = data.tags
         this._tagline = data.tagline
         this._price = data.price
         this._portrait = data.portrait
@@ -18,9 +17,6 @@ class Photographer{
     }
     get location(){
         return `${this._city}, ${this._country}`
-    }
-    get tags(){
-        return this._tags
     }
     get tagline(){
         return this._tagline

@@ -510,17 +510,6 @@ body {
   }
 }
 
-.tag {
-  color: #901C1C;
-  display: inline-block;
-  border: 0.1rem solid #C4C4C4;
-  margin: 0.2rem;
-  padding: 0.5rem;
-  font-size: 1.15rem;
-  border-radius: 1.1rem;
-  font-weight: bold;
-}
-
 .order-by {
   margin: 3rem 2rem;
 }
@@ -664,18 +653,10 @@ header nav {
   justify-content: space-between;
   margin-top: 2rem;
 }
-header nav .tags {
-  flex-wrap: wrap;
-}
 @media (max-width: 991.98px) {
   header nav {
     flex-flow: wrap row;
     margin-top: 3.5rem;
-  }
-  header nav .tags {
-    order: 3;
-    width: 100%;
-    margin: 3rem 0;
   }
 }
 @media (max-width: 575.98px) {
@@ -844,12 +825,6 @@ header nav .tags {
     opacity: 1;
   }
 }
-.tags {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
 .photographer-banner {
   margin-top: 7rem;
   margin-bottom: 7rem;
@@ -884,14 +859,6 @@ header nav .tags {
   align-self: flex-start;
   margin-top: 4rem;
   margin-left: 4rem;
-}
-.photographer-banner .tags {
-  display: inline-flex;
-  margin-top: 1rem;
-}
-.photographer-banner .tags .tag {
-  font-size: 1.5rem;
-  border-radius: 1.5rem;
 }
 .photographer-banner .card__figure {
   display: flex;
@@ -944,13 +911,6 @@ header nav .tags {
   }
   .photographer-banner__slogan {
     font-size: 1.3rem;
-  }
-  .photographer-banner .tags {
-    margin: 0;
-  }
-  .photographer-banner .tags .tag {
-    font-size: 1.3rem;
-    padding: 0.3rem 0.5rem;
   }
   .photographer-banner .card__figure {
     flex-grow: 0;
