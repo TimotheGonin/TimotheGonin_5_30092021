@@ -13,7 +13,7 @@ class PhotographerCard {
             <a href="photographer.html?id=${this._photographer.id}">
                 <div class="card__header">
                     <figure class="card__figure">
-                        <img src="public/img/Photographers_ID_Photos/${this._photographer.portrait}" alt="" class="card__image">
+                        <img src="public/img/Photographers_ID_Photos/${this._photographer.portrait}" alt="${this._photographer.name}" class="card__image">
                     </figure>
                 </div>
                 <div class="card__body">
