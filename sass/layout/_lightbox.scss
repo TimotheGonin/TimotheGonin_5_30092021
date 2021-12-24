@@ -57,10 +57,8 @@
 
     //CONTENT
     &__container{
-        display: flex;
+        @extend %center-x-y;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         margin-left: 50px;
         margin-right: 50px;
         min-height:100vh;
