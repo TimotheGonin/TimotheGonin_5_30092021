@@ -5,6 +5,27 @@
   align-items: center;
 }
 
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  overflow: auto;
+  animation: modalIn 0.5s;
+  transition: opacity 0.5s;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -740,18 +761,6 @@ header nav {
   }
 }
 
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 10;
-  overflow: auto;
-  animation: lightboxIn 0.5s;
-  transition: opacity 0.5s;
-}
 .lightbox.fadeOut {
   opacity: 0;
 }
@@ -810,15 +819,6 @@ header nav {
   font-weight: 400;
 }
 
-/* ANIMATION */
-@keyframes lightboxIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .photographer-banner {
   margin-top: 7rem;
   margin-bottom: 7rem;
