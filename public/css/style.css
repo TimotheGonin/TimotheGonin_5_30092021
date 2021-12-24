@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.lightbox {
+.lightbox, .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -685,12 +685,6 @@ header nav {
 }
 
 .modal {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.8);
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
   display: none;
   justify-content: center;
   align-items: center;
