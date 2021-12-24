@@ -49,11 +49,13 @@ class Ligthbox {
         if (url.includes('jpg')) {
             const image = new Image();
 			image.src = url;
+            image.setAttribute('aria-label', 'Lilac breasted roller');
             mediaContainer.appendChild(image);
 
 		} else if (url.includes('mp4')) {
             const video = document.createElement('video');
 			video.src = url;
+            video.setAttribute('aria-label', 'Lilac breasted roller');
             video.controls = true;
             mediaContainer.appendChild(video);
 		}
@@ -128,9 +130,9 @@ class Ligthbox {
     buildDOM(){
         const dom = document.createElement('div');
         dom.classList.add('lightbox');
-        dom.innerHTML = `<button class="lightbox__close">Fermer</button>
-        <button class="lightbox__next">Suivant</button>
-        <button class="lightbox__prev">Précédent</button>
+        dom.innerHTML = `<button class="lightbox__close" aria-lable="Close dialog">Fermer</button>
+        <button class="lightbox__next" aria-lable="Next image/video">Suivant</button>
+        <button class="lightbox__prev" aria-label="Previous image/video">Précédent</button>
         <div class="lightbox__container">
             <div class="lightbox__body"></div>
             <div class="lightbox__footer"></div>

@@ -19,8 +19,8 @@ class Picture{
     }
     get source(){
         return `<figure class="picture-card__image">
-                    <a href="public/img/${this._photographerId}/${this._image}">
-                        <img src="public/img/${this._photographerId}/${this._image}" alt="">
+                    <a href="public/img/${this._photographerId}/${this._image}" aria-label="Lilac breasted roller, closeup view">
+                        <img src="public/img/${this._photographerId}/${this._image}" alt="Photographie - ${this._title}">
                     </a>
                 </figure>`
     }
