@@ -6,7 +6,8 @@ class ContactModal {
         //INSERT CONTACT MODAL STRUCTURE BELOW
         const contactModal = document.createElement('aside');
         contactModal.setAttribute('id', 'contact-modal');
-        contactModal.setAttribute('class', 'modal')
+        contactModal.classList.add('modal');
+        contactModal.classList.add('sr-only');
         let contentModal = `
             <div class="modal--contact">
                 <header class="modal--contact__header">

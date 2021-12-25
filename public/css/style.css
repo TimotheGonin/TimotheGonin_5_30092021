@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap");
-.lightbox__container, .photographer-counter__price, .photographer-counter__likes, .picture-card, .card__body, .card {
+.lightbox__container, .modal, .photographer-counter__price, .photographer-counter__likes, .picture-card, .card__body, .card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -684,11 +684,6 @@ header nav {
   }
 }
 
-.modal {
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
 .modal--contact {
   align-self: center;
   background: #DB8876;

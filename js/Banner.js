@@ -78,10 +78,10 @@ const id = Number(pageUrl.searchParams.get("id"));
 // └──────────────────────────────────────────────────────────────────────────────┘
 function displayModal() {
     const modal = document.getElementById("contact-modal");
-	modal.style.display = "flex";
+	modal.classList.remove('sr-only');
 }
 
 function closeModal() {
     const modal = document.getElementById("contact-modal");
-    modal.style.display = "none";
+    modal.classList.add('sr-only');
 }

@@ -1,9 +1,7 @@
 .modal{
+    
     @extend %modal;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
+    @extend %center-x-y;
 
     &--contact{
         align-self: center;
