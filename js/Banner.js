@@ -35,7 +35,6 @@ class Banner {
                         this.mainContent.prepend(
                             counter.createCounter()
                         )
-                    
                 }
             });
         
@@ -71,8 +70,8 @@ const id = Number(pageUrl.searchParams.get("id"));
 
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ MODAL LAUNCHER FUNCTION                                                      │
-// └──────────────────────────────────────────────────────────────────────────────┘
+// │ CONTACT MODAL LAUNCHER FUNCTION                                              │
+// └──────────────────────────────────────────────────────────────────────────────┘ 
 function displayModal() {
     const modal = document.getElementById("contact-modal");
 	modal.classList.remove('sr-only');

@@ -6,11 +6,13 @@ class ContactModal {
         this._photographer = photographer
     }
     createContactModal(){
+
         //INSERT CONTACT MODAL STRUCTURE BELOW
         const contactModal = document.createElement('aside');
         contactModal.setAttribute('id', 'contact-modal');
         contactModal.classList.add('contact-form');
         contactModal.classList.add('sr-only');
+        
         contactModal.innerHTML  = `
             <div class="contact-form__container">
                 <header class="contact-form__header">
@@ -48,6 +50,8 @@ class ContactModal {
         contactModal.querySelector('#close-contact-modal-button').addEventListener('click', () => {
             contactModal.classList.add('sr-only');
         })
+
+        //LAUNCH
         return contactModal;
     }
 }
