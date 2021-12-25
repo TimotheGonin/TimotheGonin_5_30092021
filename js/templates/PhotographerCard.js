@@ -25,19 +25,9 @@ class PhotographerCard {
             </a>
         `;
         
-    
-        // FOOTER--ELEMENTS
-        let cardFooter = document.createElement('footer');
-        cardFooter.classList.add('card__footer');
-        let cardActions = document.createElement('div');
-        cardActions.classList.add('card__actions');
         
         //GET HEADER CONTENT
         card.innerHTML += cardHeader;
-
-        // GET FOOTER CONTENT
-        cardFooter.appendChild(cardActions); 
-        card.appendChild(cardFooter);
         
         //LAUNCH
         return card

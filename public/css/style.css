@@ -1,8 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap");
-.photographer-counter__price, .photographer-counter__likes {
+.lightbox__container, .contact-form, .photographer-counter__price, .photographer-counter__likes, .picture-card, .card__body, .card {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lightbox, .contact-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  overflow: auto;
+  animation: modalIn 0.5s;
+  transition: opacity 0.5s;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
 }
 
 *,
@@ -395,10 +428,7 @@ body {
 }
 
 .card {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 33.5rem;
   height: 34.2rem;
   margin: 2rem 0;
@@ -418,10 +448,7 @@ body {
   object-fit: cover;
 }
 .card__body {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 1.5rem;
 }
 .card__name {
@@ -442,12 +469,6 @@ body {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: #525252;
-}
-.card__actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.5rem;
 }
 
 .logo {
@@ -545,10 +566,7 @@ body {
 .picture-card {
   width: 35rem;
   height: 35.1rem;
-  display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
   margin: 2rem 0;
 }
 .picture-card__image {
@@ -666,65 +684,51 @@ header nav {
   }
 }
 
-.modal {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.8);
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-.modal--contact {
+.contact-form__container {
   align-self: center;
   background: #DB8876;
   max-height: 900px;
   width: 669px;
 }
-.modal--contact__header {
+.contact-form__header {
   font-size: 3rem;
   display: flex;
   flex-direction: row;
   margin: 2rem;
 }
-.modal--contact__info {
+.contact-form__info {
   display: flex;
   flex-direction: column;
   width: 90%;
 }
-.modal--contact__title {
+.contact-form__title, .contact-form__recipient {
   display: inline;
 }
-.modal--contact__recipient {
-  display: inline;
-}
-.modal--contact__close {
+.contact-form__close {
   width: 10%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
 }
-.modal--contact__close i {
+.contact-form__close i {
   color: white;
   font-size: 6rem;
 }
-.modal--contact__body {
+.contact-form__body {
   display: flex;
   flex-direction: column;
   margin: 2rem;
 }
-.modal--contact__body .input-group {
+.contact-form__body .input-group {
   margin-top: 1rem;
 }
-.modal--contact__body .input-group__input {
+.contact-form__body .input-group__input {
   width: 100%;
 }
-.modal--contact__body .input-group__input--textarea {
+.contact-form__body .input-group__input--textarea {
   width: 100%;
 }
-.modal--contact__body button {
+.contact-form__body button {
   align-self: flex-start;
   margin: 2rem 0;
 }
@@ -743,18 +747,6 @@ header nav {
   }
 }
 
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 10;
-  overflow: auto;
-  animation: lightboxIn 0.5s;
-  transition: opacity 0.5s;
-}
 .lightbox.fadeOut {
   opacity: 0;
 }
@@ -794,10 +786,7 @@ header nav {
   opacity: 0.5;
 }
 .lightbox__container {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-left: 50px;
   margin-right: 50px;
   min-height: 100vh;
@@ -816,15 +805,6 @@ header nav {
   font-weight: 400;
 }
 
-/* ANIMATION */
-@keyframes lightboxIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .photographer-banner {
   margin-top: 7rem;
   margin-bottom: 7rem;
