@@ -68,6 +68,9 @@ let pageUrl = new URL(window.location.href);
 //GET URL PARAMETERS
 const id = Number(pageUrl.searchParams.get("id"));
 
+//SIBLING SMALL CONTACT FORM BUTTON
+const contactButtonSmall = document.getElementById('contact-btn--small');
+contactButtonSmall.addEventListener('click', displayModal);
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ CONTACT MODAL LAUNCHER FUNCTION                                              │
