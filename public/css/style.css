@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap");
-.lightbox__container, .modal, .photographer-counter__price, .photographer-counter__likes, .picture-card, .card__body, .card {
+.lightbox__container, .contact-form, .photographer-counter__price, .photographer-counter__likes, .picture-card, .card__body, .card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.lightbox, .modal {
+.lightbox, .contact-form {
   position: fixed;
   top: 0;
   left: 0;
@@ -684,54 +684,51 @@ header nav {
   }
 }
 
-.modal--contact {
+.contact-form__container {
   align-self: center;
   background: #DB8876;
   max-height: 900px;
   width: 669px;
 }
-.modal--contact__header {
+.contact-form__header {
   font-size: 3rem;
   display: flex;
   flex-direction: row;
   margin: 2rem;
 }
-.modal--contact__info {
+.contact-form__info {
   display: flex;
   flex-direction: column;
   width: 90%;
 }
-.modal--contact__title {
+.contact-form__title, .contact-form__recipient {
   display: inline;
 }
-.modal--contact__recipient {
-  display: inline;
-}
-.modal--contact__close {
+.contact-form__close {
   width: 10%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
 }
-.modal--contact__close i {
+.contact-form__close i {
   color: white;
   font-size: 6rem;
 }
-.modal--contact__body {
+.contact-form__body {
   display: flex;
   flex-direction: column;
   margin: 2rem;
 }
-.modal--contact__body .input-group {
+.contact-form__body .input-group {
   margin-top: 1rem;
 }
-.modal--contact__body .input-group__input {
+.contact-form__body .input-group__input {
   width: 100%;
 }
-.modal--contact__body .input-group__input--textarea {
+.contact-form__body .input-group__input--textarea {
   width: 100%;
 }
-.modal--contact__body button {
+.contact-form__body button {
   align-self: flex-start;
   margin: 2rem 0;
 }

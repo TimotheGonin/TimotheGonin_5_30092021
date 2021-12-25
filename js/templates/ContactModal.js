@@ -1,3 +1,6 @@
+/**
+ * @param{string} photographer data
+ */
 class ContactModal {
     constructor(photographer){
         this._photographer = photographer
@@ -6,20 +9,20 @@ class ContactModal {
         //INSERT CONTACT MODAL STRUCTURE BELOW
         const contactModal = document.createElement('aside');
         contactModal.setAttribute('id', 'contact-modal');
-        contactModal.classList.add('modal');
+        contactModal.classList.add('contact-form');
         contactModal.classList.add('sr-only');
         let contentModal = `
-            <div class="modal--contact">
-                <header class="modal--contact__header">
-                    <div class="modal--contact__info">
-                        <h2 class="modal--contact__title">Contactez-moi</h2>
-                        <p class="modal--contact__recipient">${this._photographer.name}<p>
+            <div class="contact-form__container">
+                <header class="contact-form__header">
+                    <div class="contact-form__info">
+                        <h2 class="contact-form__title">Contactez-moi</h2>
+                        <p class="contact-form__recipient">${this._photographer.name}<p>
                     </div>
-                    <span class="modal--contact__close" id="close-contact-momdal-button" aria-label="Close Contact form">
+                    <span class="contact-form__close" id="close-contact-momdal-button" aria-label="Close Contact form">
                         <i class="fas fa-times "></i>
                     </span>
                 </header>
-                <form class="modal--contact__body">
+                <form class="contact-form__body">
                     <div class="input-group">
                         <label class="input-group__label" az>Prénom</label>
                         <input type="text" class="input-group__input" aria-labelledby="First name"/>
