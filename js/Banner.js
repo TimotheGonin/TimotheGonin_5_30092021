@@ -44,9 +44,6 @@ class Banner {
             const contactButton = document.getElementById('contact-btn');
             contactButton.addEventListener('click', displayModal);
 
-            const closeContactModal = document.getElementById('close-contact-momdal-button');
-            closeContactModal.addEventListener('click', closeModal);
-
             // SUBMIT BUTTON--modal
             const submitButtonModal = document.getElementById('contact-submit-button');
             submitButtonModal.addEventListener('click', (e) => {
@@ -79,9 +76,4 @@ const id = Number(pageUrl.searchParams.get("id"));
 function displayModal() {
     const modal = document.getElementById("contact-modal");
 	modal.classList.remove('sr-only');
-}
-
-function closeModal() {
-    const modal = document.getElementById("contact-modal");
-    modal.classList.add('sr-only');
 }

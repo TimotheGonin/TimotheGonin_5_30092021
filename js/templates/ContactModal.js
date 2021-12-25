@@ -11,14 +11,14 @@ class ContactModal {
         contactModal.setAttribute('id', 'contact-modal');
         contactModal.classList.add('contact-form');
         contactModal.classList.add('sr-only');
-        let contentModal = `
+        contactModal.innerHTML  = `
             <div class="contact-form__container">
                 <header class="contact-form__header">
                     <div class="contact-form__info">
                         <h2 class="contact-form__title">Contactez-moi</h2>
                         <p class="contact-form__recipient">${this._photographer.name}<p>
                     </div>
-                    <span class="contact-form__close" id="close-contact-momdal-button" aria-label="Close Contact form">
+                    <span class="contact-form__close" id="close-contact-modal-button" aria-label="Close Contact form">
                         <i class="fas fa-times "></i>
                     </span>
                 </header>
@@ -44,7 +44,10 @@ class ContactModal {
             </div>
         `;
 
-        contactModal.innerHTML += contentModal;
+        //EVENT 
+        contactModal.querySelector('#close-contact-modal-button').addEventListener('click', () => {
+            contactModal.classList.add('sr-only');
+        })
         return contactModal;
     }
 }
