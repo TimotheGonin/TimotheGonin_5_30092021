@@ -404,27 +404,32 @@ body {
 }
 
 .button {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.6rem;
   margin-top: 1rem;
+  min-width: 170px;
   border-radius: 0.7rem;
   padding: 0.7rem;
   background-color: #D3573C;
   border: none;
 }
 .button-contact {
-  font-weight: 500;
   border-radius: 0.4rem;
   letter-spacing: 0.1rem;
   font-size: 1.9rem;
   color: #ffffff;
-  background-color: #901c1c;
+  background-color: #901C1C;
   padding: 2.2rem 1rem;
   margin-top: 0;
 }
 .button-contact--small {
   padding: 0.8rem 1.8rem;
   font-size: 1.7rem;
+}
+.button-contact:hover {
+  background: #DB8876;
+  color: black;
+  cursor: pointer;
 }
 
 .card {
@@ -587,6 +592,9 @@ body {
   font-weight: bold;
   font-size: 2rem;
   width: 35rem;
+}
+.picture-card__info h2 {
+  font-size: 2.2rem;
 }
 .picture-card__counter-like {
   display: flex;
