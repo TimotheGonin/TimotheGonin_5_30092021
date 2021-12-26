@@ -405,12 +405,8 @@ body {
 
 .button {
   font-weight: 500;
-  font-size: 1.6rem;
   margin-top: 1rem;
   min-width: 170px;
-  border-radius: 0.7rem;
-  padding: 0.7rem;
-  background-color: #D3573C;
   border: none;
 }
 .button-contact {
@@ -668,10 +664,6 @@ header {
   display: flex;
   flex-direction: column;
   margin: 0 2rem;
-}
-header aside {
-  display: flex;
-  justify-content: center;
 }
 header nav {
   display: flex;
