@@ -16,7 +16,7 @@ class ContactModal {
         contactModal.setAttribute('aria-hidden', 'false');
         
         contactModal.innerHTML  = `
-            <div class="contact-form__container">
+            <div class="contact-form__container" role="group">
                 <header class="contact-form__header">
                     <div class="contact-form__info">
                         <h2 class="contact-form__title">Contactez-moi</h2>
@@ -29,21 +29,21 @@ class ContactModal {
                 <form class="contact-form__body">
                     <div class="input-group">
                         <label class="input-group__label">Prénom</label>
-                        <input type="text" class="input-group__input" aria-labelledby="First name"/>
+                        <input type="text" class="input-group__input" aria-label="First name"/>
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Nom</label>
-                        <input type="text" class="input-group__input" aria-labelledby="Last name"/>
+                        <input type="text" class="input-group__input" aria-label="Last name"/>
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Email</label>
-                        <input type="email" class="input-group__input" aria-labelledby="Email"/>
+                        <input type="email" class="input-group__input" aria-label="Email"/>
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Votre Message</label>
-                        <textarea class="input-group__input--textarea" aria-labelledby="Your message"></textarea>
+                        <textarea class="input-group__input--textarea" aria-label="Your message"></textarea>
                     </div>
-                    <button type="submit"class="button button-contact button-contact--small" id="contact-submit-button" aria-label="Send">Envoyer</button>
+                    <button type="submit" class="button button-contact button-contact--small" id="contact-submit-button" aria-label="Send">Envoyer</button>
                 </form>
             </div>
         `;
