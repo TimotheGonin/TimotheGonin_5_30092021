@@ -12,6 +12,8 @@ class ContactModal {
         contactModal.setAttribute('id', 'contact-modal');
         contactModal.classList.add('contact-form');
         contactModal.classList.add('sr-only');
+        contactModal.setAttribute('role','dialog');
+        contactModal.setAttribute('aria-hidden', 'false');
         
         contactModal.innerHTML  = `
             <div class="contact-form__container">
@@ -49,6 +51,9 @@ class ContactModal {
         //EVENT 
         contactModal.querySelector('#close-contact-modal-button').addEventListener('click', () => {
             contactModal.classList.add('sr-only');
+            contactModal.setAttribute('aria-hidden', 'true');
+            document.querySelector('header').setAttribute('aria-hidden','false');    
+            document.querySelector('main').setAttribute('aria-hidden','false');
         })
 
         //LAUNCH
