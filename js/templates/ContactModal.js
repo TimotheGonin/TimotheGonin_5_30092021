@@ -28,7 +28,7 @@ class ContactModal {
                 </header>
                 <form class="contact-form__body">
                     <div class="input-group">
-                        <label class="input-group__label" az>Prénom</label>
+                        <label class="input-group__label">Prénom</label>
                         <input type="text" class="input-group__input" aria-labelledby="First name"/>
                     </div>
                     <div class="input-group">
