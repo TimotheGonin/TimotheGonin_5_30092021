@@ -35,7 +35,6 @@ class Banner {
                         this.mainContent.prepend(
                             counter.createCounter()
                         )
-                    
                 }
             });
         
@@ -43,9 +42,6 @@ class Banner {
             // MODAL LAUCHER EVENTS
             const contactButton = document.getElementById('contact-btn');
             contactButton.addEventListener('click', displayModal);
-
-            const closeContactModal = document.getElementById('close-contact-momdal-button');
-            closeContactModal.addEventListener('click', closeModal);
 
             // SUBMIT BUTTON--modal
             const submitButtonModal = document.getElementById('contact-submit-button');
@@ -72,16 +68,16 @@ let pageUrl = new URL(window.location.href);
 //GET URL PARAMETERS
 const id = Number(pageUrl.searchParams.get("id"));
 
+//SIBLING SMALL CONTACT FORM BUTTON
+const contactButtonSmall = document.getElementById('contact-btn--small');
+contactButtonSmall.addEventListener('click', displayModal);
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
-// │ MODAL LAUNCHER FUNCTION                                                      │
-// └──────────────────────────────────────────────────────────────────────────────┘
+// │ CONTACT MODAL LAUNCHER FUNCTION                                              │
+// └──────────────────────────────────────────────────────────────────────────────┘ 
 function displayModal() {
     const modal = document.getElementById("contact-modal");
 	modal.classList.remove('sr-only');
-}
-
-function closeModal() {
-    const modal = document.getElementById("contact-modal");
-    modal.classList.add('sr-only');
+    document.querySelector('header').setAttribute('aria-hidden','true');    
+    document.querySelector('main').setAttribute('aria-hidden','true');
 }

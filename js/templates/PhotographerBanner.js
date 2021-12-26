@@ -5,11 +5,11 @@ class PhotographerBanner {
 
     createBanner(){
         //BANNER
-        let banner = document.createElement('section');
+        const banner = document.createElement('section');
         banner.classList.add('photographer-banner');
 
         //BANNER BODY CONTENT
-        let bannerBody =`
+        banner.innerHTML =`
             <div class="photographer-banner__body">
                 <div class="photographer-banner__info">
                     <h1 class="photographer-banner__name">${this._photographer.name}</h1>
@@ -24,24 +24,15 @@ class PhotographerBanner {
                 </figure>
             </div>
         `;
-
-        //GET BANNER BODY CONTENT
-        banner.innerHTML += bannerBody;
-    
-        //FOOTER ELEMENTS
-        let bannerFooter = document.createElement('div');
-        bannerFooter.classList.add('photographer-banner__footer');
-    
-        //BANNER FOOTER CHILD
-        banner.append(bannerFooter);
         
-        //TEST MODAL
+        //CONTACT MODAL
         const Template = new ContactModal(this._photographer)
             banner.append(
                 Template.createContactModal()
             )
+
         //LAUNCH
-        return banner
+        return banner;
     }
     
 }
