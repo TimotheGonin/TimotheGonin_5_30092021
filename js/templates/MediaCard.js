@@ -1,7 +1,9 @@
+/**
+ * @param{string} media data
+ */
 class MediaCard {
     constructor(media){
         this._media = media;
-        // this._element = this.createMediaCard();
     }
 
     /**

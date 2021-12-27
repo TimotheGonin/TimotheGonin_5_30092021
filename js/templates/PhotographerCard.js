@@ -1,15 +1,22 @@
+/**
+ * @param{string} photographer data
+ */
 class PhotographerCard {
+
     constructor(photographer){
         this._photographer = photographer
     }
 
+    /**
+     * 
+     * @returns{HTMLElement}
+     */
     createCard(){
-        //CARD
+        
         const card = document.createElement('article');
         card.classList.add('card');
     
-        // HEADER CONTENT
-        let cardHeader = `
+        card.innerHTML = `
             <a href="photographer.html?id=${this._photographer.id}">
                 <div class="card__header">
                     <figure class="card__figure">
@@ -24,10 +31,6 @@ class PhotographerCard {
                 </div>
             </a>
         `;
-        
-        
-        //GET HEADER CONTENT
-        card.innerHTML += cardHeader;
         
         //LAUNCH
         return card

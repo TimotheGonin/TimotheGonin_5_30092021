@@ -2,12 +2,17 @@
  * @param{string} photographer data
  */
 class ContactModal {
+    
     constructor(photographer){
         this._photographer = photographer
     }
+
+    /**
+     * 
+     * @returns{HTMLElement}
+     */
     createContactModal(){
 
-        //INSERT CONTACT MODAL STRUCTURE BELOW
         const contactModal = document.createElement('aside');
         contactModal.setAttribute('id', 'contact-modal');
         contactModal.classList.add('contact-form');
@@ -48,7 +53,7 @@ class ContactModal {
             </div>
         `;
 
-        //EVENT 
+        //EVENT Closing Modal--contact form
         contactModal.querySelector('#close-contact-modal-button').addEventListener('click', () => {
             contactModal.classList.add('sr-only');
             contactModal.setAttribute('aria-hidden', 'true');
