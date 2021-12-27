@@ -417,6 +417,7 @@ body {
   background-color: #901C1C;
   padding: 2.2rem 1rem;
   margin-top: 0;
+  transition: all 0.3s;
 }
 .button-contact--small {
   padding: 0.8rem 1.8rem;
@@ -426,6 +427,7 @@ body {
   background: #DB8876;
   color: black;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .card {
@@ -705,10 +707,8 @@ header nav {
   display: inline;
 }
 .contact-form__close {
-  width: 10%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  border: none;
+  background: none;
 }
 .contact-form__close i {
   color: white;

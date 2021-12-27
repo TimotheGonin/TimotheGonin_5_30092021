@@ -22,9 +22,9 @@ class ContactModal {
                         <h2 class="contact-form__title">Contactez-moi</h2>
                         <p class="contact-form__recipient">${this._photographer.name}<p>
                     </div>
-                    <span class="contact-form__close" id="close-contact-modal-button" aria-label="Close Contact form">
+                    <button class="contact-form__close" id="close-contact-modal-button" aria-label="Close Contact form">
                         <i class="fas fa-times "></i>
-                    </span>
+                    </button>
                 </header>
                 <form class="contact-form__body">
                     <div class="input-group">
