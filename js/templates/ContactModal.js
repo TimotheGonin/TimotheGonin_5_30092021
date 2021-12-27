@@ -61,6 +61,15 @@ class ContactModal {
             document.querySelector('main').setAttribute('aria-hidden','false');
         })
 
+        document.body.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape'){
+                contactModal.classList.add('sr-only');
+                contactModal.setAttribute('aria-hidden', 'true');
+                document.querySelector('header').setAttribute('aria-hidden','false');    
+                document.querySelector('main').setAttribute('aria-hidden','false');
+            }
+        })
+
         //LAUNCH
         return contactModal;
     }
