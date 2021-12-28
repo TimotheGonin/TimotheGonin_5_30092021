@@ -33,6 +33,9 @@ class Ligthbox {
         this.index = medias.indexOf(url);
         this.loadMediaInfo(titles[this.index]);
         this.onKeyUp = this.onKeyUp.bind(this);
+        
+        document.querySelector('header').setAttribute('aria-hidden','true');    
+        document.querySelector('main').setAttribute('aria-hidden','true');
         document.body.appendChild(this.element);
         document.addEventListener('keyup', this.onKeyUp);
     }
@@ -49,11 +52,13 @@ class Ligthbox {
         if (url.includes('jpg')) {
             const image = new Image();
 			image.src = url;
+            image.setAttribute('aria-label', 'Lilac breasted roller');
             mediaContainer.appendChild(image);
 
 		} else if (url.includes('mp4')) {
             const video = document.createElement('video');
 			video.src = url;
+            video.setAttribute('aria-label', 'Lilac breasted roller');
             video.controls = true;
             mediaContainer.appendChild(video);
 		}
@@ -85,10 +90,12 @@ class Ligthbox {
 
     /**
      * Close lightbox
-     * @param {MouseEvent} e 
+     * @param {MouseEvent/KeyboardEvent} e 
      */
     close(e){
         e.preventDefault();
+        document.querySelector('header').setAttribute('aria-hidden','false');    
+        document.querySelector('main').setAttribute('aria-hidden','false');
         this.element.classList.add('fadeOut');
         window.setTimeout(()=> {
             this.element.parentElement.removeChild(this.element);
@@ -128,9 +135,12 @@ class Ligthbox {
     buildDOM(){
         const dom = document.createElement('div');
         dom.classList.add('lightbox');
-        dom.innerHTML = `<button class="lightbox__close">Fermer</button>
-        <button class="lightbox__next">Suivant</button>
-        <button class="lightbox__prev">Précédent</button>
+        dom.setAttribute('role','dialog');
+        dom.setAttribute('aria-hidden', 'false');
+
+        dom.innerHTML = `<button class="lightbox__close" aria-lable="Close dialog">Fermer</button>
+        <button class="lightbox__next" aria-lable="Next image/video">Suivant</button>
+        <button class="lightbox__prev" aria-label="Previous image/video">Précédent</button>
         <div class="lightbox__container">
             <div class="lightbox__body"></div>
             <div class="lightbox__footer"></div>

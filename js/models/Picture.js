@@ -4,10 +4,8 @@ class Picture{
         this._photographerId = data.photographerId
         this._title = data.title
         this._image = data.image
-        this._tags = data.tags
         this._likes = data.likes
         this._date = data.date
-        this._price = data.price
     }
 
     get id(){
@@ -21,21 +19,15 @@ class Picture{
     }
     get source(){
         return `<figure class="picture-card__image">
-                    <a href="public/img/${this._photographerId}/${this._image}">
-                        <img src="public/img/${this._photographerId}/${this._image}" alt="">
+                    <a href="public/img/${this._photographerId}/${this._image}" aria-label="Lilac breasted roller, closeup view">
+                        <img src="public/img/${this._photographerId}/${this._image}" alt="Photographie - ${this._title}">
                     </a>
                 </figure>`
-    }
-    get tags(){
-        return this._tags
     }
     get likes(){
         return this._likes
     }
     get date(){
         return this._date
-    }
-    get price(){
-        return this._price
     }
 }

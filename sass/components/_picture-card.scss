@@ -1,10 +1,8 @@
 .picture-card{
     width:35rem;
     height:35.1rem;
-    display:flex;
-    justify-content:center;
+    @extend %center-x-y;
     flex-direction: column;
-    align-items: center;
     margin: 2rem 0;
 
     &__image{
@@ -27,6 +25,9 @@
         font-weight: bold;
         font-size:2rem;
         width:35rem;
+        h2{
+            font-size:2.2rem;
+        }
     }
 
     &__counter-like{
@@ -34,11 +35,14 @@
         justify-content: center;
         opacity: 1;
         transition: opacity 0.3s;
-        
+        border:none;
+        background: transparent;
+        color:$color-primary;
+        padding:.4rem;
         i{
-        margin-left:0.5rem;
+            margin-left:0.5rem;
         }
-
+        
         &:hover{
             opacity: 0.5;
             cursor:pointer;
