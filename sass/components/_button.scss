@@ -1,20 +1,28 @@
 .button {
-	font-weight: bold;
-	font-size: 1.6rem;
+	font-weight:500;
 	margin-top: 1rem;
-	border-radius: 0.7rem;
-	padding: 0.7rem;
-	background-color: $color-secondary;
+    min-width:170px;
 	border: none;
 
     &-contact{
-        font-weight:600;
         border-radius: 0.4rem;
         letter-spacing:0.1rem;
         font-size: 1.9rem;
         color: #ffffff;
-        background-color: #901c1c;
+        background-color: $color-primary;
         padding: 2.2rem 1rem;
         margin-top: 0;
+        transition:all .3s;
+        &--small{
+            padding: 0.8rem 1.8rem;
+            font-size:1.7rem;
+        }
+        &:hover{
+            background: $color-tertiary;
+            color:black;
+            cursor:pointer;
+            font-weight: 700;
+        }
     }
+    
 }

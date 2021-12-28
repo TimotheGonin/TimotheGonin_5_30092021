@@ -21,8 +21,8 @@
 @import "./components/button";
 @import "./components/card";
 @import "./components/logo";
+@import "./components/input-group";
 @import "./components/page-title";
-@import "./components/tag";
 @import "./components/order-by";
 @import "./components/picture-card";
 @import "./components/photographer-counter";
@@ -33,11 +33,13 @@
 // │ LAYOUT                                                                       │
 // └──────────────────────────────────────────────────────────────────────────────┘
 @import "./layout/header";
+@import "./layout/contact-form";
 @import "./layout/cards-deck";
-@import "./layout/tags";
+@import "./layout/lightbox";
 @import "./layout/photographer-banner";
 
 // ┌──────────────────────────────────────────────────────────────────────────────┐
 // │ PAGES                                                                        │
 // └──────────────────────────────────────────────────────────────────────────────┘
 @import "./pages/homepage-content";
+@import "./pages/photographer-page";

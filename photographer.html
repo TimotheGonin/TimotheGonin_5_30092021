@@ -16,141 +16,62 @@
         <nav>
             <div class="logo">
                 <a href="index.html">
-                    <img src="./public/img/fish-eye-logo.png" alt="logo FishEye">
+                    <img src="./public/img/fish-eye-logo.png" alt="Fisheye Home page">
                 </a>
-            </div>
+            </div>   
         </nav>
     </header>
 
     <main>
-        <section class="photographer-banner">
-            <div class="photographer-banner__info">
-                <h1 class="photographer-banner__name">Mimi Keel</h1>
-                <p class="photographer-banner__location">London, UK</p>
-                <p class="photographer-banner__slogan">Voir le beau dans le quotidien</p>
-                <ul class="tags">
-                    <li class="tag"><a href="#">#portrait</a></li>
-                    <li class="tag"><a href="#">#event</a></li>
-                    <li class="tag"><a href="#">#travel</a></li>
-                    <li class="tag"><a href="#">#animals</a></li>
-                </ul>
-            </div>
-            <aside class="photographer-banner__contact">
-                <button type="button" class="button button-contact">Contactez-moi</button>
-            </aside>
-            <figure class="card__figure">
-                <img src="public/img/Photographers_ID_Photos/MimiKeel.jpg" alt="">
-            </figure>
-        </section>
+
+        <!-- ORCER BY -->
         <form action="" class="order-by">
-            <label for="orderBy" class="order-by__label">Trier par</label>
+            <label for="orderBy" class="order-by__label" aria-label="Order by">Trier par</label>
             <select name="order" id="orderBy" class="order-by__select">
-                <option value="Popularité" selected class="order-by__option">Popularité</option>
+                <option value="">--Option--</option>
+                <option value="Popularité" class="order-by__option">Popularité</option>
                 <option value="Date" class="order-by__option">Date</option>
                 <option value="Titre" class="order-by__option">Titre</option>
             </select>
         </form>
 
-        <div class="cards-deck ">
-            <!-- 1 -->
-            <article class="picture-card">
-                <figure class="picture-card__image">
-                    <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
-                </figure>
-                <footer class="picture-card__info">
-                    <h3 class="picture-card__title">Arc-en-cie</h3>
-                    <aside class="picture-card__counter-like">
-                        <p>12</p>
-                        <i class="fas fa-heart"></i>
-                    </aside>
-                </footer>
-            </article>
+        <!-- CONTENT DECK -->
+        <div id="media-cards-deck" class="cards-deck"></div>
 
-            <!-- 2 -->
-            <article class="picture-card">
-                <figure class="picture-card__image">
-                    <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
-                </figure>
-                <footer class="picture-card__info">
-                    <h3 class="picture-card__title">Arc-en-cie</h3>
-                    <aside class="picture-card__counter-like">
-                        <p>12</p>
-                        <i class="fas fa-heart"></i>
-                    </aside>
-                </footer>
-            </article>
-
-            <!-- 3 -->
-            <article class="picture-card">
-                <figure class="picture-card__image">
-                    <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
-                </figure>
-                <footer class="picture-card__info">
-                    <h3 class="picture-card__title">Arc-en-cie</h3>
-                    <aside class="picture-card__counter-like">
-                        <p>12</p>
-                        <i class="fas fa-heart"></i>
-                    </aside>
-                </footer>
-            </article>
-
-            <!-- 4 -->
-            <article class="picture-card">
-                <figure class="picture-card__image">
-                    <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
-                </figure>
-                <footer class="picture-card__info">
-                    <h3 class="picture-card__title">Arc-en-cie</h3>
-                    <aside class="picture-card__counter-like">
-                        <p>12</p>
-                        <i class="fas fa-heart"></i>
-                    </aside>
-                </footer>
-            </article>
-
-            <!-- 5 -->
-            <article class="picture-card">
-                <figure class="picture-card__image">
-                    <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
-                </figure>
-                <footer class="picture-card__info">
-                    <h3 class="picture-card__title">Arc-en-cie</h3>
-                    <aside class="picture-card__counter-like">
-                        <p>12</p>
-                        <i class="fas fa-heart"></i>
-                    </aside>
-                </footer>
-            </article>
-
-            <!-- 6 -->
-            <article class="picture-card">
-                <figure class="picture-card__image">
-                    <img src="public/img/Mimi/Animals_Rainbow.jpg" alt="">
-                </figure>
-                <footer class="picture-card__info">
-                    <h3 class="picture-card__title">Arc-en-cie</h3>
-                    <aside class="picture-card__counter-like">
-                        <p>12</p>
-                        <i class="fas fa-heart"></i>
-                    </aside>
-                </footer>
-            </article>
+        <!-- CONTACT BUTTON SMALL'Ajouter event et générer en JS'-->
+        <div class="photographer-contact">
+            <button type="button" id="contact-btn--small" class="button button-contact button-contact--small" aria-label="Contact Me">Contactez-moi</button>
         </div>
 
-        <!-- PHOTOGRAPHER-COUNTER -->
-        <aside class="photographer-counter">
-            <div class="photographer-counter__likes">
-                <p>297 081</p>
-                <i class="fas fa-heart"></i>
-            </div>
-            <div class="photographer-counter__price">
-                <p>300€ / jour</p>
-            </div>
-        </aside>
     </main>
 
     <!-- ICONS IMPORT -->
     <script src="https://kit.fontawesome.com/1243262ebe.js" crossorigin="anonymous"></script>
+    
+    <!-- JS FILE IMPORT -->
+    <!-- Factory -->
+    <script src="js/factories/MediaFactory.js"></script>
+
+    <!-- Models -->
+    <script src="js/models/Photographer.js"></script>
+    <script src="js/models/Picture.js"></script>
+    <script src="js/models/Video.js"></script>
+
+    <!-- Templates -->
+    <script src="js/templates/ContactModal.js"></script>
+    <script src="js/templates/MediaCard.js"></script>
+    <script src="js/templates/PhotographerBanner.js"></script>
+    <script src="js/templates/PhotographerCounter.js"></script>
+
+    <!-- Api -->
+    <script src="js/api/Api.js"></script>
+
+    <!-- Entry point -->
+    <script src="js/Banner.js"></script>
+    <script src="js/Lightbox.js"></script>
+    <script src="js/Likes.js"></script>
+    <script src="js/Medias.js"></script>
+    <script src="js/Order-By.js"></script>
 </body>
 
 </html>

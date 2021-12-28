@@ -1,24 +1,31 @@
-.photographer-counter{
-    align-items: center;
-    background:$color-secondary;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    bottom:0;
-    display:flex;
-    font-size:2.5rem;
-    justify-content:space-around;
-    padding:1.8rem;
-    position:fixed;
-    right:3.8rem;
-    width:37.6rem;
+.photographer-counter {
+	align-items: center;
+	background: $color-secondary;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	bottom: 0;
+	display: flex;
+	font-size: 2.5rem;
+	justify-content: space-around;
+	padding: 1.8rem;
+	position: fixed;
+	right: 3.8rem;
+	width: 37.6rem;
 
-    &__likes{
-        @extend %center-x-y;
-        i{
-            margin-left:0.5rem;
-        }
-    }
-    &__price{
-        @extend %center-x-y;
-    }
+	&__likes {
+		@extend %center-x-y;
+		i {
+			margin-left: 0.5rem;
+		}
+	}
+	&__price {
+		@extend %center-x-y;
+	}
+
+	// MEDIA QUERIES
+
+	//--tablets
+	@include tablets {
+        display:none;
+	}
 }

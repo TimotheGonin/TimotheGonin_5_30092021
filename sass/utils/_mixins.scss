@@ -9,8 +9,15 @@
 }
 
 // Small devices (landscape phones, less than 768px)
-@mixin tablets {
+@mixin landscape-mobile{
     @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin tablets {
+    @media (max-width: 991.98px) {
         @content;
     }
 }

@@ -1,12 +1,15 @@
 .card{
-    display: flex;
+    @extend %center-x-y;
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
     width:33.5rem;
     height:34.2rem;
     margin: 2rem 0;
 
+    &__header{
+        display: flex;
+        justify-content: center;
+    }
+    
     &__figure{
         width:20rem;
         height:20rem;
@@ -20,10 +23,8 @@
     }
 
     &__body{
-        display: flex;
+        @extend %center-x-y;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin-top:1.5rem;
     }
     
@@ -47,12 +48,5 @@
         margin-top:0.5rem;
         font-size:1rem;
         color:#525252;
-    }
-
-    &__actions {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top:0.5rem;
     }
 }

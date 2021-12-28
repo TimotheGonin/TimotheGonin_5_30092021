@@ -1,15 +1,15 @@
 .picture-card{
     width:35rem;
     height:35.1rem;
-    display:flex;
+    @extend %center-x-y;
     flex-direction: column;
-    align-items: center;
     margin: 2rem 0;
 
     &__image{
         width:100%;
         height:30rem;
-        img{
+        
+        img, video{
             border-radius:0.5rem;
             height: 100%;
             width:100%;
@@ -25,14 +25,67 @@
         font-weight: bold;
         font-size:2rem;
         width:35rem;
+        h2{
+            font-size:2.2rem;
+        }
     }
 
     &__counter-like{
         display: flex;
         justify-content: center;
-        
+        opacity: 1;
+        transition: opacity 0.3s;
+        border:none;
+        background: transparent;
+        color:$color-primary;
+        padding:.4rem;
         i{
-        margin-left:0.5rem;
+            margin-left:0.5rem;
+        }
+        
+        &:hover{
+            opacity: 0.5;
+            cursor:pointer;
+        }
+    }
+
+    //MEDIA QUERIES
+
+    //--tablets
+    @include tablets{
+        width:55%;
+        &__image{
+            
+            img{
+                object-position: 0 20%;
+            }
+        }
+
+        &__info{
+            font-weight:500;
+            width:100%;
+        }
+
+        &__title{
+            font-weight:500;
+        }
+    }
+
+    //--mobile
+    @include mobile{
+        width:33.5rem;
+        height:21.8rem;
+        margin: 0 0 1.5rem;
+
+        &__image{
+            height: 19rem;
+            object-fit:contain;
+        }
+
+        &__info{
+            font-size:1.4rem;
+            font-weight:500;
+            width:100%;
         }
     }
 }
