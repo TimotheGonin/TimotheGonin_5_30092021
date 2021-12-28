@@ -1,15 +1,23 @@
+/**
+ * @param{string} photographer data
+ * @param{string} media data
+ */
 class PhotographerCounter {
     constructor(photographer, likes){
         this._photographer = photographer
         this._likes = likes
     }
     
+    /**
+     * 
+     * @returns{HTMLElement}
+     */
     createCounter(){
 
-        let counter = document.createElement('aside');
+        const counter = document.createElement('aside');
         counter.classList.add('photographer-counter');
     
-        let counterBody = `
+        counter.innerHTML = `
             <div class="photographer-counter__likes">
                 <p>${this._likes}</p>
                 <i class="fas fa-heart"></i>
@@ -19,7 +27,6 @@ class PhotographerCounter {
             </div>
         `;
     
-        counter.innerHTML += counterBody;
         return counter;
     }
 }

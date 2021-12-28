@@ -404,27 +404,30 @@ body {
 }
 
 .button {
-  font-weight: bold;
-  font-size: 1.6rem;
+  font-weight: 500;
   margin-top: 1rem;
-  border-radius: 0.7rem;
-  padding: 0.7rem;
-  background-color: #D3573C;
+  min-width: 170px;
   border: none;
 }
 .button-contact {
-  font-weight: 500;
   border-radius: 0.4rem;
   letter-spacing: 0.1rem;
   font-size: 1.9rem;
   color: #ffffff;
-  background-color: #901c1c;
+  background-color: #901C1C;
   padding: 2.2rem 1rem;
   margin-top: 0;
+  transition: all 0.3s;
 }
 .button-contact--small {
   padding: 0.8rem 1.8rem;
   font-size: 1.7rem;
+}
+.button-contact:hover {
+  background: #DB8876;
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .card {
@@ -588,11 +591,18 @@ body {
   font-size: 2rem;
   width: 35rem;
 }
+.picture-card__info h2 {
+  font-size: 2.2rem;
+}
 .picture-card__counter-like {
   display: flex;
   justify-content: center;
   opacity: 1;
   transition: opacity 0.3s;
+  border: none;
+  background: transparent;
+  color: #901C1C;
+  padding: 0.4rem;
 }
 .picture-card__counter-like i {
   margin-left: 0.5rem;
@@ -661,10 +671,6 @@ header {
   flex-direction: column;
   margin: 0 2rem;
 }
-header aside {
-  display: flex;
-  justify-content: center;
-}
 header nav {
   display: flex;
   align-items: center;
@@ -705,10 +711,8 @@ header nav {
   display: inline;
 }
 .contact-form__close {
-  width: 10%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  border: none;
+  background: none;
 }
 .contact-form__close i {
   color: white;

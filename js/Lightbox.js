@@ -90,7 +90,7 @@ class Ligthbox {
 
     /**
      * Close lightbox
-     * @param {MouseEvent} e 
+     * @param {MouseEvent/KeyboardEvent} e 
      */
     close(e){
         e.preventDefault();

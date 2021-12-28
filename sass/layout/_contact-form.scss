@@ -25,11 +25,9 @@
         display: inline;
     }
     
-    &__close{
-        width: 10%;
-        display :flex;
-        align-items: flex-start;
-        justify-content: flex-end;
+    &__close{  
+        border:none;
+        background: none;
         i{
             color:white;
             font-size: 6rem;

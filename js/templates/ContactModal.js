@@ -2,12 +2,17 @@
  * @param{string} photographer data
  */
 class ContactModal {
+    
     constructor(photographer){
         this._photographer = photographer
     }
+
+    /**
+     * 
+     * @returns{HTMLElement}
+     */
     createContactModal(){
 
-        //INSERT CONTACT MODAL STRUCTURE BELOW
         const contactModal = document.createElement('aside');
         contactModal.setAttribute('id', 'contact-modal');
         contactModal.classList.add('contact-form');
@@ -22,9 +27,9 @@ class ContactModal {
                         <h2 class="contact-form__title">Contactez-moi</h2>
                         <p class="contact-form__recipient">${this._photographer.name}<p>
                     </div>
-                    <span class="contact-form__close" id="close-contact-modal-button" aria-label="Close Contact form">
+                    <button class="contact-form__close" id="close-contact-modal-button" aria-label="Close Contact form">
                         <i class="fas fa-times "></i>
-                    </span>
+                    </button>
                 </header>
                 <form class="contact-form__body">
                     <div class="input-group">
@@ -48,12 +53,21 @@ class ContactModal {
             </div>
         `;
 
-        //EVENT 
+        //EVENT Closing Modal--contact form
         contactModal.querySelector('#close-contact-modal-button').addEventListener('click', () => {
             contactModal.classList.add('sr-only');
             contactModal.setAttribute('aria-hidden', 'true');
             document.querySelector('header').setAttribute('aria-hidden','false');    
             document.querySelector('main').setAttribute('aria-hidden','false');
+        })
+
+        document.body.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape'){
+                contactModal.classList.add('sr-only');
+                contactModal.setAttribute('aria-hidden', 'true');
+                document.querySelector('header').setAttribute('aria-hidden','false');    
+                document.querySelector('main').setAttribute('aria-hidden','false');
+            }
         })
 
         //LAUNCH

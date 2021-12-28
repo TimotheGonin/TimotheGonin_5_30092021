@@ -1,7 +1,9 @@
+/**
+ * @param{string} media data
+ */
 class MediaCard {
     constructor(media){
         this._media = media;
-        // this._element = this.createMediaCard();
     }
 
     /**
@@ -15,10 +17,10 @@ class MediaCard {
                 ${this._media.source}
                 <footer class="picture-card__info">
                     <h2 class="picture-card__title">${this._media.title}</h2>
-                    <aside class="picture-card__counter-like" aria-label="likes">
-                        <p>${this._media.likes}</p>
+                    <button type="button" class="picture-card__counter-like" aria-label="likes">
+                        ${this._media.likes}
                         <i class="fas fa-heart"></i>
-                    </aside>
+                    </button>
                 </footer>
                 <time datetime="${this._media.date}"></time>
         `;
