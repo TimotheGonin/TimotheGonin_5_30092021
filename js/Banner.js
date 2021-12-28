@@ -47,14 +47,25 @@ class Banner {
             const submitButtonModal = document.getElementById('contact-submit-button');
             submitButtonModal.addEventListener('click', (e) => {
                 e.preventDefault();
+
+                //SHOW USER DATA
+                const firstName = document.querySelector('#firstName');
+                const lastName = document.querySelector('#lastName');
+                const email = document.querySelector('#email');
+                const userTextArea = document.querySelector('#userTextArea');
+                console.log(firstName.value);
+                console.log(lastName.value);
+                console.log(email.value);
+                console.log(userTextArea.value);
+
+                //REDIRECTION
+                // let origin = pageUrl.origin;
+                // let pathName = pageUrl.pathname;
+                // let search = pageUrl.search;
+
+                // let urlRedirect = `${origin}${pathName}${search}`;
                 
-                let origin = pageUrl.origin;
-                let pathName = pageUrl.pathname;
-                let search = pageUrl.search;
-
-                let urlRedirect = `${origin}${pathName}${search}`;
-
-                document.location.href=`${urlRedirect}`;
+                // document.location.href=`${urlRedirect}`;
             });
     }
 }

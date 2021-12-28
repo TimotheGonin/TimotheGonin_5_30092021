@@ -34,19 +34,19 @@ class ContactModal {
                 <form class="contact-form__body">
                     <div class="input-group">
                         <label class="input-group__label">Prénom</label>
-                        <input type="text" class="input-group__input" aria-label="First name"/>
+                        <input type="text" class="input-group__input" aria-label="First name" id="firstName" required/>
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Nom</label>
-                        <input type="text" class="input-group__input" aria-label="Last name"/>
+                        <input type="text" class="input-group__input" aria-label="Last name" id="lastName"/>
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Email</label>
-                        <input type="email" class="input-group__input" aria-label="Email"/>
+                        <input type="email" class="input-group__input" aria-label="Email" id="email"/>
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Votre Message</label>
-                        <textarea class="input-group__input--textarea" aria-label="Your message"></textarea>
+                        <textarea class="input-group__input--textarea" aria-label="Your message" id="userTextArea"></textarea>
                     </div>
                     <button type="submit" class="button button-contact button-contact--small" id="contact-submit-button" aria-label="Send">Envoyer</button>
                 </form>
