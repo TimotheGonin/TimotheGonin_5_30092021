@@ -599,6 +599,10 @@ body {
   justify-content: center;
   opacity: 1;
   transition: opacity 0.3s;
+  border: none;
+  background: transparent;
+  color: #901C1C;
+  padding: 0.4rem;
 }
 .picture-card__counter-like i {
   margin-left: 0.5rem;

@@ -35,11 +35,14 @@
         justify-content: center;
         opacity: 1;
         transition: opacity 0.3s;
-        
+        border:none;
+        background: transparent;
+        color:$color-primary;
+        padding:.4rem;
         i{
-        margin-left:0.5rem;
+            margin-left:0.5rem;
         }
-
+        
         &:hover{
             opacity: 0.5;
             cursor:pointer;
