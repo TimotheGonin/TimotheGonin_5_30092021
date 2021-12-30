@@ -89,6 +89,7 @@ contactButtonSmall.addEventListener('click', displayModal);
 function displayModal() {
     const modal = document.getElementById("contact-modal");
 	modal.classList.remove('sr-only');
+    modal.style.display='flex';
     document.querySelector('header').setAttribute('aria-hidden','true');    
     document.querySelector('main').setAttribute('aria-hidden','true');
 }

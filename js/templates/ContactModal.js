@@ -46,7 +46,7 @@ class ContactModal {
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Votre Message</label>
-                        <textarea class="input-group__input--textarea" aria-label="Your message" id="userTextArea"></textarea>
+                        <textarea class="input-group__input--textarea"  aria-label="Your message" id="userTextArea"></textarea>
                     </div>
                     <button type="submit" class="button button-contact button-contact--small" id="contact-submit-button" aria-label="Send">Envoyer</button>
                 </form>
@@ -57,6 +57,7 @@ class ContactModal {
         contactModal.querySelector('#close-contact-modal-button').addEventListener('click', () => {
             contactModal.classList.add('sr-only');
             contactModal.setAttribute('aria-hidden', 'true');
+            contactModal.style.display='none';              
             document.querySelector('header').setAttribute('aria-hidden','false');    
             document.querySelector('main').setAttribute('aria-hidden','false');
         })
@@ -65,6 +66,7 @@ class ContactModal {
             if(e.key === 'Escape'){
                 contactModal.classList.add('sr-only');
                 contactModal.setAttribute('aria-hidden', 'true');
+                contactModal.style.display='none';
                 document.querySelector('header').setAttribute('aria-hidden','false');    
                 document.querySelector('main').setAttribute('aria-hidden','false');
             }
