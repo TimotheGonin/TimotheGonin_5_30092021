@@ -46,7 +46,7 @@ class ContactModal {
                     </div>
                     <div class="input-group">
                         <label class="input-group__label">Votre Message</label>
-                        <textarea class="input-group__input--textarea" aria-label="Your message" id="userTextArea"></textarea>
+                        <textarea class="input-group__input--textarea"  aria-label="Your message" id="userTextArea"></textarea>
                     </div>
                     <button type="submit" class="button button-contact button-contact--small" id="contact-submit-button" aria-label="Send">Envoyer</button>
                 </form>

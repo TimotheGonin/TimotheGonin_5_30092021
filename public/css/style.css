@@ -399,8 +399,15 @@ html {
 }
 
 body {
-  max-width: 1240px;
+  max-width: 124rem;
   margin: 0 auto;
+}
+
+input[type=text], input[type=email], textarea {
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  border-radius: 0.4rem;
 }
 
 .button {
@@ -500,18 +507,12 @@ body {
   color: #312E2E;
 }
 .input-group__input {
-  font-size: 2rem;
   padding: 0 2rem;
   height: 6.8rem;
-  outline: none;
-  border: none;
-  border-radius: 0.4rem;
 }
 .input-group__input--textarea {
-  outline: none;
-  border: none;
+  padding: 2rem;
   height: 17rem;
-  border-radius: 0.4rem;
 }
 
 .page-title {
