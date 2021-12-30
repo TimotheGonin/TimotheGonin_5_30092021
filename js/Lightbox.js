@@ -137,6 +137,7 @@ class Ligthbox {
         dom.classList.add('lightbox');
         dom.setAttribute('role','dialog');
         dom.setAttribute('aria-hidden', 'false');
+        dom.style.display="flex";
 
         dom.innerHTML = `<button class="lightbox__close" aria-label="Close dialog"></button>
         <button class="lightbox__next" aria-label="Next image/video"></button>
