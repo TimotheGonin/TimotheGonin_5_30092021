@@ -138,9 +138,9 @@ class Ligthbox {
         dom.setAttribute('role','dialog');
         dom.setAttribute('aria-hidden', 'false');
 
-        dom.innerHTML = `<button class="lightbox__close" aria-lable="Close dialog">Fermer</button>
-        <button class="lightbox__next" aria-lable="Next image/video">Suivant</button>
-        <button class="lightbox__prev" aria-label="Previous image/video">Précédent</button>
+        dom.innerHTML = `<button class="lightbox__close" aria-label="Close dialog"></button>
+        <button class="lightbox__next" aria-label="Next image/video"></button>
+        <button class="lightbox__prev" aria-label="Previous image/video"></button>
         <div class="lightbox__container">
             <div class="lightbox__body"></div>
             <div class="lightbox__footer"></div>
