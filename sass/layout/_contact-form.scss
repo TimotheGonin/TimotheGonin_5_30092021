@@ -1,7 +1,6 @@
 .contact-form{
 
     @extend %modal;
-    @extend %center-x-y;
 
     &__container{
         align-self: center;
