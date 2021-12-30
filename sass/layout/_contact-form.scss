@@ -1,13 +1,12 @@
 .contact-form{
 
     @extend %modal;
-    @extend %center-x-y;
 
     &__container{
         align-self: center;
         background:$color-tertiary;
-        max-height:900px;
-        width: 669px;
+        max-height:90rem;
+        width: 66.9rem;
     }
     //MODAL--header
     &__header{

@@ -17,6 +17,15 @@ html{
 // │ GLOBAL RULES                                                                 │
 // └──────────────────────────────────────────────────────────────────────────────┘
 body{
-    max-width:1240px;
+    max-width:124rem;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+input[type=text],input[type=email], textarea{
+    outline:none;
+    border:none;
+    font-size:2rem;
+    border-radius: 0.4rem;
 }
