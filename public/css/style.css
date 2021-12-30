@@ -403,6 +403,9 @@ html {
 body {
   max-width: 124rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 input[type=text], input[type=email], textarea {
@@ -908,12 +911,6 @@ header nav {
     height: 10rem;
     width: 10rem;
   }
-}
-
-.homepage-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .photographer-contact {
