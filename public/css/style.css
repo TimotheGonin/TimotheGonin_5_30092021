@@ -413,7 +413,7 @@ input[type=text], input[type=email], textarea {
 .button {
   font-weight: 500;
   margin-top: 1rem;
-  min-width: 170px;
+  min-width: 17rem;
   border: none;
 }
 .button-contact {
@@ -694,8 +694,8 @@ header nav {
 .contact-form__container {
   align-self: center;
   background: #DB8876;
-  max-height: 900px;
-  width: 669px;
+  max-height: 90rem;
+  width: 66.9rem;
 }
 .contact-form__header {
   font-size: 3rem;
@@ -757,13 +757,13 @@ header nav {
 }
 .lightbox__next, .lightbox__prev {
   border: none;
-  background: url("../../public/icon/arrow.svg") center center/16px 28px no-repeat;
-  width: 50px;
+  background: url("../../public/icon/arrow.svg") center center/1.6rem 2.8rem no-repeat;
+  width: 5rem;
   height: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  margin-top: -14px;
+  margin-top: -1.4rem;
   z-index: 11;
 }
 .lightbox__prev {
@@ -772,28 +772,27 @@ header nav {
   transform: rotate(180deg);
 }
 .lightbox__close {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   border: none;
   background: url("../../public/icon/cross.svg") center center/100% 100% no-repeat transparent;
   position: fixed;
-  top: 20px;
-  right: 10px;
+  top: 2rem;
+  right: 1rem;
   z-index: 12;
 }
 .lightbox button {
   opacity: 1;
   cursor: pointer;
   transition: opacity 0.3s;
-  text-indent: -3000px;
 }
 .lightbox button:hover {
   opacity: 0.5;
 }
 .lightbox__container {
   flex-direction: column;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5rem;
+  margin-right: 5rem;
   min-height: 100vh;
 }
 .lightbox__container img, .lightbox__container video {
