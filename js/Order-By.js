@@ -17,7 +17,7 @@ class OrderBy{
         const gallery = document.querySelector('#media-cards-deck'); //media-cards collection container
         const galleryContent = Array.from(document.querySelectorAll('.picture-card')); //media-cards collection
 
-        orderByButton.addEventListener('change', (e) => {
+        orderByButton.addEventListener('click', (e) => {
             
             switch (e.target.value) {
                 case 'Popularité':
