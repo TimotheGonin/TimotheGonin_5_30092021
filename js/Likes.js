@@ -6,7 +6,6 @@ class Likes{
             // const counterElement = this.querySelector('.picture-card__counter-like-value');
             const counterElement = this.previousElementSibling;
             const counterValue = Number(counterElement.innerText);
-            console.log(counterValue);
         
             // PHOTOGRAPHER'S-COUNTER LIKES
             const totalLikesElement = document.querySelector('.photographer-counter__likes p');
