@@ -603,18 +603,21 @@ input[type=text], input[type=email], textarea {
 .picture-card__counter-like {
   display: flex;
   justify-content: center;
-  opacity: 1;
-  transition: opacity 0.3s;
-  border: none;
-  background: transparent;
   color: #901C1C;
   padding: 0.4rem;
 }
-.picture-card__counter-like i {
+.picture-card__counter-like button {
+  border: none;
+  background: transparent;
+  color: #901C1C;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+.picture-card__counter-like button i {
   margin-left: 0.5rem;
 }
-.picture-card__counter-like:hover {
-  opacity: 0.5;
+.picture-card__counter-like button:hover {
+  transform: scale(1.5);
   cursor: pointer;
 }
 @media (max-width: 991.98px) {

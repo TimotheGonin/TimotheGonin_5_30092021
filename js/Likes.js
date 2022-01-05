@@ -3,8 +3,10 @@ class Likes{
         function liking(){
 
             //PICTURE-CARD'S LIKES
-            const counterElement = this.querySelector('.picture-card__counter-like p');
-            const counterValue = Number(counterElement.textContent);
+            // const counterElement = this.querySelector('.picture-card__counter-like-value');
+            const counterElement = this.previousElementSibling;
+            const counterValue = Number(counterElement.innerText);
+            console.log(counterValue);
         
             // PHOTOGRAPHER'S-COUNTER LIKES
             const totalLikesElement = document.querySelector('.photographer-counter__likes p');
@@ -21,7 +23,7 @@ class Likes{
         }
         
         
-        const likes = document.querySelectorAll('.picture-card__counter-like');
+        const likes = document.querySelectorAll('.picture-card__counter-like-action');
         likes.forEach(like => like.addEventListener('click', liking));
     }
 }

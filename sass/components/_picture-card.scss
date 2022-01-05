@@ -33,19 +33,24 @@
     &__counter-like{
         display: flex;
         justify-content: center;
-        opacity: 1;
-        transition: opacity 0.3s;
-        border:none;
-        background: transparent;
         color:$color-primary;
         padding:.4rem;
-        i{
-            margin-left:0.5rem;
-        }
-        
-        &:hover{
-            opacity: 0.5;
-            cursor:pointer;
+
+        button{
+            border:none;
+            background: transparent;
+            color:$color-primary;
+            transform: scale(1);
+            transition: transform 0.3s;
+            
+            i{
+                margin-left:0.5rem;
+            }
+
+            &:hover{
+                transform: scale(1.5);
+                cursor:pointer;
+            }
         }
     }
 
