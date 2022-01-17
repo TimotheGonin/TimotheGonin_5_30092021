@@ -11,7 +11,7 @@
 	position: fixed;
 	right: 3.8rem;
 	width: 37.6rem;
-
+	z-index:99;
 	&__likes {
 		@extend %center-x-y;
 		i {
